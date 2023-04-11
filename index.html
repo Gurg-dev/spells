@@ -85,16 +85,7 @@
 	
 	</style>
     <script>
-        const overlay = document.querySelector('.overlay');
 
-        overlay.addEventListener('click', () => {
-          overlay.classList.add('clicked');
-        });
-		const myFrame = document.getElementById("myFrame");
-		myFrame.onload = function()
-		{
-		  myFrame.style.height = myFrame.contentWindow.document.body.scrollHeight + 'px';
-		};
     </script>
 </head>
 <body>
@@ -103,7 +94,7 @@
 
 	
 		<div class="links">
-			<a href="https://aonprd.com/Spells.aspx?Class=Adept#ctl00_MainContent_DataListTypes" target="myFrame" class="link">Adept</a>
+			<a href="https://aonprd.com/Spells.aspx?Class=Adept#ctl00_MainContent_DataListTypes" id="scroll-to-iframe" target="myFrame" class="link">Adept</a>
 			<a href="https://aonprd.com/Spells.aspx?Class=Alchemist#ctl00_MainContent_DataListTypes" target="myFrame" class="link">Alchemist</a>
 			<a href="https://aonprd.com/Spells.aspx?Class=Antipaladin#ctl00_MainContent_DataListTypes" target="myFrame" class="link">Antipaladin</a>
 			<a href="https://aonprd.com/Spells.aspx?Class=Arcanist#ctl00_MainContent_DataListTypes" target="myFrame" class="link">Arcanist</a>
@@ -134,7 +125,7 @@
 			<a href="https://aonprd.com/Spells.aspx?Class=Witch#ctl00_MainContent_DataListTypes" target="myFrame" class="link">Witch</a>
 			<a href="https://aonprd.com/Spells.aspx?Class=Wizard#ctl00_MainContent_DataListTypes" target="myFrame" class="link">Wizard</a>
 			<a href="https://aonprd.com/OccultRituals.aspx?ItemName=All#ctl00_MainContent_GridViewOccultRituals" target="myFrame" class="link">Occult Rituals</a>
-			<a href="Divi.html#start" height="800" target="myFrame" class="link">Divination Wiz/Sorc</a>
+			<a href="Divi.html#start" height="800" target="myFrame" class="link" id="scroll-to-iframe">Divination Wiz/Sorc</a>
 		</center></h3>
 		</div>
 	
@@ -145,5 +136,11 @@
 
 </div>
 
+<script>
+
+	document.getElementById("scroll-to-iframe").addEventListener("click", function() {
+	  scrollToIframe();
+	});
+	</script>
 </body>
 </html>
