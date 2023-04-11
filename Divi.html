@@ -86,6 +86,21 @@
       document.querySelector("button").textContent = "Show Best";
     }
   }
+
+  var search_term = 'word'; // The word you want to find on the page
+
+// Find the first instance of the search term on the page
+var element = document.querySelector(":contains('" + search_term + "')");
+
+// Generate an href link with an anchor to the search term
+if (element) {
+    var id = element.id || 'search_term_anchor';
+    element.id = id;
+    var href = window.location.href.split('#')[0] + '#' + id;
+    console.log(href);
+} else {
+    console.log('Search term not found on page');
+}
 </script>
 </head>
 
