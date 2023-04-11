@@ -65,14 +65,6 @@
   }
 </style>
 <script>
-  if (window.self !== window.top) {
-    // The page is in an iframe
-    // Add code here to prevent the main HTML file from being opened again
-    
-} else {
-    // The page is not in an iframe
-    // Add code here to allow the main HTML file to be opened
-
   window.onload = function() {
     document.getElementById('Butt').innerHTML = 'Show All';
 }
@@ -94,7 +86,6 @@
       document.querySelector("button").textContent = "Show Best";
     }
   }
-}
 </script>
 </head>
 
@@ -105,7 +96,7 @@
     <button id="Butt" onclick="toggleVisibility()">x</button>
 </tr>
     <tr><td></td>
-<a title="Divination sorc"><h2>Divination sorc:</h2>    
+<a title="Divination sorc"><h2>Divination sorc:</h2><form>     
         ps. Components F/DF or M/DF, have either Focus/Divine Focus or 
         Material component/Divine focus component, not both (select one - Arcane/Divine).
          </tr>
@@ -797,7 +788,7 @@
 <td class="text"> </td>
 <td class="text">“Sixth sense”  You are never surprised or flat-footed. Gives you a +2 insight bonus to AC and on Reflex saves</td>
 <!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
-</tr>
+</tr></form> 
 
 
 
