@@ -95,6 +95,10 @@
 		{
 		  myFrame.style.height = myFrame.contentWindow.document.body.scrollHeight + 'px';
 		};
+		function scrollToIframe() {
+			var iframe = document.getElementsByName("myFrame")[0];
+			iframe.scrollIntoView();
+		  };
     </script>
 </head>
 <body>
@@ -130,7 +134,7 @@
 			<a href="https://aonprd.com/Spells.aspx?Class=Spiritualist#ctl00_MainContent_DataListTypes" target="myFrame" class="link">Spiritualist</a>
 			<a href="https://aonprd.com/Spells.aspx?Class=Summoner#ctl00_MainContent_DataListTypes" target="myFrame" class="link">Summoner</a>
 			<a href="https://aonprd.com/Spells.aspx?Class=Summoner%20(Unchained)#ctl00_MainContent_DataListTypes" target="myFrame" class="link">Summoner(Unchained)</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Warpriest#bleed#ctl00_MainContent_DataListTypes" target="myFrame" class="link">Warpriest</a>
+			<a href="https://aonprd.com/Spells.aspx?Class=Warpriest#ctl00_MainContent_DataListTypes" target="myFrame" class="link">Warpriest</a>
 			<a href="https://aonprd.com/Spells.aspx?Class=Witch#ctl00_MainContent_DataListTypes" target="myFrame" class="link">Witch</a>
 			<a href="https://aonprd.com/Spells.aspx?Class=Wizard#ctl00_MainContent_DataListTypes" target="myFrame" class="link">Wizard</a>
 			<a href="https://aonprd.com/OccultRituals.aspx?ItemName=All#ctl00_MainContent_GridViewOccultRituals" target="myFrame" class="link">Occult Rituals</a>
@@ -139,9 +143,9 @@
 		</div>
 	
 <div>	<center>
-    <iframe src="https://aonprd.com/Spells.aspx?Class=Adept" width="100%" height="800" name="myFrame">
-	</center>
-    </iframe>
+    <iframe src="https://aonprd.com/Spells.aspx?Class=Adept" width="100%" height="800" name="myFrame" onload="scrollToIframe()">
+	
+    </iframe></center>
 
 </div>
 
