@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=0">
+<style>
+  
+  body {
+    background-color: #070D0C;
+    color: white;
+  }
+
+  a:link {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+  }
+  a:visited {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+  }
+  button {
+    display: inline;
+    background-color: #000000;
+    color: #ff0000;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+    padding-inline: 5px;
+    line-height: 40px;
+    font-size: 2em;
+  }
+  #Butt {
+    font-weight: bold;
+  }
+  td.source {
+    font-size: 1em;
+  }
+  .hidden-link {
+    display: none;
+    
+  }
+  .hide {
+    display: none;
+  }
+  @media only screen and (max-width: 800px) {
+    td.text {
+      max-width: 600px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      text-align: start;
+      word-break: normal;
+      font-size: 0.5em;
+      vertical-align: top;
+    }
+    td.spell {
+      overflow: hidden;
+      text-align: start;
+      font-size: 0.5em;
+    }
+    p.text {
+      overflow: hidden;
+      text-align: bottom;
+      font-size: 2.5em;
+    }
+  }
+</style>
+<script>
+  if (window.self !== window.top) {
+    // The page is in an iframe
+    // Add code here to prevent the main HTML file from being opened again
+    
+} else {
+    // The page is not in an iframe
+    // Add code here to allow the main HTML file to be opened
+
+  window.onload = function() {
+    document.getElementById('Butt').innerHTML = 'Show All';
+}
+
+  function toggleVisibility() {
+    var links = document.querySelectorAll(".hidden-link");
+    for (var i = 0; i < links.length; i++) {
+      if (links[i].style.display === "table-cell") {
+        links[i].style.display = "none";
+      } else {
+        links[i].style.display = "table-cell";
+      }
+    }
+    
+    var buttonText = document.querySelector("button").textContent;
+    if (buttonText === "Show Best") {
+      document.querySelector("button").textContent = "Show All";
+    } else {
+      document.querySelector("button").textContent = "Show Best";
+    }
+  }
+}
+</script>
+</head>
+
+<body>
+  <div class="table-container" id="myElement">
+  <table id="start">
+    <tr>
+    <button id="Butt" onclick="toggleVisibility()">x</button>
+</tr>
+    <tr><td></td>
+<a title="Divination sorc"><h2>Divination sorc:</h2>    
+        ps. Components F/DF or M/DF, have either Focus/Divine Focus or 
+        Material component/Divine focus component, not both (select one - Arcane/Divine).
+         </tr>
+    <tr>
+      <tr>
+        <td class="source"><a title="Level-1">Cantrip</a></td>
+        </tr>
+      <td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/d/detect-fiendish-presence">Detect Fiendish Presence</a></td>
+      <td class="text"></td>
+      <td class="text">This spell functions like detect evil, except that it detects only outsiders with the evil subtype, as well as the lingering effects caused by their gifts,<br> presence, and spells. It can also detect clerics and paladins of fiendish deities, including Asmodeus, archdevils, daemonic harbingers, and demon lords.</td>
+    </tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/d/detect-poison">Detect Poison</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">Detects <a href="https://www.d20pfsrd.com/gamemastering/afflictions/poison">poison</a> in one creature or small object.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> --> 
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/r/read-magic">Read Magic</a></td>
+<td class="text"> </td>
+<td class="text">Read <a class="magic-item" href="https://www.d20pfsrd.com/magic-items/scrolls">scrolls</a> and spellbooks.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+</td>
+
+<tr>
+<td class="source"><a title="Level-1">Level-1</a></td>
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/a/anticipate-peril">Anticipate Peril</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">Target gains a bonus on one <a href="https://www.d20pfsrd.com/gamemastering/combat#TOC-Initiative">initiative</a> check.</td>
+<!-- <td class="source"><a title="PZO1117" href="http://www.amazon.com/gp/product/1601252994/" target="_blank" rel="nofollow noopener">PZO1117</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/c/comprehend-languages">Comprehend Languages</a></td>
+<td class="text"> </td>
+<td class="text">You understand all spoken and written languages.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/c/cultural-adaptation">Cultural Adaptation</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">Adapt to fit the local culture.</td>
+<!-- <td class="source"><a title="PZO1134" href="http://www.opengamingstore.com/collections/all-products/products/ultimate-intrigue-pathfinder-rpg" target="_blank" rel="nofollow noopener">PZO1134</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/d/detect-charm">Detect Charm</a></td>
+<td class="text"></td>
+<td class="text">As <a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/d/detect-magic">detect magic</a>, except you immediately detect the strength and location of each <a href="https://www.d20pfsrd.com/magic#TOC-Enchantment-Charm">charm</a>, <a href="https://www.d20pfsrd.com/magic#TOC-Enchantment-Compulsion">compulsion</a>, and possession aura on all creatures in the area.</td>
+<!-- <td class="source"><a title="PC:ASL" href="http://www.amazon.com/gp/product/1601252056/" target="_blank" rel="nofollow noopener">PC:ASL</a></td>-->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/d/detect-metal">Detect Metal</a></td>
+<td class="text"> </td>
+<td class="text">You detect any metal objects or creatures within a 60-foot cone.</td>
+<!-- <td class="source"><a title="PZO9448" href="http://www.amazon.com/gp/product/1601256663/" target="_blank" rel="nofollow noopener">PZO9448</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/d/detect-radiation">Detect Radiation</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">You detect radiation in the surrounding area.</td>
+<!-- <td class="source"><a title="PCS:TG" href="http://www.amazon.com/gp/product/1601256728/" target="_blank" rel="nofollow noopener">PCS:TG</a></td>-->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/d/detect-secret-doors">Detect Secret Doors</a></td>
+<td class="text"> </td>
+<td class="text">Reveals hidden doors within 60 ft.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/d/detect-undead">Detect Undead</a></td>
+<td class="text"> </td>
+<td class="text">Reveals <a href="https://www.d20pfsrd.com/bestiary/rules-for-monsters/creature-types#TOC-Undead">undead</a> within 60 ft.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/d/discern-next-of-kin">Discern Next of Kin</a></td>
+<td class="text"> </td>
+<td class="text">Read the target&#8217;s mind to learn about its family.</td>
+<!-- <td class="source"><a title="PZO1129" href="http://www.amazon.com/gp/product/160125671X/" target="_blank" rel="nofollow noopener">PZO1129</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/h/heightened-awareness">Heightened Awareness</a></td>
+<td class="text"> </td>
+<td class="text">Your recall and ability to process information improve.</td>
+<!-- <td class="source"><a title="PZO1129" href="http://www.amazon.com/gp/product/160125671X/" target="_blank" rel="nofollow noopener">PZO1129</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/i/identify">Identify</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">Gives +10 bonus to identify magic items.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/l/linked-legacy">Linked Legacy</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">This spell helps build community and ensure a shared vision for the future.</td>
+<!-- <td class="source"><a title="PZO9465" href="http://www.opengamingstore.com/products/pathfinder-player-companion-arcane-anthology" target="_blank" rel="nofollow noopener">PZO9465</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/m/mindlink/">Mindlink</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">Communicate a great deal of information in an instant.</td>
+<!-- <td class="source"><a title="PRG:OA" href="http://www.amazon.com/gp/product/1601257627/" target="_blank" rel="nofollow noopener">PRG:OA</a></td>-->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/s/see-alignment">See Alignment</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">Pick an <a href="https://www.d20pfsrd.com/basics-ability-scores/glossary#TOC-Alignment">alignment</a>; in your sight, creatures and items with that <a href="https://www.d20pfsrd.com/basics-ability-scores/glossary#TOC-Alignment">alignment</a> emit a ghostly radiance.</td>
+<!-- <td class="source"><a title="PZO1118" href="http://www.amazon.com/gp/product/1601253591/" target="_blank" rel="nofollow noopener">PZO1118</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/t/technomancy">Technomancy</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">As <a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/d/detect-magic">detect magic</a>, except detects the presence of technological objects instead of magical objects and grants the <a href="https://www.d20pfsrd.com/feats/general-feats/technologist">Technologist</a> feat for attempting <a href="https://www.d20pfsrd.com/skills/knowledge">Knowledge</a> (engineering) checks to identify the properties of technological items. If you already possess this feat, you gain a +10 bonus on <a href="https://www.d20pfsrd.com/skills/knowledge">Knowledge</a> (engineering) checks to identify item properties.</td>
+<!-- <td class="source"><a title="TG" href="http://www.amazon.com/gp/product/1601256728/" target="_blank" rel="nofollow noopener">TG</a></td>-->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/t/true-strike">True Strike</a></td>
+<td class="text"> </td>
+<td class="text">+20 on your next <a href="https://www.d20pfsrd.com/gamemastering/combat#TOC-Attack-Roll">attack roll</a>.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+
+
+
+<tr>
+<td class="source"><a title="Level-2">Level-2</a></td><br>
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/a/anticipate-thoughts/">Anticipate Thoughts</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">Gain increasing bonuses to AC and on attack rolls and damage rolls against one creature.</td>
+<!-- <td class="source"><a title="PRG:OA" href="http://www.amazon.com/gp/product/1601257627/" target="_blank" rel="nofollow noopener">PRG:OA</a></td>-->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/b/blood-transcription">Blood Transcription</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link"><b>Wizard Only.</b> Learn a spell from the target&#8217;s blood.</td>
+<!-- <td class="source"><a title="PZO1117" href="http://www.amazon.com/gp/product/1601252994/" target="_blank" rel="nofollow noopener">PZO1117</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/c/carrion-compass">Carrion Compass</a></td>
+<td class="text"> </td>
+<td class="text">You are lead to an <a href="https://www.d20pfsrd.com/bestiary/rules-for-monsters/creature-types#TOC-Undead">undead</a> creature&#8217;s most recent controller or the cause of the creature&#8217;s undeath.</td>
+<!-- <td class="source"><a title="PZO9444" href="http://www.amazon.com/gp/product/1601256043/" target="_blank" rel="nofollow noopener">PZO9444</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/c/commune-with-birds">Commune with Birds</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">You can ask birds a question.</td>
+<!-- <td class="source"><a title="PZO1121" href="http://www.amazon.com/gp/product/1601253907/" target="_blank" rel="nofollow noopener">PZO1121</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/c/create-treasure-map">Create Treasure Map</a></td>
+<td class="text hidden-link">M</td>
+<td class="text hidden-link">Creates treasure map out of a creature’s corpse.</td>
+<!-- <td class="source"><a title="PZO1115" href="http://www.amazon.com/gp/product/1601252463/" target="_blank" rel="nofollow noopener">PZO1115</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/d/detect-magic">Detect Magic, Greater</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/d/detect-magic">As detect magic, but learn more information.</a></td>
+<!-- <td class="source"><a title="PZO1134" href="http://www.opengamingstore.com/collections/all-products/products/ultimate-intrigue-pathfinder-rpg" target="_blank" rel="nofollow noopener">PZO1134</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/d/detect-thoughts">Detect Thoughts</a></td>
+<td class="text"> </td>
+<td class="text">Allows “listening” to surface thoughts.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/d/determine-depth">Determine Depth</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">With a touch, you determine the exact thickness of a wall, ceiling, or other solid barrier.</td>
+<!-- <td class="source"><a title="PZO9430" href="http://www.amazon.com/gp/product/1601255101/" target="_blank" rel="nofollow noopener">PZO9430</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/e/elemental-speech">Elemental Speech</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">Enables you to speak to <a href="https://www.d20pfsrd.com/bestiary/rules-for-monsters/creature-types#TOC-Elemental">elementals</a> and some creatures.</td>
+<!-- <td class="source"><a title="PZO1115" href="http://www.amazon.com/gp/product/1601252463/" target="_blank" rel="nofollow noopener">PZO1115</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/e/embrace-destiny">Embrace Destiny </a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">Roll d20; before end of spell, use roll to replace another d20 roll before the die is rolled.</td>
+<!-- <td class="source">PZO9246</td>-->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/k/know-peerage">Know Peerage</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">Target uses your <a href="https://www.d20pfsrd.com/skills/knowledge">Knowledge</a> (nobility) ranks.</td>
+<!-- <td class="source"><a title="PZO1134" href="http://www.opengamingstore.com/collections/all-products/products/ultimate-intrigue-pathfinder-rpg" target="_blank" rel="nofollow noopener">PZO1134</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/l/locate-object">Locate Object</a></td>
+<td class="text"> </td>
+<td class="text">Senses direction toward object (specific or type).</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/p/psychic-reading/">Psychic Reading</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">Read surface thoughts to learn information about a subject.</td>
+<!-- <td class="source"><a title="PRG:OA" href="http://www.amazon.com/gp/product/1601257627/" target="_blank" rel="nofollow noopener">PRG:OA</a></td>-->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/s/see-invisibility">See Invisibility</a></td>
+<td class="text"> </td>
+<td class="text">Reveals <a href="https://www.d20pfsrd.com/gamemastering/conditions#TOC-Invisible">invisible</a> creatures or objects.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/s/share-language">Share Language</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">Subject understands chosen language.</td>
+<!-- <td class="source"><a title="PZO1115" href="http://www.amazon.com/gp/product/1601252463/" target="_blank" rel="nofollow noopener">PZO1115</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/s/share-memory">Share Memory</a></td>
+<td class="text"> </td>
+<td class="text">Share one memory with the target.</td>
+<!-- <td class="source"><a title="PZO1117" href="http://www.amazon.com/gp/product/1601252994/" target="_blank" rel="nofollow noopener">PZO1117</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/s/spell-gauge">Spell Gauge</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">You learn the spells known or prepared by the target.</td>
+<!-- <td class="source"><a title="PZO9418" href="http://www.amazon.com/gp/product/1601253168/" target="_blank" rel="nofollow noopener">PZO9418</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/t/track-ship">Track Ship</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">Track a ships location and movement with the aid of a nautical chart and a piece of the ship to be tracked.</td>
+<!-- <td class="source"><a title="PZO9422" href="http://www.amazon.com/gp/product/1601254059/" target="_blank" rel="nofollow noopener">PZO9422</a></td> -->
+</tr>
+<tr>
+<td><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/t/trapfinders-focus/">Trapfinders Focus</a></td>
+<td class="text>"></td>
+<td class="text">If you don’t have the <a class="spell" href="https://www.d20pfsrd.com/classes/core-classes/rogue#TOC-Trapfinding">trapfinding</a>
+   class ability, this spell grants you the <a class="spell" href="https://www.d20pfsrd.com/classes/core-classes/rogue#TOC-Trapfinding">trapfinding</a> 
+   ability of a <a class="spell"href="https://www.d20pfsrd.com/classes/core-classes/rogue">rogue</a> of half your character level.</td>
+<!-- <td class="source"><a title="PCS:PSFG" href="http://www.amazon.com/gp/product/1601253052/" target="_blank" rel="nofollow noopener">PCS:PSFG</a></td>-->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/t/twisted-futures">Twisted Futures</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">A creature affected by this spell is unable to benefit from effects that grant the ability to roll multiple times and take the higher result.</td>
+<!-- <td class="source"><a title="PZO9453" href="http://www.amazon.com/gp/product/1601257120/" target="_blank" rel="nofollow noopener">PZO9453</a></td> -->
+</tr>
+
+<tr>
+<td class="source"><a title="Level-3">Level-3</a></td>
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/a/arcane-sight">Arcane Sight</a></td>
+<td class="text"> </td>
+<td class="text">Magical auras become visible to you. Better than detect magic.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/a/aura-sight">Aura Sight</a></td>
+<td class="text"> </td>
+<td class="text">Alignment auras become visible to you. Religion check to detect item's aura.</td>
+<!-- <td class="source"><a title="PZO1129" href="http://www.amazon.com/gp/product/160125671X/" target="_blank" rel="nofollow noopener">PZO1129</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/b/blood-biography">Blood Biography</a></td>
+<td class="text"> </td>
+<td class="text">Learn about a creature with its blood.</td>
+<!-- <td class="source"><a title="PZO1115" href="http://www.amazon.com/gp/product/1601252463/" target="_blank" rel="nofollow noopener">PZO1115</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/c/clairaudience-clairvoyance">Clairaudience/Clairvoyance</a></td>
+<td class="text"> </td>
+<td class="text">Hear or see at a distance for 1 min./level.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/d/detect-anxieties">Detect Anxieties</a></td>
+<td class="text"> </td>
+<td class="text">Learn what makes creatures anxious. Reveals the most pressing current anxiety of any mind in the area. </td>
+<!-- <td class="source"><a title="PZO1134" href="http://www.opengamingstore.com/collections/all-products/products/ultimate-intrigue-pathfinder-rpg" target="_blank" rel="nofollow noopener">PZO1134</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/d/detect-desires">Detect Desires</a></td>
+<td class="text"> </td>
+<td class="text">Learn what creatures desire.</td>
+<!-- <td class="source"><a title="PZO1134" href="http://www.opengamingstore.com/collections/all-products/products/ultimate-intrigue-pathfinder-rpg" target="_blank" rel="nofollow noopener">PZO1134</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/d/detect-mindscape/">Detect Mindscape</a></td>
+<td class="text"> </td>
+<td class="text">Sense the presence and attributes of mindscapes.</td>
+<!-- <td class="source"><a title="PRG:OA" href="http://www.amazon.com/gp/product/1601257627/" target="_blank" rel="nofollow noopener">PRG:OA</a></td>-->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/d/discern-value">Discern Value</a></td>
+<td class="text hidden-link">F</td>
+<td class="text hidden-link">You can quickly analyze the monetary value of objects and identify which are most valuable to an average trader.</td>
+<!-- <td class="source"><a title="PZO9430" href="http://www.amazon.com/gp/product/1601255101/" target="_blank" rel="nofollow noopener">PZO9430</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/f/find-fault">Find Fault</a></td>
+<td class="text"> </td>
+<td class="text">You instantly learn many of the target’s weaknesses,  Knowledge skill check with a result equal to 20 + your caster level.</td>
+<!-- <td class="source"><a title="PZO9465" href="http://www.opengamingstore.com/products/pathfinder-player-companion-arcane-anthology" target="_blank" rel="nofollow noopener">PZO9465</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/h/harrowing">Harrowing</a></td>
+<td class="text hidden-link">F</td>
+<td class="text hidden-link">You use a Harrow deck to tell a fortune for yourself or someone else.</td>
+<!-- <td class="source"><a title="PZO9226" href="http://www.amazon.com/gp/product/1601253605/" target="_blank" rel="nofollow noopener">PZO9226</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/i/insect-scouts">Insect Scouts</a></td>
+<td class="text"> </td>
+<td class="text">This spell summons one or more vermin to investigate a single location or building you can see. <br>The scouts spend 1d6 hours investigating the target location, with no oversight.</td>
+<!-- <td class="source"><a title="PZO9469" href="https://www.amazon.com/gp/product/1601258445/" target="_blank" rel="nofollow noopener">PZO9469</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/l/locate-weakness">Locate Weakness</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">You roll damage twice when you roll damage for a <a href="https://www.d20pfsrd.com/gamemastering/combat#TOC-Critical-Hits">critical hit</a> and take the best damage.</td>
+<!-- <td class="source"><a title="PZO1118" href="http://www.amazon.com/gp/product/1601253591/" target="_blank" rel="nofollow noopener">PZO1118</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/p/pack-empathy">Pack Empathy</a></td>
+<td class="text"> </td>
+<td class="text">Create an empathic bond with allies.</td>
+<!-- <td class="source"><a title="PZO1134" href="http://www.opengamingstore.com/collections/all-products/products/ultimate-intrigue-pathfinder-rpg" target="_blank" rel="nofollow noopener">PZO1134</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/p/perfect-placement">Perfect Placement</a></td>
+<td class="text"> </td>
+<td class="text">Affected creatures gain tactical knowledge and maximize their efficiency on the field of battle.</td>
+<!-- <td class="source"><a title="PZO9465" href="http://www.opengamingstore.com/products/pathfinder-player-companion-arcane-anthology" target="_blank" rel="nofollow noopener">PZO9465</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/p/pierce-disguise">Pierce Disguise</a></td>
+<td class="text"> </td>
+<td class="text">See through low-level magical disguises.</td>
+<!-- <td class="source"><a title="PZO1129" href="http://www.amazon.com/gp/product/160125671X/" target="_blank" rel="nofollow noopener">PZO1129</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/s/see-beyond">See Beyond</a></td>
+<td class="text hidden-link">M</td>
+<td class="text hidden-link">You attune your mind and your sight to the hidden world of spirits.</td>
+<!-- <td class="source"><a title="PZO9472" href="http://amzn.to/2dotgkW" target="_blank" rel="nofollow noopener">PZO9472</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/s/seek-thoughts">Seek Thoughts</a></td>
+<td class="text"> </td>
+<td class="text">Detects thinking creatures’ thoughts within 40ft,1min/lvl.</td>
+<!-- <td class="source"><a title="PZO1115" href="http://www.amazon.com/gp/product/1601252463/" target="_blank" rel="nofollow noopener">PZO1115</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/s/share-language">Share Language, Communal</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">As <a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/s/share-language">share language</a>, but you may divide the duration among creatures touched.</td>
+<!-- <td class="source"><a title="PZO1118" href="http://www.amazon.com/gp/product/1601253591/" target="_blank" rel="nofollow noopener">PZO1118</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/s/spherescry">Spherescry</a></td>
+<td class="text hidden-link">F</td>
+<td class="text hidden-link">Remotely view through spheres that have consumed some portion of the caster&#8217;s body.</td>
+<!-- <td class="source"><a title="PZO9220" href="http://www.amazon.com/gp/product/160125220X/" target="_blank" rel="nofollow noopener">PZO9220</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/s/spirit-bonds">Spirit Bonds</a></td>
+<td class="text hidden-link">M</td>
+<td class="text hidden-link">You know the direction, relative distance to, and condition of target creatures or objects.</td>
+<!-- <td class="source"><a title="PZO9472" href="http://amzn.to/2dotgkW" target="_blank" rel="nofollow noopener">PZO9472</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/t/tongues">Tongues</a></td>
+<td class="text"> </td>
+<td class="text">Speak and understand any language.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/u/unravel-destiny">Unravel Destiny</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">A target suffers penalties to checks depending on how many <a href="https://www.d20pfsrd.com/gamemastering/other-rules/hero-points">hero points</a> it has, and takes damage if it uses them.</td>
+<!-- <td class="source"><a title="PZO1115" href="http://www.amazon.com/gp/product/1601252463/" target="_blank" rel="nofollow noopener">PZO1115</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/v/voluminous-vocabulary">Voluminous Vocabulary</a></td>
+<td class="text"> </td>
+<td class="text">Grant ability to speak, read, and write one or more languages for 8 hours.</td>
+<!-- <td class="source"><a title="PZO1134" href="http://www.opengamingstore.com/collections/all-products/products/ultimate-intrigue-pathfinder-rpg" target="_blank" rel="nofollow noopener">PZO1134</a></td> -->
+</tr>
+
+
+<tr>
+<td class="source"><a title="Level-4">Level-4</a></td> <br>
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/a/akashic-communion">Akashic Communion</a></td>
+<td class="text">M/DF</td>
+<td class="text">Attempt to gain a glimpse of some specific event from the Akashic Record.</td>
+<!-- <td class="source"><a title="PZO9468" href="https://www.amazon.com/gp/product/1601258380/" target="_blank" rel="nofollow noopener">PZO9468</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/a/arcane-eye">Arcane Eye</a></td>
+<td class="text"> </td>
+<td class="text">Invisible floating eye moves 30 ft./round.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/d/detect-scrying">Detect Scrying</a></td>
+<td class="text"> </td>
+<td class="text">Alerts you to magical eavesdropping.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/h/hypercognition/">Hypercognition</a></td>
+<td class="text"> </td>
+<td class="text">Rapidly recall everything on Intelligence, Linguistics or Knowledge checks. insight bonus on the check equal to your caster level (maximum bonus +10).</td>
+<!-- <td class="source"><a title="PRG:OA" href="http://www.amazon.com/gp/product/1601257627/" target="_blank" rel="nofollow noopener">PRG:OA</a></td>-->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/i/insect-spies">Insect Spies</a></td>
+<td class="text"> </td>
+<td class="text">Use magic <a href="https://www.d20pfsrd.com/bestiary/monster-listings/vermin/beetle">beetles</a> as spies.</td>
+<!-- <td class="source"><a title="PZO1134" href="http://www.opengamingstore.com/collections/all-products/products/ultimate-intrigue-pathfinder-rpg" target="_blank" rel="nofollow noopener">PZO1134</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/l/locate-creature">Locate Creature</a></td>
+<td class="text"> </td>
+<td class="text">Indicates direction to familiar creature.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/m/meticulous-match">Meticulous Match</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">Determine if two things are identical.</td>
+<!-- <td class="source"><a title="PZO1134" href="http://www.opengamingstore.com/collections/all-products/products/ultimate-intrigue-pathfinder-rpg" target="_blank" rel="nofollow noopener">PZO1134</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/m/mnemonic-siphon/">Mnemonic Siphon</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">Steal the spells of a creature carrying the affected object</td>
+<!-- <td class="source">PPC:BotA</td>-->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/n/named-bullet">Named Bullet</a></td>
+<td class="text"></td>
+<td class="text">Imbues ammunition with accuracy against a specific creature type.</td>
+<!-- <td class="source"><a title="PZO1118" href="http://www.amazon.com/gp/product/1601253591/" target="_blank" rel="nofollow noopener">PZO1118</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/s/scrying">Scrying</a></td>
+<td class="text hidden-link">F</td>
+<td class="text hidden-link">Spies on subject from a distance.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/s/share-senses">Share Senses</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">See/hear/smell what your familiar is.</td>
+<!-- <td class="source"><a title="PZO1115" href="http://www.amazon.com/gp/product/1601252463/" target="_blank" rel="nofollow noopener">PZO1115</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/s/symbol-of-revelation">Symbol of Revelation</a></td>
+<td class="text hidden-link">M</td>
+<td class="text hidden-link">Triggered symbol reveals illusions.</td>
+<!-- <td class="source"><a title="PZO1117" href="http://www.amazon.com/gp/product/1601252994/" target="_blank" rel="nofollow noopener">PZO1117</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/t/tongues">Tongues, Communal</a></td>
+<td class="text"> </td>
+<td class="text">As <a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/t/tongues">tongues</a>, but you may divide the duration among creatures touched.</td>
+<!-- <td class="source"><a title="PZO1118" href="http://www.amazon.com/gp/product/1601253591/" target="_blank" rel="nofollow noopener">PZO1118</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/v/vicarious-view">Vicarious View</a></td>
+<td class="text"> </td>
+<td class="text">Plant a scrying sensor that you can use to spy on a creature, object, or location.</td>
+<!-- <td class="source"><a title="PZO1134" href="http://www.opengamingstore.com/collections/all-products/products/ultimate-intrigue-pathfinder-rpg" target="_blank" rel="nofollow noopener">PZO1134</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/w/watchful-animal">Watchful Animal</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">You place a scrying sensor on your <a href="https://www.d20pfsrd.com/classes/core-classes/druid/animal-companions">animal companion</a> or <a href="https://www.d20pfsrd.com/bestiary/monster-listings/animals/familiar">familiar</a>.</td>
+<!-- <td class="source"><a title="PZO9469" href="https://www.amazon.com/gp/product/1601258445/" target="_blank" rel="nofollow noopener">PZO9469</a></td> -->
+</tr>
+
+
+
+<tr>
+<td class="source"><a title="Level-5">Level-5</a></td> <br>
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/c/contact-other-plane">Contact Other Plane</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">Lets you ask question of <a href="https://www.d20pfsrd.com/bestiary/rules-for-monsters/creature-types#TOC-Extraplanar">extraplanar</a> entity.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/f/foretell-failure">Foretell Failure</a></td>
+<td class="text"> </td>
+<td class="text">** You cast this spell immediately before taking an action that requires a d20 roll, granting you an ability to change your action<br> if it would fail on a roll of 9 or less on the roll. **</td>
+<!-- <td class="source"><a title="PZO9465" href="http://www.opengamingstore.com/products/pathfinder-player-companion-arcane-anthology" target="_blank" rel="nofollow noopener">PZO9465</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/g/glimpse-of-truth">Glimpse of Truth</a></td>
+<td class="text"> </td>
+<td class="text">Gain <a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/t/true-seeing">true seeing</a> for 1 round.</td>
+<!-- <td class="source"><a title="PZO1134" href="http://www.opengamingstore.com/collections/all-products/products/ultimate-intrigue-pathfinder-rpg" target="_blank" rel="nofollow noopener">PZO1134</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/l/locate-gate">Locate Gate</a></td>
+<td class="text"> </td>
+<td class="text">Find a nearby magical portal.</td>
+<!-- <td class="source"><a title="PZO1135" href="http://amzn.to/2chJpnf" target="_blank" rel="nofollow noopener">PZO1135</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/m/mask-from-divination">Mask From Divination</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">You lock a mask on the target’s face, after which it adheres tightly to the target for the spell’s duration and cannot be removed by physical force.</td>
+<!-- <td class="source"><a title="PZO9465" href="http://www.opengamingstore.com/products/pathfinder-player-companion-arcane-anthology" target="_blank" rel="nofollow noopener">PZO9465</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/m/mind-probe/">Mind Probe</a></td>
+<td class="text"> </td>
+<td class="text">Learn answers from a subject’s memories.</td>
+<!-- <td class="source"><a title="PRG:OA" href="http://www.amazon.com/gp/product/1601257627/" target="_blank" rel="nofollow noopener">PRG:OA</a></td>-->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/p/prying-eyes">Prying Eyes</a></td>
+<td class="text"> </td>
+<td class="text">1d4 + 1/level floating eyes scout for you.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/s/symbol-of-scrying">Symbol of Scrying</a></td>
+<td class="text">M</td>
+<td class="text">Triggered rune activates <a href="https://www.d20pfsrd.com/magic#TOC-Divination-Scrying">scrying</a> sensor.</td>
+<!-- <td class="source"><a title="PZO1117" href="http://www.amazon.com/gp/product/1601252994/" target="_blank" rel="nofollow noopener">PZO1117</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/t/telepathic-bond">Telepathic Bond</a></td>
+<td class="text"> </td>
+<td class="text">Link lets allies communicate.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/t/thoughtsense/">Thoughtsense</a></td>
+<td class="text"> </td>
+<td class="text">Automatically detect nearby conscious creatures.</td>
+<!-- <td class="source"><a title="PRG:OA" href="http://www.amazon.com/gp/product/1601257627/" target="_blank" rel="nofollow noopener">PRG:OA</a></td>-->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/t/trace-teleport">Trace Teleport</a></td>
+<td class="text"> </td>
+<td class="text">Determine where and when <a href="https://www.d20pfsrd.com/magic#TOC-Conjuration-Teleportation">teleportation</a> occurred, and glimpse the origin or destination.</td>
+<!-- <td class="source"><a title="PZO1134" href="http://www.opengamingstore.com/collections/all-products/products/ultimate-intrigue-pathfinder-rpg" target="_blank" rel="nofollow noopener">PZO1134</a></td> -->
+</tr>
+
+
+
+
+<tr>
+ <td class="source"><a title="Level-6">Level-6</a></td><br>
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/a/analyze-dweomer">Analyze Dweomer</a></td>
+<td class="text hidden-link">F</td>
+<td class="text hidden-link">You learn its functions (including any curse effects), how to activate its functions and how many charges are left</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/b/battlemind-link">Battlemind Link</a></td>
+<td class="text hidden-link"> </td>
+<td class="text hidden-link">You and an ally gain attack and AC bonuses.</td>
+<!-- <td class="source"><a title="PZO1117" href="http://www.amazon.com/gp/product/1601252994/" target="_blank" rel="nofollow noopener">PZO1117</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/d/dream-scan/">Dream Scan</a></td>
+<td class="text"> </td>
+<td class="text">Read a dreaming creature’s thoughts.</td>
+<!-- <td class="source"><a title="PRG:OA" href="http://www.amazon.com/gp/product/1601257627/" target="_blank" rel="nofollow noopener">PRG:OA</a></td>-->
+</tr>
+<tr>
+<td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/l/legend-lore">Legend Lore</a></td>
+<td class="text hidden-link">MF</td>
+<td class="text hidden-link">Lets you learn tales about a person, place, or thing.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/n/named-bullet">Named Bullet, Greater</a></td>
+<td class="text"> </td>
+<td class="text">As <a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/n/named-bullet">**named bullet</a>, but deals 2 points of damage for every <a href="https://www.d20pfsrd.com/magic#TOC-Caster-Level">caster level**</a>.</td>
+<!-- <td class="source"><a title="PZO1118" href="http://www.amazon.com/gp/product/1601253591/" target="_blank" rel="nofollow noopener">PZO1118</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/t/telepathy">Telepathy</a></td>
+<td class="text"> </td>
+<td class="text">Communicate mentally with creatures within 100 ft.</td>
+<!-- <td class="source"><a title="PZO1132" href="http://www.amazon.com/gp/product/1601257627/" target="_blank" rel="nofollow noopener">PZO1132</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/t/true-seeing">True Seeing</a></td>
+<td class="text">M</td>
+<td class="text">Lets you see all things as they really are.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+
+
+
+
+<tr>
+<td class="source"><a title="Level-7">Level-7</a></td><br>
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/a/arcane-sight">Arcane Sight, Greater</a></td>
+<td class="text"> </td>
+<td class="text">As <a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/a/arcane-sight">arcane sight</a>, but also reveals magic effects on creatures and objects.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/i/insect-spies">Insect Spies, Greater</a></td>
+<td class="text"> </td>
+<td class="text">Use magic <a href="https://www.d20pfsrd.com/bestiary/monster-listings/vermin/beetle">beetles</a> as spies and also share their senses.</td>
+<!-- <td class="source"><a title="PZO1134" href="http://www.opengamingstore.com/collections/all-products/products/ultimate-intrigue-pathfinder-rpg" target="_blank" rel="nofollow noopener">PZO1134</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/r/retrocognition/">Retrocognition</a></td>
+<td class="text"> </td>
+<td class="text">Gain psychic impressions from past events in current location. Level 13th–15th 1 week per minute</td>
+<!-- <td class="source"><a title="PRG:OA" href="http://www.amazon.com/gp/product/1601257627/" target="_blank" rel="nofollow noopener">PRG:OA</a></td>-->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/s/scrying">Scrying, Greater</a></td>
+<td class="text"> </td>
+<td class="text">As <a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/s/scrying">scrying</a>, but faster and longer.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/v/vision">Vision</a></td>
+<td class="text">M</td>
+<td class="text">As <a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/v/vision">legend lore</a>, but quicker.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+
+
+
+
+<tr>
+<td class="source"><a title="Level-8">Level-8</a></td><br>
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/d/discern-location">Discern Location</a></td>
+<td class="text"> </td>
+<td class="text">Reveals exact location of creature or object.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/m/moment-of-prescience">Moment of Prescience</a></td>
+<td class="text"> </td>
+<td class="text">**You gain +1/level <a href="https://www.d20pfsrd.com/basics-ability-scores/glossary#TOC-Insight-Bonus">insight bonus</a> on single <a href="https://www.d20pfsrd.com/gamemastering/combat#TOC-Attack-Roll">attack roll</a>, check, or save.**</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/p/prediction-of-failure">Prediction of Failure</a></td>
+<td class="text"> </td>
+<td class="text">**Target is permanently <a href="https://www.d20pfsrd.com/gamemastering/conditions#TOC-Shaken">shaken</a> and <a href="https://www.d20pfsrd.com/gamemastering/conditions#TOC-Sickened">sickened</a>, and may gain a random spellblight.**</td>
+<!-- <td class="source"><a title="PZO1117" href="http://www.amazon.com/gp/product/1601252994/" target="_blank" rel="nofollow noopener">PZO1117</a></td> -->
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/p/prying-eyes">Prying Eyes, Greater</a></td>
+<td class="text"> </td>
+<td class="text">As <a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/p/prying-eyes">prying eyes</a>, with Perception modifier is +25 instead of +15, but eyes have <a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/t/true-seeing">true seeing</a>.</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+
+
+
+
+<tr>
+<td class="source"><a title="Level-9">Level-9</a></td><br>
+</tr>
+<tr>
+<td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/f/foresight">Foresight</a></td>
+<td class="text"> </td>
+<td class="text">“Sixth sense”  You are never surprised or flat-footed. Gives you a +2 insight bonus to AC and on Reflex saves</td>
+<!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+</table></div>
+</body>
