@@ -29,7 +29,6 @@
 		  }
 		.overlay {
             cursor: pointer;
-			
 			display: all;
 			width: 100%;
 			height: 100%;
@@ -77,12 +76,29 @@
 			flex: flex;
 			height: 100%;
 			width: 100%;
-			border: 10px;
+			border: 10px solid green;
 			border-color: rgba(19, 19, 19, 0.795);
 			background-color: rgba(19, 19, 19, 0.795);
 			font-size:small;
 
 		}
+		.box {
+
+			border: 2px solid #de0d0d;
+			position: relative;
+			transform: translate(0);
+			transform-style: preserve-3d;
+		  }
+		  .shadow:before {
+			content:"";
+			box-shadow:"" ;
+			position: absolute;
+			inset: 0;
+			transform: translate3d(-5,10,-1px);
+			background: conic-gradient(from 90deg at 40% -25%, #ffd700, #f79d03, #ee6907, #e6390a, #de0d0d, #d61039, #cf1261, #c71585, #cf1261, #d61039, #de0d0d, #ee6907, #f79d03, #ffd700, #ffd700, #ffd700);
+			filter: blur(10px);
+			clip-path: polygon(-100vmax -100vmax,100vmax -100vmax,100vmax 100vmax,-100vmax 100vmax,-100vmax -100vmax,0 0,0 100%,100% 100%,100% 0,0 0);
+		  }
 
 	
 	</style>
@@ -95,7 +111,7 @@
 	<h3><center>
 
 	
-		<div class="links">
+		<div class="box shadow links">
 			<a href="https://aonprd.com/Spells.aspx?Class=Adept#ctl00_MainContent_DataListTypes" id="scroll-to-iframe" target="myFrame" class="link">Adept</a>
 			<a href="https://aonprd.com/Spells.aspx?Class=Alchemist#ctl00_MainContent_DataListTypes" target="myFrame" class="link">Alchemist</a>
 			<a href="https://aonprd.com/Spells.aspx?Class=Antipaladin#ctl00_MainContent_DataListTypes" target="myFrame" class="link">Antipaladin</a>
@@ -132,7 +148,7 @@
 		</div>
 	
 <div>	<center>
-    <iframe src="Divi.html#start" width="100%" height="800" name="myFrame">
+    <iframe class="box shadow" src="Divi.html#start" width="100%" height="800" name="myFrame" ">
 	
     </iframe></center>
 
