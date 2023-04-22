@@ -22,12 +22,12 @@
         margin-top: 0;
         margin-bottom: 0;
         background-color: rgb(0, 0, 0);
-        background-image: url("background dragon2.png");
+        background-image: url("dragonyang gray.jpg");
         height: fit-content;
         width: fit-content;
         background-attachment: fixed;
         background-position: center;
-        background-repeat: repeat;
+        background-repeat:space;
 
         justify-content: center;
         align-items: center;
@@ -59,7 +59,7 @@
 		}
 
 		.link:hover{
-			background-color: hwb(0 0% 0% / 0.384);
+			background-color: hwb(0 100% 0%);
 			border-radius: 8px;
 			transition: background-color 0.3s ease-in-out;
 			padding-inline: 0px;
@@ -90,12 +90,10 @@
 
 
         }
-       
-
         .bgimg-1 {
           background-image:url("bgold.jpg");
           background-repeat: no-repeat;
-          background-position:center;
+          background-position:right;
           background-size:cover;
           background-clip: padding-box;
           border: 2px groove #de0d0d;
@@ -103,9 +101,9 @@
           border-radius: 8px;
           clip-path: inset(0% 0% 0% 0% round var(--border-radius));
           width: 100%;
-          height: 300px;
+          height: 400px;
         }
-       .bgimg-2 {
+        .bgimg-2 {
           background-image: url("mordgola.jpg");
           background-repeat: no-repeat;
           background-position:right;
@@ -122,20 +120,7 @@
         .bgimg-3 {
           background-image: url("TS_1624027005.png");
           background-repeat: no-repeat;
-          background-position:center;
-          background-size:cover;
-          background-clip: padding-box;
-          border: 2px groove #491b00bb;
-          border-style: inset;
-          border-radius: 100px;
-          clip-path: inset(0% 0% 0% 0% round var(--border-radius));
-          width: 100%;
-          height: 300px;
-        }
-        .bgimg-4 {
-          background-image: url("bg2.png");
-          background-repeat: no-repeat;
-          background-position:center;
+          background-position:right;
           background-size:cover;
           background-clip: padding-box;
           border: 2px groove #de0d0d;
@@ -143,26 +128,40 @@
           border-radius: 8px;
           clip-path: inset(0% 0% 0% 0% round var(--border-radius));
           width: 100%;
-          height: 300px;
+          height: 400px;
+        }
+        .bgimg-4 {
+          background-image: url("bg2.png");
+          background-repeat: no-repeat;
+          background-position:right;
+          background-size:cover;
+          background-clip: padding-box;
+          border: 2px groove #de0d0d;
+          border-style: inset;
+          border-radius: 8px;
+          clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+          width: 100%;
+          height: 400px;
         }
         .textibox {
           background-image: url("papyrus.jpg");
-          background-color: #000000e3;
           background-repeat: no-repeat;
-          background-position:center;
+          background-position:right;
           background-size:cover;
           background-clip: padding-box;
-          border: 0px groove #de0d0d;
+          border: 2px groove #de0d0d;
           border-style: inset;
-          border-radius: 1px;
+          border-radius: 8px;
           clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+          width: 120%;
+          height: 400px;
         }
         nav {
-          position: fixed;
-          top: 50%;
+    
+          top: 0;
           left: 0;
           transform: translateY(-50%);
-          z-index: 999;
+          z-index: 0.8;
         }
         
         ul {
@@ -191,12 +190,13 @@
           background-color: rgba(0, 0, 0, 0.308);
         }
 
-.texti {
-  width:fit-content;
-  color: #ffffff;
-  text-shadow: 1px 0px 2px rgb(197, 0, 0);
-  background-color: #00000000; /* specify a background color to ensure readability */
-}
+        .texti {
+        height:calc(100% - 50px);
+        width:fit-content;
+        color: #ffffff;
+        text-shadow: 1px 0px 2px rgb(197, 0, 0);
+        background-color: #00000000; /* specify a background color to ensure readability */
+        }
 /*
 #yellow {
   font-size: 30px;
@@ -287,35 +287,31 @@ body {
     </style>
 
 <body>
-  <h3><p id="texti">Jump to:</p>
+  <nav><p id="texti">Jump to:</p>
     <a href="#Mordia">Mordia</a>
     <a href="#Village">Bleakburn</a>
     <a href="#Sutekh">Sutekh</a>
-    <a href="#Gods">Gods</a></h3>
+    <a href="#Gods">Gods</a></nav>
 
-    
+   
  <div class="texti">
-
-      <h1><p class="inner_text_shadow">World of Mordia *work in progress*</h1>  <h3>
+  <div class="bgimg-4"></div>
+      <h1><p class="inner_text_shadow">World of Mordia <br>*work in progress*</h1>  
         <div >
-        <p>Mordia is located direct east of Katapesh coast line, Between Qadira and Katapesh, Amidst of the Obari Ocean. shows the spot where this Island was found by the adventurers. </p>
+        <p>Mordia is located direct east of Katapesh coast line, Between Qadira and Katapesh, Amidst of the Obari Ocean... </p>
         <p></div>
           <br />
-          <div class="bgimg-3"></div>
+          <div class="bgimg-2"></div>
     <h2><p id="Mordia">Mordia, First Day - the Disaster.</p></h2>
-    <p class="textibox">Katapesh: The yellow-sailed ships from the Katapeshi city of Okeno are the most well-known and feared agents of the slave trade on the Inner Sea. Okeno originally
+    <p><i>Katapesh: The yellow-sailed ships from the Katapeshi city of Okeno are the most well-known and feared agents of the slave trade on the Inner Sea. Okeno originally
     began as a convenient spot for pirates to stop by to collect water and provisions without relying on the ports of the mainland nations. Keleshite Captain
     Xiren Bhey is the current leader of Okeno Slavers. He arrived in Okeno more than ten years ago and gained the reputation of a ruthless slaver. Captain Xiren
     Bhey (aka Stanley Pike) killed the leader of Okeno Slavers in a duel and established himself as the new leader. He captains the galley Undertow.
-    </p>
+  </i></p>
+    <div class="bgimg-3"></div>
     <p>Undertow sank in the shoreline when it was heading to sell slaves to Blackmouth village for the Blessed Kingdom.</p>
     <p><i>You remember being on a ship for a while and wondering where and who you are. No one remembers their names. Some weird fog covers the air, until suddenly you hear the bottom of the ship screeching and after the crash upon some stones, the ship went over the rocky coral reef and rose on top of it. Your ship sank because the captain could no longer remember where the reefs were on the shore. The ship sank next to a river mouth. Your ship must have been carrying resources because the flag had a gold coin on hand.  The beaches are also quite deep. The adventurers managed to get off the ship, alive. You swim ashore and watch as the ship continues to sink offshore...</i></p>
-    <div class="bgimg-1"></div>
-    <div class="bgimg-2"></div>
-   
-    <div class="bgimg-4"></div>
- </p>
-<h3>
+
 
 
     </p>
@@ -323,19 +319,19 @@ body {
       <br />
   <h2>
     <p id="Sutekh">Sutekh City
-    
+      <div class="bgimg-1"></div></h2>
     City established in the Valley of Sand next to the inner sea of Mordia. Sutekh was captured by Bata's forces some years ago. Since then, Bata has lead the city with his evil minions - 
        ruling with an iron fist. First adventurers that arrived there were hauling a mysterious artifact for Bata. City council has been plotting the demice
        of Bata. The party of people with help of Mantis Guild in the city is planning to overthrow the unrightful tyrant.  Their arrival started a series of events
        leading to Bata using Artifacts only known to him to free his mother from her higher domain. Now Bata's mother is free in Mordia, and the story continues...</p>
-      </p></h2>
+      </p>
 
      
- <h1></p>
-    </p><h3>
-    <p>Important people</p></h1>
+ <h2></p>
+    </p>
+    <p>Important people</p></h2>
             
-    </p></h3>
+    </p>
     <p>Lady Elspeth von Carstein - Human noble - Trading Company: Lady Elspeth comes from a wealthy and influential family that has long held a significant position in the city's political scene. She is known for her sharp intellect, political savvy, and unwavering dedication to the city's well-being. She believes the city's prosperity depends on strong trade relationships with neighboring kingdoms and works constantly to improve these relationships. Lady Elspeth is often seen dressed in the latest fashion trends and behaves in a regal manner. - burned down a rival clothing merchant's warehouse
     
     </p>
@@ -375,7 +371,7 @@ body {
     <p>Will - The current tavern keep, Axel Willis "Will" This is a big guy, pure barbaric muscle. Wielding a huge
       Earthbreaker. Lightly armored, currently running a tavern.
   
-      <p>
+      <p>    
       <h2><p id="Gods">☥ Gods of Mordia ☥</h2></p>
       In addition to following Gods, island of Mordia Campaign you can use all gods from Pathfinder 1E world. And then some. <br><br />
       Mordia worshipped Gods: <br>
@@ -419,7 +415,7 @@ body {
       and will go to great lengths to thwart their plans. Ealdthryn's followers are also sworn enemies of any who seek to use knowledge for personal gain or to subjugate
       others.<br><br><br />
     
-      <h1><p id="Races">Races</p></h1>
+      <h2><p id="Races">Races</p></h2>
       <p>Filth Oread (6 RP)
     </p><p>Bite attack: Filth oread teeth grow rapidly, their teeth carry a disease - increase by level
     </p><p>Random Oread Starting Ages
