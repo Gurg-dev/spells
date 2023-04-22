@@ -10,31 +10,55 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
     <style>
+      html {
+        height: 100%;
+        width: 100%;
+        background-color: rgb(0, 25, 165);
+        text-align:center;
+        margin
 
+}
+      body, html {
+        margin: 0 50px;
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        background-image: url("background dragon2.png");
+        height: fit-content;
+        width: fit-content;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: repeat;
+
+        justify-content: center;
+        align-items: center;
+        display: all;
+        z-index: 0.9;
         
-    body{
+      }
+
+
+
+    /*body,html{
         font-family: 'Mukta', sans-serif;
-        background-color: #070D0C;
+        background-color: #0000005b;
+        background-repeat:repeat;
         scrollbar-color: #250047;
         color: #ff0000c9;
+        height:"100%";
+        scroll-behavior: smooth;
         }
         #yellow {
             font-size: 30px;
             color: yellow;
         }
-        .box {
-			content:"";
-			background-color: rgba(0, 12, 0, 0.952);
-			box-shadow:"" ;
-			border: 3px solid #de0d0d;
-			border-style: inset;
-			position: relative;
-			transform: translate(0);
-			transform-style: preserve-3d;
-			border-radius: 8px;
-			clip-path: inset(0% 0% 0% 0% round var(--border-radius));
-        }
-        .shadow:before {
+  
+        }*/
+      .box {
+      content:"";
+      }
+      .shadow:before {
 			content:"";
 			box-shadow:"" ;
 			position: absolute;
@@ -45,11 +69,9 @@
 			clip-path: polygon(-100vmax -100vmax,100vmax -100vmax,100vmax 100vmax,-100vmax 100vmax,-100vmax -100vmax,0 0,0 100%,100% 100%,100% 0,0 0);
 		}
 
-        a:link {
-			color: #fff;
-			text-decoration: none;
-		  }
-        .link {
+
+    .link {
+      
 			color: #fff;
 			font-size:larger;
 			border-radius: 8px;
@@ -63,92 +85,213 @@
 			padding-inline: 0px;
 
 		}
-		  div {
-			word-spacing:2dvw ;
-		  }
+
+    
         h1 {
-        font-size: 30px;
+
+        padding: 0;
+        font-size: 35px;
         letter-spacing: 1px;
+
+
         }
         h2 {
-        font-size: 20px;
+
+        padding: 0;
+        font-size: 25px;
         letter-spacing: 1px;
+
         }
         h3 {
-        font-size: 16px;
+
+        padding: 0;
+        font-size: 20px;
         letter-spacing: 1px;
+
+
         }
-        .parallax {
-        perspective: 10px;
-        height: 100vh;
-        overflow-x: hidden;
-        overflow-y: auto;
-        }
+       
+
         .bgimg-1 {
-        background-image: url("bg.jpg");
-        height: 650px;
-        position: relative;
-        background-position:top;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border: 2px groove #de0d0d;
-		    border-style: inset;
-        border-radius: 8px;
-		clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+          background-image:url("bgold.jpg");
+          background-repeat: no-repeat;
+          background-position:center;
+          background-size:cover;
+          background-clip: padding-box;
+          border: 2px groove #de0d0d;
+          border-style: inset;
+          border-radius: 8px;
+          clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+          width: 100%;
+          height: 300px;
         }
-        .bgimg-2 {
-        background-image: url("mordgola.jpg");
-        height:600px;
-        position: relative;
-        background-position: right;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border: 2px groove #de0d0d;
-		border-style: inset;
-        border-radius: 8px;
-		clip-path: inset(0% 0% 0% 0% round var(--border-radius));}
-
+       .bgimg-2 {
+          background-image: url("mordgola.jpg");
+          background-repeat: no-repeat;
+          background-position:right;
+          background-size:cover;
+          background-clip: padding-box;
+          border: 2px groove #de0d0d;
+          border-style: inset;
+          border-radius: 8px;
+          clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+          width: 100%;
+          height: 400px;
+          
+        }
         .bgimg-3 {
-        background-image: url("TS_1624027005.png");
-        position: relative;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border: 2px groove #de0d0d;
-		border-style: inset;
-        border-radius: 8px;
-		clip-path: inset(0% 0% 0% 0% round var(--border-radius));
-        height:300px;
+          background-image: url("TS_1624027005.png");
+          background-repeat: no-repeat;
+          background-position:center;
+          background-size:cover;
+          background-clip: padding-box;
+          border: 2px groove #491b00bb;
+          border-style: inset;
+          border-radius: 100px;
+          clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+          width: 100%;
+          height: 300px;
+        }
+        .bgimg-4 {
+          background-image: url("bg2.png");
+          background-repeat: no-repeat;
+          background-position:center;
+          background-size:cover;
+          background-clip: padding-box;
+          border: 2px groove #de0d0d;
+          border-style: inset;
+          border-radius: 8px;
+          clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+          width: 100%;
+          height: 300px;
+        }
+        .textibox {
+          background-image: url("papyrus.jpg");
+          background-color: #000000e3;
+          background-repeat: no-repeat;
+          background-position:center;
+          background-size:cover;
+          background-clip: padding-box;
+          border: 0px groove #de0d0d;
+          border-style: inset;
+          border-radius: 1px;
+          clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+        }
+        nav {
+          position: fixed;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          z-index: 999;
+        }
+        
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+        
+        li {
+          margin-bottom: 10px;
+        }
+        
+        a {
+          display:inline-block;
+          padding: 10px;
+          background-color: #33333300;
+          color: #000000dc;
+          text-decoration: none;
+          border-radius: 5px;
+          transition: background-color 0.3s ease;
+          max-width: 120px;
+          text-shadow: 1px 0px 2px rgb(197, 0, 0);
+        }
+        
+        a:hover {
+          background-color: rgba(0, 0, 0, 0.308);
+        }
 
-        }
-        .parallax__layer {
-        position:fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        }
-        .parallax__layer--base {
-        transform: translateZ(0);
-        }
-        .parallax__layer--back {
-        transform: translateZ(-1px) scale(2);
-        }    
-        .parallax__layer--deep {
-            transform: translateZ(-2px) scale(3);
-        }
-        .parallax__group {
-        position: relative;
-        height: 100vh;
-        transform-style: preserve-3d;
-        }
-        p.yellow {
-            color: #fbff00c9;
-            font-size: 30px;
-            }
-/* Turn off parallax scrolling for tablets and phones */
+.texti {
+  width:fit-content;
+  color: #000000dc;
+  text-shadow: 1px 0px 2px rgb(197, 0, 0);
+  background-color: #00000000; /* specify a background color to ensure readability */
+}
+/*
+#yellow {
+  font-size: 30px;
+  color: yellow;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.288);
+}
+
+
+body {
+  margin: 0;
+
+    background-image: url("bg2.png");
+
+    height: 650px;
+    position: relative;
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border:transparent;
+  
+ 
+    min-height: 500px; 
+  
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
+
+
+
+
+
+
+
+/*.parallax {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.parallax-layer {
+    position: sticky;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("bg2.png");
+}
+.parallax-layer.layer1 {
+
+  transform:translateZ(-0.1px);
+  top: 10rem;
+
+  width: 100%;
+  height: 50rem;  
+
+  min-height: 500px; 
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}*/
+
+
+
+
+
+
+
+
+
+/* Turn off parallax scrolling for tablets and phones 
 @media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
       background-attachment: scroll;
     }
     }
@@ -160,47 +303,38 @@
     class.mw-headline{
     background-color: #250047;
     }
-    @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');*/
     </style>
 
 <body>
-    
-    <div class="box shadow links"><h3>Jump to:
-    <a href="#Mordia" target="myFrame" class="jump" id="scroll-to-iframe">Mordia</a>
-    <a href="#Bleakburn" target="myFrame" class="jump" id="scroll-to-iframe">Bleakburn</a>
-    <a href="#Sutekh" target="myFrame" class="jump" id="scroll-to-iframe">Sutekh</a>
-    <a href="#Gods" target="myFrame" class="jump" id="scroll-to-iframe">Gods</a>
-</h3></div>
-    <p id="yellow">UNDER CONSTRUCTION</p>
-    <!--
-    <a href="#Races" target="myFrame" class="jump" id="scroll-to-iframe">Races</a>
-    <a href="#Races" target="myFrame" class="jump" id="scroll-to-iframe">Races</a>
-    <a href="#Races" target="myFrame" class="jump" id="scroll-to-iframe">Races</a>
-    <a href="#Races" target="myFrame" class="jump" id="scroll-to-iframe">Races</a>
-    <a href="#Races" target="myFrame" class="jump" id="scroll-to-iframe">Races</a>
-    <a href="#Races" target="myFrame" class="jump" id="scroll-to-iframe">Races</a>-->
-    <div class="bgimg-1"></div>  <h1>
-    <span class="mw-headline" id="Mordia">World of Mordia</span></h1>  <h3>
-    <p><b>This is the main story page, here is the information given so far:</b></p>
-    <p>Mordia is located direct east of Katapesh coast line, Between Qadira and Katapesh, Amidst of the Obari Ocean. shows the spot where this Island was found by the adventurers. </p>
-    <p>
-      <br />
-    </p> <div class="bgimg-2">
-      </div>
-      
-    
-      
+  <h3><p id="texti">Jump to:</p>
+    <a href="#Mordia">Mordia</a>
+    <a href="#Village">Bleakburn</a>
+    <a href="#Sutekh">Sutekh</a>
+    <a href="#Gods">Gods</a></h3>
 
-    <h2><p>Mordia, First Day - the Disaster.</p></h2>
-    <p>Katapesh: The yellow-sailed ships from the Katapeshi city of Okeno are the most well-known and feared agents of the slave trade on the Inner Sea. Okeno originally
+    
+ <div class="texti">
+
+      <h1><p class="inner_text_shadow">World of Mordia</h1>  <h3>
+        <div >
+        <p>Mordia is located direct east of Katapesh coast line, Between Qadira and Katapesh, Amidst of the Obari Ocean. shows the spot where this Island was found by the adventurers. </p>
+        <p></div>
+          <br />
+          <div class="bgimg-3"></div>
+    <h2><p id="Mordia">Mordia, First Day - the Disaster.</p></h2>
+    <p class="textibox">Katapesh: The yellow-sailed ships from the Katapeshi city of Okeno are the most well-known and feared agents of the slave trade on the Inner Sea. Okeno originally
     began as a convenient spot for pirates to stop by to collect water and provisions without relying on the ports of the mainland nations. Keleshite Captain
     Xiren Bhey is the current leader of Okeno Slavers. He arrived in Okeno more than ten years ago and gained the reputation of a ruthless slaver. Captain Xiren
     Bhey (aka Stanley Pike) killed the leader of Okeno Slavers in a duel and established himself as the new leader. He captains the galley Undertow.
     </p>
     <p>Undertow sank in the shoreline when it was heading to sell slaves to Blackmouth village for the Blessed Kingdom.</p>
     <p><i>You remember being on a ship for a while and wondering where and who you are. No one remembers their names. Some weird fog covers the air, until suddenly you hear the bottom of the ship screeching and after the crash upon some stones, the ship went over the rocky coral reef and rose on top of it. Your ship sank because the captain could no longer remember where the reefs were on the shore. The ship sank next to a river mouth. Your ship must have been carrying resources because the flag had a gold coin on hand.  The beaches are also quite deep. The adventurers managed to get off the ship, alive. You swim ashore and watch as the ship continues to sink offshore...</i></p>
- </h2>
- <div class="bgimg-3"></div> 
+    <div class="bgimg-1"></div>
+    <div class="bgimg-2"></div>
+   
+    <div class="bgimg-4"></div>
+ </p>
 <h3>
 
 
@@ -208,12 +342,18 @@
     <p>
       <br />
   <h2>
-    <p id="Sutekh">Sutekh
-    </h2></p>
-    <p>City established in the Valley of Sand next to the inner sea of Mordia. Sutekh was captured by Bata's forces some years ago. Since then, Bata has lead the city with his evil minions - ruling with an iron fist. First adventurers that arrived there were hauling a mysterious artifact for Bata. Their arrival started a series of events leading to Bata using Artifacts only known to him to free his mother from her higher domain. Now Bata's mother is free in Mordia, and the story continues...
+    <p id="Sutekh">Sutekh City
     
+    City established in the Valley of Sand next to the inner sea of Mordia. Sutekh was captured by Bata's forces some years ago. Since then, Bata has lead the city with his evil minions - 
+       ruling with an iron fist. First adventurers that arrived there were hauling a mysterious artifact for Bata. City council has been plotting the demice
+       of Bata. The party of people with help of Mantis Guild in the city is planning to overthrow the unrightful tyrant.  Their arrival started a series of events
+       leading to Bata using Artifacts only known to him to free his mother from her higher domain. Now Bata's mother is free in Mordia, and the story continues...</p>
+      </p></h2>
+
+     
+ <h1></p>
     </p><h3>
-    <p>Important people
+    <p>Important people</p></h1>
             
     </p></h3>
     <p>Lady Elspeth von Carstein - Human noble - Trading Company: Lady Elspeth comes from a wealthy and influential family that has long held a significant position in the city's political scene. She is known for her sharp intellect, political savvy, and unwavering dedication to the city's well-being. She believes the city's prosperity depends on strong trade relationships with neighboring kingdoms and works constantly to improve these relationships. Lady Elspeth is often seen dressed in the latest fashion trends and behaves in a regal manner. - burned down a rival clothing merchant's warehouse
@@ -226,33 +366,23 @@
     
     </p>
     <p>
-    Xalara Bloodblade - Elf - Assassin - Background: Xalara is the current leader of the Red Mantis assassins. She rose to the position through sheer skill and ruthlessness, having climbed the ranks of the organization over many years. Xalara is highly respected among the Red Mantis for her strategic thinking and deadly efficiency.
-    Xalara is a cold and calculating individual who rarely shows emotion. She is highly intelligent and a skilled strategist, often planning out complex operations with meticulous attention to detail. Xalara is also a master of disguise, able to blend seamlessly into any crowd and manipulate those around her to achieve her goals.
-    
-    </p>
-    Bata Bata is establishing a life in the Valley of the Sand, building a new home for himself in Sutekh city (Sand Kingdom). City council has been plotting the demice
-    of Bata. The party of people with help of Mantis Guild in the city is planning to overthrow the unrightful tyrant. Name: Xalara Bloodblade jr. Race: Elf Background:
+    Xalara Bloodblade - 
     Xalara is the current leader of the Red Mantis assassins in Sutekh. She rose to the position through sheer skill and ruthlessness, having climbed the ranks of
     the organization over many years. Xalara is highly respected among the Red Mantis for her strategic thinking and deadly efficiency. Characteristics: Xalara is
     a cold and calculating individual who rarely shows emotion. She is highly intelligent and a skilled strategist, often planning out complex operations with meticulous
-    attention to detail. Xalara is also a master of disguise, able to blend seamlessly into any crowd and manipulate those around her to achieve her goals. -- Anpu
-    is the leader of the Blessed Kindom, living in the city of Rerakth.
-    
-    <h2>
-      <p>Sutekh city</p>
-      </h2>
-      <p>Bata - The current ruler of Sutekh</p>
-      <p>Xalara Bloodblade jr. - The current leader of the Red Mantis assassins in Sutekh.</p>
+    attention to detail. Xalara is also a master of disguise, able to blend seamlessly into any crowd and manipulate those around her to achieve her goals.
+    </p>
+  
       <h2>
-      <span class="mw-headline" id="Rerakth_city">Rerakth city</span>
+      <p class="mw-headline" id="Rerakth_city">Rerakth city</p>
       </h2>
       <p>Anpu - The current ruler of Rerakth</p>
-      <p>
+      <p>-- Anpu
+        is the leader of the Blessed Kindom, living in the city of Rerakth.
         <br />
       </p>
-
-    <h2>
-    <p id="Bleakburn">Village of Bleakburn</h2></p>
+      <h2>
+    <p id="Village">Village of Bleakburn</h2></p>
  
     <p>This village was taken over by the Sand Kingdom with the help by group of players some time ago.</p>
 
@@ -264,10 +394,10 @@
       her as the guard Captain for the village.</p>
     <p>Will - The current tavern keep, Axel Willis "Will" This is a big guy, pure barbaric muscle. Wielding a huge
       Earthbreaker. Lightly armored, currently running a tavern.
- </h2>
+  
       <p>
       <h2><p id="Gods">☥ Gods of Mordia ☥</h2></p>
-      In addition, island of Mordia Campaign you can use all gods from Pathfinder 1E world. And then some. <br>
+      In addition to following Gods, island of Mordia Campaign you can use all gods from Pathfinder 1E world. And then some. <br><br />
       Mordia worshipped Gods: <br>
       Mother <br>
       Alignment: Chaotic Evil
@@ -308,7 +438,7 @@
       Ealdthryn's enemies are those who seek to suppress knowledge and keep others in ignorance. They view such beings as threats to the natural order of the universe,
       and will go to great lengths to thwart their plans. Ealdthryn's followers are also sworn enemies of any who seek to use knowledge for personal gain or to subjugate
       others.<br><br><br />
-
+    
       <h1><p id="Races">Races</p></h1>
       <p>Filth Oread (6 RP)
     </p><p>Bite attack: Filth oread teeth grow rapidly, their teeth carry a disease - increase by level
@@ -373,7 +503,7 @@
     Isolated: Many oreads are loners and raise their families in isolated groups, either in deep caverns or high mountains. They gain a +2 racial bonus on Perception checks and Knowledge (dungeoneering) checks, and they can use Knowledge (dungeoneering) untrained. They begin play speaking only Terran, rather than Common and Terran. This racial trait replaces energy resistance and alters the oread’s starting languages. Source PZO9280
     Mountain-Born: Oreads are drawn to mountains and other high places, and after many generations they’ve grown well suited to their environment. Oreads with this racial trait gain a +2 racial bonus on Acrobatics checks made to cross narrow ledges and on saves against altitude fatigue and sickness. This racial trait replaces the spell-like ability racial trait.
     Mostly Human: A few oreads have appearances much closer to those of their human ancestors; in fact, they may not even realize their true race. Such geniekin appear to be human, save perhaps minor features like unusual eye color, and they count as humanoid (human) as well as outsider (native) for all purposes (such as humanoid-affecting spells such as charm person or enlarge person). These geniekin do not automatically gain their associated elemental language (but may select it as a bonus language if their Intelligence is high enough). This ability alters the geniekin’s type, subtype, and languages. Source PZO9280
-    Oread Gem Magic (1 RP): Oreads’ proclivity for long spans of study and concentration makes them natural wizards, witches, and oracles. Oreads with this racial trait can augment their earth-related spells and spell-like abilities through the use of precious and semiprecious gemstones as additional material components (see Table: Oread Gem Magic below). The gems are destroyed in the process, granting the spell the listed effects in addition to its normal effects unless otherwise noted. Only one instance of oread gem magic can be applied to a spell at a time; excess expended gems do not stack. This racial trait replaces the earth affinity racial trait. Source: PPC:BotE
+    Oread Gem Magic (1 RP): Oreads’ proclivity for long ps of study and concentration makes them natural wizards, witches, and oracles. Oreads with this racial trait can augment their earth-related spells and spell-like abilities through the use of precious and semiprecious gemstones as additional material components (see Table: Oread Gem Magic below). The gems are destroyed in the process, granting the spell the listed effects in addition to its normal effects unless otherwise noted. Only one instance of oread gem magic can be applied to a spell at a time; excess expended gems do not stack. This racial trait replaces the earth affinity racial trait. Source: PPC:BotE
     Stone in the Blood: Oreads with this racial trait mimic the healing abilities of the mephits, gaining fast healing 2 for 1 round anytime they are subject to acid damage (the acid damage does not need to overcome the oread’s resistances or immunities to activate this ability). The oread can heal up to 2 hit points per level per day with this ability, after which it ceases to function. This racial trait replaces earth affinity.
     Treacherous Earth: Once per day, an oread with this racial trait can will the earth to rumble and shift, transforming a 10-foot-radius patch of earth, unworked stone, or sand into an area of difficult terrain, centered on an area the oread touches. This lasts for a number of minutes equal to the oread’s level, after which the ground returns to normal. This racial trait replaces the spell-like ability racial trait.
     Alternate Elemental Heritages
@@ -434,7 +564,13 @@
     Oread Burrower
     Oread Earth Glider
     Stony Step
-    </p></h3> 
-</body>
+  </div></div>
+    
+    </p>
+  </div></div>
+</div>
+
+<div class="parallax"></div>
+  </body>
 
 </head></html>
