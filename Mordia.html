@@ -272,6 +272,23 @@ body {
 <body>
 
 
+  <input type="text" id="search-input" placeholder="Enter your search query">
+  <button onclick="search()">Search</button>
+  
+  <script>
+    function search() {
+      // Get the search query
+      const query = document.getElementById("search-input").value;
+  
+      // Find all the elements on the page that contain the search query
+      const elements = [...document.querySelectorAll("*")].filter(element => element.textContent.includes(query));
+  
+      // If any elements were found, scroll to the first one
+      if (elements.length > 0) {
+        elements[0].scrollIntoView();
+      }
+    }
+  </script>
    
  <div class="texti">
   <div class="bgimg-4"></div>
