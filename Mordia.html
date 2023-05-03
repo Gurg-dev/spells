@@ -25,13 +25,12 @@
         margin-top: 0;
         margin-bottom: 0;
         background-color: #0f0f0f;
-        background-image: url("dragonyang gray.jpg");
+        background-image: url("dragonbg.png");
         height: fit-content;
         width: fit-content;
         background-attachment: fixed;
         background-position: center;
         background-repeat:space;
-
         justify-content: center;
         align-items: center;
         display: all;
@@ -40,6 +39,7 @@
 
       .box {
       content:"";
+      padding-inline-start: 50px;
       }
       .shadow:before {
 			content:"";
@@ -54,22 +54,65 @@
 
 
     .link {
-      
-			color: #fff;
-			font-size:larger;
-			border-radius: 8px;
-			transition: background-color 0.3s ease-in-out;
+      text-decoration: none;
+			transition: background-color 0.2s ease-in-out;
 		}
 
 		.link:hover{
-			background-color: hwb(0 100% 0%);
-			border-radius: 8px;
-			transition: background-color 0.3s ease-in-out;
-			padding-inline: 0px;
-
+      text-decoration: none;
+      color:white;
+      background-color: #df000093;
 		}
 
     
+    .bgmother {
+      background-image:url("Mother2.png");
+      background-repeat: no-repeat;
+      background-position:right;
+      background-size:contain;
+      border: 2px groove #46464646;
+      border-style: inset;
+      border-radius: 8px;
+      clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+      width:100%;
+      height:calc(100% - 8px);
+    }
+    .bgmotherword {
+        width: 550px; /* adjust as needed */
+        word-wrap: break-word;
+        background-color: #630000b6;
+        background-repeat: no-repeat;
+        border: 2px groove #de0d0d;
+        border-style: inset;
+        border-radius: 8px;
+        clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+    }
+    .bgeald {
+      background-image:url("Eald.png");
+      background-repeat: no-repeat;
+      background-position:right;
+      background-size:contain;
+      border: 2px groove #44444446;
+      border-style: inset;
+      border-radius: 8px;
+      clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+      width:100%;
+      height:calc(100% - 8px);
+    }
+    .bgealdword {
+      width: 550px; /* adjust as needed */
+      word-wrap: break-word;
+      background-color: #123a00b6;
+      background-repeat: no-repeat;
+      border: 1px groove #000000;
+      border-style: inset;
+      border-radius: 8px;
+      clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+      color:#ececec;
+      padding: 0px;
+      margin:0%;
+      
+    }
 
         .bgimg-1 {
           background-image:url("bgold.jpg");
@@ -138,7 +181,7 @@
           height: 400px;
         }
         nav {
-    
+          padding-inline-start: 50px;
           top: 0;
           left: 0;
           transform: translateY(-50%);
@@ -157,26 +200,24 @@
         
         a {
           display:inline-block;
-          padding: 10px;
-
+          padding:5px;
           color: #830000fa;
           text-decoration: none;
           border-radius: 5px;
           transition: background-color 0.3s ease;
-          max-width: 120px;
-          text-shadow: 1px 0px 2px rgb(197, 0, 0);
           height:calc(100% - 8px);
           width:fit-content;
-          text-shadow: 1px 0px 1px rgb(0, 0, 0);
+          text-shadow: 2px 1px 2px rgb(0, 0, 0);
           background-color: #b900002c; /* specify a background color to ensure readability */
         }
         
         a:hover {
           background-color: rgba(0, 0, 0, 0.308);
+          text-shadow: 2px 0px 2px rgb(0, 0, 0);
         }
 
         .texti {
-        height:calc(100% - 50px);
+        size: 10px;
         width:fit-content;
         color: #ffffff;
         text-shadow: 1px 0px 2px rgb(197, 0, 0); 
@@ -274,7 +315,7 @@ body {
 
 <body>
 
-<!-- uus button ja script -->
+<!-- uus button ja script
 
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Open Modal</button>
 
@@ -297,10 +338,10 @@ body {
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="<URL>" integrity="<URL>" crossorigin="<URL>"></script>
-
-<!-- uus button ja script -->
+ -->
+<!-- uus button ja script 
   <input type="text" id="search-input" placeholder="Enter your search query">
-  <button onclick="search()">Search</button>
+  <button onclick="search()">Search</button> -->
   
   <script>
     function search() {
@@ -319,11 +360,11 @@ body {
    
  <div class="texti">
   <div class="bgimg-4"></div>
-  <nav><br><br><br><br><h2><p id="texti">Jump to:</p>
-    <a href="#Mordia">Mordia</a>
-    <a href="#Village">Bleakburn</a>
-    <a href="#Sutekh">Sutekh</a>
-    <a href="#Gods">Gods</a></h2></nav>
+  <nav><br><br><br><br><h2><br><a>Jump to:</a></p>
+    <a href="#Mordia" class="link">Mordia</a>
+    <a href="#Village" class="link">Bleakburn</a>
+    <a href="#Sutekh" class="link">Sutekh</a>
+    <a href="#Gods" class="link">Gods</a></h2></nav>
       <h1><p class="inner_text_shadow">World of Mordia <br>*work in progress*</h1>  
         <div>
         <p>Mordia is located direct east of Katapesh coast line, Between Qadira and Katapesh, Amidst of the Obari Ocean... </p>
@@ -400,10 +441,11 @@ body {
       Earthbreaker. Lightly armored, currently running a tavern.
   
       <p></h3>
-      <h2><p id="Gods">☥ Gods of Mordia ☥</h2></p><h3>
+      <h2><p id="Gods">☥ Gods of Mordia ☥</h2></p>
       In addition to following Gods, island of Mordia Campaign you can use all gods from Pathfinder 1E world. And then some. <br><br />
-      Mordia worshipped Gods: <br>
-      Mother <br>
+      Mordia worshipped Gods: <br><br>
+      <div class="bgmother"><div class="bgmotherword">
+      <h2>Mother</h2> <br>
       Alignment: Chaotic Evil
       <br>
       Domains: Air, Chaos, Healing, Evil
@@ -413,18 +455,19 @@ body {
       Favored Weapons: quarterstaff, spear, poisoned weapons<br>
       Typical Worshipers: Evil power-seeking humanoids, evil monks, assassins, concubines,
       cultists
-      <br>
+      <br><br>
       Mother *hidden true name* is a greater god, worshiped by some denizens on Mordia. Organized groups of assassins are known to be dedicated to her worship.
       Her worshipers, mainly clerics use a long robe and a mask to cover their face. Tales tell of her showing her self around Mordia, but many of the ones who saw
       her - never did again. Many of his worshipers tattoo themselves with roses and embroider clothing in same way.
       <br>
-      <br></h3>
-      <h2>Ealdthryn, god of wisdom and knowledge.</h2><h3><br> Alignment:Chaotic Good <br>
+      <br></div></div><br />
+      <div class="bgeald"><tr></tr><div class="bgealdword"><td></td>
+      <h2>Ealdthryn</h2><h3>god of wisdom and knowledge.</h3>Alignment:Chaotic Good <br>
       Domains: Earth, Protection, Knowledge<br>
       Symbol: Book<br>
       Garb: Staff, Long robes<br>
       Favored Weapons: Staff<br>
-      Typical Worshipers: Good humanoids, good monks,philosophers, planar creatures In the pantheon of the gods.<br>
+      Typical Worshipers: Good humanoids, good monks,philosophers, planar creatures In the pantheon of the gods.<br><br>
       Ealdthryn is known as the deity of wisdom and knowledge. It is said that Ealdthryn's vast intellect
       is matched only by their insatiable hunger for learning and understanding. Ealdthryn is often depicted as a wise old figure with a long white beard, deep-set
       eyes, and a serene expression. They are typically depicted holding a staff or book, symbolizing their mastery over knowledge. According to legend, Ealdthryn
@@ -433,7 +476,7 @@ body {
       and they spent countless eons traveling the cosmos, exploring every corner of it. Over time, Ealdthryn became revered by mortal beings for their vast knowledge
       and wisdom. Temples were built in their honor, and they were worshipped by scholars, sages, and philosophers alike. Ealdthryn was seen as a source of guidance
       and inspiration, and their followers sought their counsel on matters of science, philosophy, and magic. Ealdthryn's teachings are focused on the importance
-      of learning and self-improvement. They believe that the pursuit of knowledge is a sacred duty, and that every being has the potential to grow and expand their
+      of learning and self-improvement.They believe that the pursuit of knowledge is a sacred duty, and that every being has the potential to grow and expand their
       understanding of the universe. Ealdthryn's followers are encouraged to seek out new experiences, learn from their mistakes, and constantly strive to better
       themselves. Despite their immense wisdom, Ealdthryn is not infallible. There are many stories of Ealdthryn making mistakes or underestimating the power of
       their own creations. However, these missteps are seen as learning opportunities, and Ealdthryn is always quick to rectify their errors and use them to expand
@@ -441,8 +484,10 @@ body {
       their opponents. Ealdthryn's followers are often powerful mages, using their knowledge of the arcane to manipulate reality itself and gain an edge in battle.
       Ealdthryn's enemies are those who seek to suppress knowledge and keep others in ignorance. They view such beings as threats to the natural order of the universe,
       and will go to great lengths to thwart their plans. Ealdthryn's followers are also sworn enemies of any who seek to use knowledge for personal gain or to subjugate
-      others.<br><br><br />
-    </h3>
+      others.
+
+
+   </div>   </div>
       <h2><p id="Races">Races</p></h2><h3>
       <p>Filth Oread (6 RP)
     </p><p>Bite attack: Filth oread teeth grow rapidly, their teeth carry a disease - increase by level
