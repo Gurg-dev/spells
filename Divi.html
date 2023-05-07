@@ -5,10 +5,12 @@
 <style>
   
   body {
+    border-collapse: collapse;
+    padding: 0;
+    margin: 0;
     background-color: #0f0f0f;
     color: white;
   }
-
   a:link {
     color: rgb(255, 0, 0);
     text-decoration: none;
@@ -17,26 +19,43 @@
     color: rgb(255, 0, 0);
     text-decoration: none;
   }
+table {
+  border-collapse: collapse;
+  padding: 0;
+  margin: 0;
+}
+
+th, td {
+  padding: 0;
+}
+#global-navigation-user-icon {
+  margin:0;
+  padding:0;
+  padding-inline-start: none;
+}
   button {
-    display: inline;
-    background-color: #000000;
-    color: #ff0000;
+  
+    padding: 2px 8px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
     text-decoration: none;
-    border-radius: 10px;
-    transition: background-color 0.3s ease-in-out;
-    padding-inline: 0px;
-    line-height: 40px;
-    font-size: 2em;
+    outline: none;
+    color: #fff;
+    background-color: #a30000;
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 6px #00000070;
   }
-  #Butt {
-    font-weight: bold;
-  }
+    button:hover {background-color: #db0000}
+      button:active {
+        background-color: #4d0000;
+      }
   td.source {
     font-size: 1em;
   }
   .hidden-link {
     display: none;
-    
   }
   .hide {
     display: none;
@@ -63,16 +82,12 @@
       font-size: 2.5em;
     }
   }
-  #global-navigation-user-icon {
-    margin: 0;
-    padding: 0;
-  }
+
 </style>
 <script>
   window.onload = function() {
     document.getElementById('Butt').innerHTML = 'Show All';
 }
-
   function toggleVisibility() {
     var links = document.querySelectorAll(".hidden-link");
     for (var i = 0; i < links.length; i++) {
@@ -82,7 +97,6 @@
         links[i].style.display = "table-cell";
       }
     }
-    
     var buttonText = document.querySelector("button").textContent;
     if (buttonText === "Show Best") {
       document.querySelector("button").textContent = "Show All";
@@ -90,12 +104,18 @@
       document.querySelector("button").textContent = "Show Best";
     }
   }
-
   var search_term = 'word'; // The word you want to find on the page
-
 // Find the first instance of the search term on the page
-var element = document.querySelector(":contains('" + search_term + "')");
+function findElementWithText(searchTerm) {
+  let elements = document.querySelectorAll('*');
+  for (let i = 0; i < elements.length; i++) {
+    if (elements[i].textContent.indexOf(searchTerm) !== -1) {
+      return elements[i];
+    }
+  }
+}
 
+let element = findElementWithText(search_term);
 // Generate an href link with an anchor to the search term
 if (element) {
     var id = element.id || 'search_term_anchor';
@@ -107,15 +127,13 @@ if (element) {
 }
 </script>
 </head>
-
 <body>
   <div class="table-container" id="myElement">
-    <a title="Divination sorc"><h2>Divination sorc:</h2><form>      <div style="font-size: 11px;"></div>
-      ps. Components F/DF or M/DF, have either Focus/Divine Focus or 
-      Material component/Divine focus component, not both (select one - Arcane/Divine).<br /><br />
-      ⋆✩ Prophecy domain spells for Vatic ✩⋆<br /> ⋆✩ DC 10+1/2LV+WisMod ✩⋆<br /> ⌗
-      
-    <table id="global-navigation-user-icon">
+
+  <a title="Divination sorc"><h2>Domain spells Diviner Prime:</h2></a><div style="font-size: 11px;">
+        <td>ps. Components F/DF or M/DF, have either Focus/Divine Focus or 
+        Material component/Divine focus component, not both (select one - Arcane/Divine).</td>
+      <td>⋆✩ Prophecy domain spells for Vatic ✩⋆ ⋆✩ DC 10+1/2LV+WisMod ✩⋆ ⌗</td></div>
         <a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/d/deathwatch">Deathwatch</a> 1st ⌗
         <a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/a/augury">Augury</a> 2nd ⌗
         <a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/l/locate-object">Locate object</a> 3rd ⌗
@@ -125,13 +143,14 @@ if (element) {
         <a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/p/prying-eyes">Prying eyes</a> 7th ⌗
         <a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/m/moment-of-prescience">Moment of prescience</a> 8th ⌗
         <a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/f/foresight">Foresight</a> 9th ⌗
-        </div>
-<table id="global-navigation-user-icon">    <button id="Butt" onclick="toggleVisibility()">x</button>
-        <td class="source"><a title="Level-1">⋆✩Cantrip✩⋆</a></td>
-        </tr>
-      <td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/d/detect-fiendish-presence">Detect Fiendish Presence</a></td>
-      <td class="text"></td>
-      <td class="text">This spell functions like detect evil, except that it detects only outsiders with the evil subtype, as well as the lingering effects caused by their gifts,<br> presence, and spells. It can also detect clerics and paladins of fiendish deities, including Asmodeus, archdevils, daemonic harbingers, and demon lords.</td>
+        <table id="global-navigation-user-icon">
+        <br>
+    <tr>
+        <td title="Level-0">⋆✩Cantrip✩⋆</a></td></tr>
+        <button  id="Butt" onclick="toggleVisibility()">x</button>
+        <td class="spell"><a class="spell" href="https://www.d20pfsrd.com/magic/all-spells/d/detect-fiendish-presence">Detect Fiendish Presence</a></td>
+        <td class="text"></td>
+        <td class="text">This spell functions like detect evil, except that it detects only outsiders with the evil subtype, as well as the lingering effects caused by their gifts,<br> presence, and spells. It can also detect clerics and paladins of fiendish deities, including Asmodeus, archdevils, daemonic harbingers, and demon lords.</td>
     </tr>
 <tr>
 <td class="spell"><a class="spell hidden-link" href="https://www.d20pfsrd.com/magic/all-spells/d/detect-poison">Detect Poison</a></td>
@@ -813,17 +832,6 @@ if (element) {
 <td class="text"> </td>
 <td class="text">“Sixth sense”  You are never surprised or flat-footed. Gives you a +2 insight bonus to AC and on Reflex saves</td>
 <!-- <td class="source"><a title="PZO1110" href="https://amzn.to/2E3dYvm" target="_blank" rel="nofollow noopener">PZO1110</a></td> -->
-</tr></form> 
-
-
-
-
-
-
-
-
-
-
-
+</tr>
 </table></div>
 </body>
