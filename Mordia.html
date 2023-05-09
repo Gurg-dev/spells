@@ -116,7 +116,7 @@
     .bgeald {
       background-image:url("Eald.png");
       background-repeat: no-repeat;
-      background-position:right;
+      background-position:bottom;
       background-size:contain;
       border: 2px groove #44444446;
       border-style: inset;
@@ -137,7 +137,19 @@
       color:#ececec;
       padding: 0px;
       margin:0%;
-      
+    }
+    .Anpu {
+      background-image:url("Anpu.png");
+      background-repeat: no-repeat;
+      background-position:center;
+      background-size:contain;
+      background-clip: padding-box;
+      border: 2px groove #de0d0d;
+      border-style: inset;
+      border-radius: 8px;
+      clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+      width: 100%;
+      height: 400px;
     }
 
         .bgimg-1 {
@@ -217,15 +229,7 @@
           z-index: 0.8;
         }
         
-        ul {
-          list-style: none;
-          margin: 0;
-          padding: 0;
-        }
-        
-        li {
-          margin-bottom: 10px;
-        }
+
         
         a {
           display:inline-block;
@@ -257,10 +261,37 @@
         size: 14px;
         margin:3px;
         }
+        .fadein {
+          opacity: 0;
+          transition: opacity 2s;
+        }
         .otsikko {
           text-align:center;
           size: 14px;
           margin:3px;
+          }
+          .parent {
+            text-align: center;
+          }
+        td {
+        padding-right:10px;
+        min-width:fit-content;
+        }
+        th {
+          padding-right:10px;
+          min-width:fit-content;
+          }
+          ul {
+            list-style: none;
+            margin: 0;
+            padding-right:10px;
+            min-width:fit-content;
+          }
+          
+          li {
+            margin-bottom: 10px;
+            padding-right:10px;
+            min-width:fit-content;
           }
 
         /*
@@ -418,7 +449,23 @@ body {
         elements[0].scrollIntoView();
       }
     }
+
+    window.addEventListener('scroll', function() {
+      var elements = document.querySelectorAll('.fadein');
+    
+      elements.forEach(function(element) {
+        var position = element.getBoundingClientRect();
+    
+        // checking whether partially visible
+        if(position.top < window.innerHeight && position.bottom >= 0) {
+          element.style.opacity = 1;
+        } else {
+          element.style.opacity = 0;
+        }
+      });
+    });
   </script>
+
    
  <div class="texti">
   <div class="bgimg-4"></div>
@@ -426,37 +473,38 @@ body {
     <a href="#Mordia" class="link">Mordia</a>
     <a href="#Village" class="link">Bleakburn</a>
     <a href="#Sutekh" class="link">Sutekh</a>
-    <a href="#Gods" class="link">Gods</a></h2></nav>
-      <h1><p class="inner_text_shadow otsikko">World of Mordia <br>*work in progress*</h1>  
+    <a href="#Gods" class="link">Gods</a>
+    <a href="Oread.html" class="link">Race: Oread</a></h2></nav>
+      <h1><p class="inner_text_shadow otsikko fadein">World of Mordia <br>*work in progress*</h1>  
         <div>
-        <p>Mordia is located direct east of Katapesh coast line, Between Qadira and Katapesh, Amidst of the Obari Ocean... </p>
+        <p class="fadein parent">Mordia is located direct east of Katapesh coast line, Between Qadira and Katapesh, Amidst of the Obari Ocean... </p>
         </div>
           <br />
           
           <div class="bgimg-2"><button button type="button" onclick="window.location.href='MordiaGOLA.png';" target="_blank" class="button" class="expand">Expand</button>
           </div>
-    <h2><p id="Mordia" class="otsikko">Mordia, First Day - the Disaster.</p></h2>
+    <h2><p id="Mordia" class="otsikko fadein">Mordia, First Day - the Disaster.</p></h2>
     <div class="container"></div>
     <div class="bgimg-3"><button button type="button" onclick="window.location.href='TS_1624027005.png';" target="_blank" class="button" class="expand">Expand</button>
     </div>
    
-    <p>Katapesh: The yellow-sailed ships from the Katapeshi city of Okeno are the most well-known and feared agents of the slave trade on the Inner Sea. Okeno originally
+    <p class="fadein">Katapesh: The yellow-sailed ships from the Katapeshi city of Okeno are the most well-known and feared agents of the slave trade on the Inner Sea. Okeno originally
       began as a convenient spot for pirates to stop by to collect water and provisions without relying on the ports of the mainland nations. Keleshite Captain
       Xiren Bhey is the current leader of Okeno Slavers. He arrived in Okeno more than ten years ago and gained the reputation of a ruthless slaver. Captain Xiren
       Bhey (aka Stanley Pike) killed the leader of Okeno Slavers in a duel and established himself as the new leader. He captains the galley Undertow.
       </p>
-    <p>Undertow sank in the shoreline when it was heading to sell slaves to Blackmouth village for the Blessed Kingdom.</p>
-    <p>You remember being on a ship for a while and wondering where and who you are. No one remembers their names. Some weird fog covers the air,
+    <p class="fadein">Undertow sank in the shoreline when it was heading to sell slaves to Blackmouth village for the Blessed Kingdom.</p>
+    <p class="fadein">You remember being on a ship for a while and wondering where and who you are. No one remembers their names. Some weird fog covers the air,
        until suddenly you hear the bottom of the ship screeching and after the crash upon some stones, the ship went over the rocky coral reef
         and rose on top of it. Your ship sank because the captain could no longer remember where the reefs were on the shore. The ship sank 
         next to a river mouth. Your ship must have been carrying resources because the flag had a gold coin on hand.  The beaches are also quite deep.
          The adventurers managed to get off the ship, alive. You swim ashore and watch as the ship continues to sink offshore...</p>
   
       <br />
-  <h2 id="Sutekh" class="otsikko">Sutekh City</h2>
+  <h2 id="Sutekh" class="otsikko fadein">Sutekh City</h2>
       <div class="bgimg-1"><button button type="button" onclick="window.location.href='bgold.png';" target="_blank" class="button" class="expand">Expand</button>
       </div>
-    <p>City established in the Valley of Sand next to the inner sea of Mordia. Sutekh was captured by Bata's forces some years ago. Since then, Bata has lead the city
+    <p class="fadein">City established in the Valley of Sand next to the inner sea of Mordia. Sutekh was captured by Bata's forces some years ago. Since then, Bata has lead the city
        with his evil minions - 
        ruling with an iron fist. First adventurers that arrived there were hauling a mysterious artifact for Bata. City council has been plotting the demice
        of Bata. The party of people with help of Mantis Guild in the city is planning to overthrow the unrightful tyrant.  Their arrival started a series of events
@@ -465,24 +513,24 @@ body {
     
      
  <h2>
-    <p class="otsikko">Important people</p></h2>
+    <p class="otsikko fadein">Important people</p></h2>
             
     
-    <p>Lady Elspeth von Carstein - Human noble - Trading Company: Lady Elspeth comes from a wealthy and influential family that has long held a significant position in
+    <p class="fadein">Lady Elspeth von Carstein - Human noble - Trading Company: Lady Elspeth comes from a wealthy and influential family that has long held a significant position in
        the city's political scene. She is known for her sharp intellect, political savvy, and unwavering dedication to the city's well-being. She believes the city's 
        prosperity depends on strong trade relationships with neighboring kingdoms and works constantly to improve these relationships. Lady Elspeth is often seen 
        dressed in the latest fashion trends and behaves in a regal manner. - burned down a rival clothing merchant's warehouse
     
     </p>
-    <p>Thorne Ironfist - Dwarf paladin - Corrupt police chief: Thorne is a rough and outspoken member of the city council. He takes his duties very seriously and is 
+    <p class="fadein">Thorne Ironfist - Dwarf paladin - Corrupt police chief: Thorne is a rough and outspoken member of the city council. He takes his duties very seriously and is 
       dedicated to maintaining law and protecting the city's residents. He is a skilled fighter and is not afraid to get his hands dirty when necessary. Thorne is loyal
        to his deity Moradin and often speaks of the importance of honor, loyalty, and duty. Although his stiff demeanor can be intimidating, he is popular with many of
         the city's residents.
     
     </p>
-    <p>Mirielle d'Arc - Halfling bard - City entertainment director: Mirielle is a charismatic and charming member of the city council. She has a way of speaking that
+    <p class="fadein">Mirielle d'Arc - Halfling bard - City entertainment director: Mirielle is a charismatic and charming member of the city council. She has a way of speaking that
     </p>
-    <p>
+    <p class="fadein">
     Xalara Bloodblade - 
     Xalara is the current leader of the Red Mantis assassins in Sutekh. She rose to the position through sheer skill and ruthlessness, having climbed the ranks of
     the organization over many years. Xalara is highly respected among the Red Mantis for her strategic thinking and deadly efficiency. Characteristics: Xalara is
@@ -490,35 +538,36 @@ body {
     attention to detail. Xalara is also a master of disguise, able to blend seamlessly into any crowd and manipulate those around her to achieve her goals.
     </p>
   
-      <h2>
-      <p class="mw-headline otsikko" id="Rerakth_city">Rerakth city</p>
+      <h2 class="mw-headline otsikko fadein" id="Rerakth_city">Rerakth city
       </h2>
-      <p>Anpu - The current ruler of Rerakth</p>
-      <p>-- Anpu
+      <div class="Anpu"><button button type="button" onclick="window.location.href='Anpu.png';" target="_blank" class="button" class="expand">Expand</button>
+      </div>
+      <p class="fadein">Anpu - The current ruler of Rerakth</p>
+      <p class="fadein">-- Anpu
         is the leader of the Blessed Kindom, living in the city of Rerakth.
         <br />
       </p>
       <h2>
-    <p id="Village" class="otsikko">Village of Bleakburn</h2></p>
+    <p id="Village" class="otsikko fadein">Village of Bleakburn</h2></p>
  
-    <p>This village was taken over by the Sand Kingdom with the help by group of players some time ago.</p>
+    <p class="fadein">This village was taken over by the Sand Kingdom with the help by group of players some time ago.</p>
 
-    <p>Ashii - The current appointed village leader Astomoi Cleric Ashii, She has a long ceremonial cloak covering her body,
+    <p class="fadein">Ashii - The current appointed village leader Astomoi Cleric Ashii, She has a long ceremonial cloak covering her body,
       unlike like most Astomoi. Behind her mask, you only see darkness and some light beams. Astomoi like company even if they don't eat or drink. She can sense
       thoughts and thus has been voted for a temporary leader of the village after a short ceremony.
     </p>
-    <p>Hera - Temporary The guard Commander, Dark Elf Magus Hera, Covered in a dark cloak, wielding a longsword. Ashii assigned
+    <p class="fadein">Hera - Temporary The guard Commander, Dark Elf Magus Hera, Covered in a dark cloak, wielding a longsword. Ashii assigned
       her as the guard Captain for the village.</p>
-    <p>Will - The current tavern keep, Axel Willis "Will" This is a big guy, pure barbaric muscle. Wielding a huge
+    <p class="fadein">Will - The current tavern keep, Axel Willis "Will" This is a big guy, pure barbaric muscle. Wielding a huge
       Earthbreaker. Lightly armored, currently running a tavern.
   
-      <p>
-      <h2 id="Gods" class="otsikko">☥ Gods of Mordia ☥</h2>
-      In addition to following Gods, island of Mordia Campaign you can use all gods from Pathfinder 1E world. And then some. <br />
+      <p class="fadein">
+      <h2 id="Gods" class="otsikko fadein">☥ Gods of Mordia ☥</h2>
+      <p class="fadein">In addition to following Gods, island of Mordia Campaign you can use all gods from Pathfinder 1E world. And then some.</p> <br />
       <br />
       <div class="bgmother"><div class="bgmotherword">
-      <h2><p class="otsikko">Mother</p></h2> <br>
-      Alignment: Chaotic Evil
+      <h2><p class="otsikko fadein">Mother</p></h2> <br>
+      <p class="fadein">Alignment: Chaotic Evil
       <br>
       Domains: Air, Chaos, Healing, Evil
       <br> Symbol: Golden bouquet of Roses<br>
@@ -530,15 +579,15 @@ body {
       <br><br>
       Mother *hidden true name* is a greater god, worshiped by some denizens on Mordia. Organized groups of assassins are known to be dedicated to her worship.
       Her worshipers, mainly clerics use a long robe and a mask to cover their face. Tales tell of her showing her self around Mordia, but many of the ones who saw
-      her - never did again. Many of his worshipers tattoo themselves with roses and embroider clothing in same way.
+      her - never did again. Many of his worshipers tattoo themselves with roses and embroider clothing in same way.</p>
       <br>
       <br></div></div><br />
-      <div class="bgeald"><tr></tr><div class="bgealdword"><td></td>
-      <h2 class="otsikko">Ealdthryn</h2>Alignment: Chaotic Good <br>Domains: Earth, Protection, Knowledge<br>
-      Symbol: Book<br>
-      Garb: Staff, Long robes<br>
-      Favored Weapons: Staff<br>
-      Typical Worshipers: Good humanoids, good monks,philosophers, planar creatures In the pantheon of the gods.<br><br>
+      <div class="bgeald"><div class="bgealdword">
+      <h2 class="otsikko fadein">Ealdthryn</h2> <p class="fadein">Alignment: Chaotic Good <br>Domains: Earth, Protection, Knowledge<br></p>
+      <p class="fadein">Symbol: Book
+      Garb: Staff, Long robes
+      Favored Weapons: Staff
+      Typical Worshipers: Good humanoids, good monks,philosophers, planar creatures In the pantheon of the gods.
       Ealdthryn is known as the deity of wisdom and knowledge. It is said that Ealdthryn's vast intellect
       is matched only by their insatiable hunger for learning and understanding. Ealdthryn is often depicted as a wise old figure with a long white beard, deep-set
       eyes, and a serene expression. They are typically depicted holding a staff or book, symbolizing their mastery over knowledge. According to legend, Ealdthryn
@@ -556,747 +605,9 @@ body {
       Ealdthryn's enemies are those who seek to suppress knowledge and keep others in ignorance. They view such beings as threats to the natural order of the universe,
       and will go to great lengths to thwart their plans. Ealdthryn's followers are also sworn enemies of any who seek to use knowledge for personal gain or to subjugate
       others.
-
+</p>
 
    </div>   </div>
-      <h2><p id="Races" class="otsikko">Races</p></h2>
-
-      <h2>Filth Oread (6 RP)</h2>
-      <p>Bite attack: Filth oread teeth grow rapidly, their teeth carry a disease - increase by level</p>
-      
-      <h3>Random Oread Starting Ages</h3>
-      <table>
-        <tr>
-          <th>Adulthood</th>
-          <th>Intuitive1</th>
-          <th>Self-Taught2</th>
-          <th>Trained3</th>
-        </tr>
-        <tr>
-          <td>60 years</td>
-          <td>+4d6 years (64 – 84 years)</td>
-          <td>+6d6 years (66 – 96 years)</td>
-          <td>+8d6 years (68 – 108 years)</td>
-        </tr>
-      </table>
-      
-      <ol>
-        <li>This category includes barbarians, oracles, rogues, and sorcerers.</li>
-        <li>This category includes bards, cavaliers, fighters, gunslingers, paladins, rangers, summoners, and witches.</li>
-        <li>This category includes alchemists, clerics, druids, inquisitors, magi, monks, and wizards.</li>
-      </ol>
-      
-      <h3>Random Oread Height and Weight</h3>
-      
-      <table>
-        <tr>
-          <th>Gender</th>
-          <th>Base Height</th>
-          <th>Height Modifier</th>
-          <th>Base Weight</th>
-          <th>Weight Modifier</th>
-        </tr>
-        <tr>
-          <td>Male</td>
-          <td>4 ft. 0 in.</td>
-          <td>+2d6 in. (4 ft. 2 in. – 5 ft.)</td>
-          <td>150 lbs.</td>
-          <td>+(2d6×7 lbs.) (164 – 234 lbs.)</td>
-        </tr>
-        <tr>
-          <td>Female</td>
-          <td>3 ft. 9 in.</td>
-<table>
-  <tr>
-    <td>120 lbs.</td>
-    <td>+(2d6×7 lbs.) (134 – 204 lbs.)</td>
-  </tr>
-</table>
-
-<h3>Table: Race Point Costs</h3>
-
-<table>
-  <tr>
-    <th>Racial Traits</th>
-    <th>Race Point Cost</th>
-  </tr>
-  <tr>
-    <td>Type Outsider (native)</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>Size Medium</td>
-    <td>0</td>
-  </tr>
-  <tr>
-    <td>Base Speed Slow</td>
-    <td>-1</td>
-  </tr>
-  <tr>
-    <td>Ability Score Modifiers Standard (+2 Str, +2 Wis, –2 Cha)</td>
-    <td>0</td>
-  </tr>
-  <tr>
-    <td>Languages Standard</td>1
-
-<p>Filth Oread are immune to bleed damage, death effects, disease, paralysis, poison, sleep effects, and stunning.</p>
-
-<h3>Misc.</h3>
-<ul>
-  <li>Elemental affinity (earth): 1</li>
-  <li>Spell-Like Ability Lesser: 1</li>
-  <li>Senses Darkvision 60 ft.: 2</li>
-  <li>Total: 8</li>
-</ul>
-
-<p>Oreads are humans whose ancestry includes the touch of an elemental being of earth somewhere along the line, often that of a shaitan genie. Stoic and contemplative, oreads are a race not easily moved, yet almost unstoppable when spurred to action. They remain a mystery to most of the world thanks to their reclusive nature, but those who seek them out in their secluded mountain hideaways find oreads to be quiet, dependable, and protective of their friends.</p>
-
-<h3>Physical Description:</h3>
-<p>Oreads are strong and solidly built, with skin and hair colored stony shades of black, brown, gray, or white. While all oreads appear vaguely earthy,
-   a few bear more pronounced signs of their elemental heritage—skin that shines like polished onyx, rocky outcroppings protruding from their flesh,
-    glowing gemstones for eyes, or hair like crystalline spikes. They often dress in earthy tones, wearing practical clothing well suited to vigorous 
-    physical activity and preferring fresh flowers, simple gemstones,
-    <p>They often dress in earthy tones, wearing practical clothing well suited to vigorous physical activity and preferring fresh flowers, simple gemstones, and other natural accents to complex manufactured jewelry.</p>
-    
-    <h3>Society:</h3>
-    <p>As a minor offshoot of the human race, oreads have no real established society of their own. Instead, most oreads grow up in human communities learning the customs of their parents. Adult oreads have a well-deserved reputation among other races for being hermits and loners. Few take well to the bustle of city life, preferring instead to spend their days in quiet contemplation atop some remote mountain peak or deep below the earth in a secluded cavern. Oreads with a greater tolerance for life among humans often join the city watch or find some other way to serve their community in a position of responsibility.</p>
-    
-    <h3>Relations:</h3>
-    <p>Oreads feel comfortable in the company of dwarves, with whom they have much in common. They find gnomes too strange and many halflings far too brash and so avoid these races in general. Oreads gladly associate with half-orcs and half-elves, feeling a sense of kinship with the other part-human races despite inevitable personality conflicts. Among the elemental-touched races, oreads have few friends but no true enemies.</p>
-    
-    <h3>Alignment and Religion:</h3>
-    <p>Oreads are, perhaps above all else, set in their ways and any disruption of their routine is met with quiet disapproval. Oreads are fiercely protective of their friends but don’t seem particularly concerned with the well-being of those outside their small circle of acquaintances. As such, most oreads are lawful neutral. Religious life comes easily to the earth-touched. They appreciate the quiet, contemplative life of the monastic order and most dedicate themselves to the worship of earth- or nature-related deities.</p>
-    
-    <h3>Adventurers:</h3>
-    <p>Oreads are initially hesitant adventurers. They dislike leaving their homes and don’t handle the shock of new experiences well. Usually it takes some outside force to rouse oreads into action often by threatening their homes lives or friends. Once they have committed themselves to a course of action however oreads are almost impossible to dissuade from seeing it through to its conclusion.</p>
-
-    <p>Male Names: Andanan, Jeydavu, Mentys, Oret, Sithundan, Urtar.</p>
-    <p>Female Names: Besthana, Echane, Ghatiyara, Irice, Nysene, Pashe.</p>
-    
-    <h3>Standard Racial Traits</h3>
-    <ul>
-      <li>Ability Score Modifiers: Oreads are strong, solid, stable, and stoic. They gain +2 Strength, +2 Wisdom, and –2 Charisma.</li>
-      <li>Type: Oreads are outsiders with the native subtype.</li>
-      <li>Size: Oreads are Medium creatures and thus have no bonuses or penalties due to their size.</li>
-      <li>Speed (Slow): Oreads have a base speed of 20 feet.</li>
-      <li>Languages: Oreads begin play speaking Common and Terran. Oreads with high Intelligence scores can choose from the following: Aquan, Auran, Dwarven, Elven, Gnome, Halfling, Ignan, and Undercommon. See the Linguistics skill page for more information about these languages.</li>
-    </ul>
-    
-    <h3>Defense Racial Traits</h3>
-    <ul>
-      <li>Energy Resistance: Oreads have acid resistance 5.</li>
-    </ul>
-    
-    <h3>Magical Racial Traits</h3>
-    <ul>
-      <li>Spell-Like Ability (Sp) Oread can use magic stone 1/day (caster level equals the oread‘s total level; DC 11 + Charisma modifier).</li>
-    </ul>
-    
-    <h3>Senses Racial Traits</h3>
-
-    <div>
-      <p>Isolated: Many oreads are loners and raise their families in isolated groups, either in deep caverns or high mountains. They gain a +2 racial bonus on Perception checks and Knowledge (dungeoneering) checks, and they can use Knowledge (dungeoneering) untrained. They begin play speaking only Terran, rather than Common and Terran. This racial trait replaces energy resistance and alters the oread’s starting languages.</p>
-      </div>
-      <div>
-      <p>Mountain-Born: Oreads are drawn to mountains and other high places, and after many generations they’ve grown well suited to their environment. Oreads with this racial trait gain a +2 racial bonus on Acrobatics checks made to cross narrow ledges and on saves against altitude fatigue and sickness. This racial trait replaces the spell-like ability racial trait.</p>
-      </div>
-      <div>
-      <p>Mostly Human: A few oreads have appearances much closer to those of their human ancestors; in fact, they may not even realize their true race. Such geniekin appear to be human, save perhaps minor features like unusual eye color, and they count as humanoid (human) as well as outsider (native) for all purposes (such as humanoid-affecting spells such as charm person or enlarge person). These geniekin do not automatically gain their associated elemental language (but may select it as a bonus language if their Intelligence is high enough). This ability alters the geniekin’s type, subtype, and languages.</p>
-      </div>
-
-      <p>
-        Oread Gem Magic (1 RP): Oreads’ proclivity for long ps of study and concentration makes them natural wizards, witches, and oracles. Oreads with this racial trait can augment their earth-related spells and spell-like abilities through the use of precious and semiprecious gemstones as additional material components (see Table: Oread Gem Magic below). The gems are destroyed in the process, granting the spell the listed effects in addition to its normal effects unless otherwise noted. Only one instance of oread gem magic can be applied to a spell at a time; excess expended gems do not stack. This racial trait replaces the earth affinity racial trait. Source: PPC:BotE
-    </p>
-    <p>
-        Stone in the Blood: Oreads with this racial trait mimic the healing abilities of the mephits, gaining fast healing 2 for 1 round anytime they are subject to acid damage (the acid damage does not need to overcome the oread’s resistances or immunities to activate this ability). The oread can heal up to 2 hit points per level per day with this ability, after which it ceases to function. This racial trait replaces earth affinity.
-    </p>
-    <p>
-        Treacherous Earth: Once per day, an oread with this racial trait can will the earth to rumble and shift, transforming a 10-foot-radius patch of earth, unworked stone, or sand into an area of difficult terrain, centered on an area the oread touches. This lasts for a number of minutes equal to the oread’s level, after which the ground returns to normal. This racial trait replaces the spell-like ability racial trait.
-    </p>
-    <p>
-        Alternate Elemental Heritages<br>
-        Note Geniekin trace their lineage to beings from the various Elemental Planes. Though their progenitors are typically genies, this ancestry can derive from any number of elemental creatures. Furthermore, even geniekin whose ancestry includes only genies can manifest their elemental heritage in uncommon ways. The following heritages represent geniekin variants who have an affinity for different aspects of the elements, with new ability modifiers, spell-like abilities, and elemental affinities that replace the default racial traits.
-    </p>
-    <table >
-      <thead>
-        <tr>
-          <th>Gemsoul (Crystal Oread)</th>
-        </tr>
-      </thead>
-      </table>
-      
-      <p>Typical Alignment: N</p>
-      
-      <p>Ability Modifiers: +2 Str, +2 Cha, –2 Wis</p>
-      
-      <p>Alternate Spell-Like Ability: Gemsouls gain color spray as a spell-like ability.</p>
-      
-      <p>With scintillating personalities to match their captivating appearances, gemsoul oreads command attention—and prefer it that way. Gemsouls tend to have large egos and are flashy in their relationships. They gravitate towards artistic pursuits, most frequently of a performative nature, though they also have a strong tradition of symmetric poetry. Gemsouls prefer to make their homes in flamboyant societies or places where they can make meaningful personal contributions, as well as in nations that appreciate cultivated beauty. Gemsouls typically have dazzling, faceted skin, along with a cluster of crystalline formations instead of hair and pupil-less eyes of vivid colors. Some favor tattoos in complex, branching geometric shapes, and they can frequently be seen wearing silks or brightly dyed linen to contrast their complexions.</p>
-      
-      <p>Crystal Affinity: This racial trait functions as and can be replaced as the base oread’s earth affinity, except it benefits sorcerers with the deep earth bloodline and spellcasters with the Charm domain.</p>
-      <table >
-        <thead>
-          <tr>
-            <th>Ironsoul (Metal Oread)</th>
-          </tr>
-        </thead>
-        </table>
-        
-
-      
-      <p>Typical Alignment: LN</p>
-      
-      <p>Ability Modifiers: +2 Con, +2 Wis, –2 Dex</p>
-      
-      <p>Alternate Spell-Like Ability Ironsouls gain unerring weapon as a spell-like ability.
-      <br /></p><p>Stolid and indomitable, ironsoul oreads undertake great works, both physical and conceptual, with unwavering determination. Possessed of patience and a sense of self-refinement through struggle, ironsouls reflect their ancestry in their continuous and determined efforts towards self-improvement. Ironsouls are most at home in areas that reflect that same sense of directed and intentional growth, and they operate best within existing formal structures. Ironsouls wear their elemental heritage on their skin, with most having some amount of metallic sheen. Their skin tone varies, with colors ranging from gold and silver to copper-green and dull, oxide gray.
-      <br /></p><p>Metal Affinity This racial trait functions as and can be replaced as the base oread’s earth affinity, except it benefits sorcerers with the shaitan bloodline and spellcasters with the Metal subdomain.</p>
-
-
-        <table>
-          <tr>
-            <th>Spell/Spell-Like Ability</th>
-            <th>Effect</th>
-            <th>Cost</th>
-          </tr>
-          <tr>
-            <td>Binding Earth</td>
-            <td>+1 damage; +1 to DC of Strength checks</td>
-            <td>Garnet worth 50 gp.</td>
-          </tr>
-          <tr>
-            <td>Binding Earth, Mass</td>
-            <td>As binding earth augmentation, affecting all targets of the augmented spell</td>
-            <td>Garnets worth 250 gp.</td>
-          </tr>
-          <tr>
-            <td>Calcific Touch</td>
-            <td>+1 Dexterity damage</td>
-            <td>Aquamarine worth 250 gp.</td>
-          </tr>
-          <tr>
-            <td>Clashing Rocks</td>
-            <td>+1 damage per damage die</td>
-            <td>Emeralds worth 1,500 gp.</td>
-          </tr>
-          <tr>
-            <td>Earthquake</td>
-            <td>+2 Reflex save DC in whatever application the spell is used; area increases to 100-foot-radius shapeable spread</td>
-            <td>Jet worth 500 gp.</td>
-          </tr>
-          <tr>
-            <td>Elemental Body</td>
-            <td>Duration increases to 10 minutes/level.</td>
-            <td>Amber worth 250 gp for elemental body I, +100 gp per spell level for greater versions.</td>
-          </tr>
-          <tr>
-            <td>Elemental Swarm</td>
-            <td>Earth elementals summoned gain the advanced simple template (this does not stack with the Augment Summoning feat)</td>
-            <td>Rubies worth 1,200 gp.</td>
-          </tr>
-          <tr>
-            <td>Magic Stone</td>
-            <td>Range increment increases by 10 feet.</td>
-            <td>Moonstone worth 25 gp.</td>
-          </tr>
-          <tr>
-            <td>Meld into Stone</td>
-            <td>Can bring up to 200 pounds of equipment with you; you can see as normal out of the stone</td>
-            <td>Peridots worth 150 gp.</td>
-          </tr>
-          <tr>
-            <td>Mighty Fist of Earth</td>
-            <td>Increase unarmed strike damage by one step (to 1d4 in most instances)</td>
-            <td>Sard or sardonyx worth 25 gp.</td>
-          </tr>
-          <tr>
-            <td>Raging Rubble</td>
-            <td>Rubble deals +1 damage; distraction DC increases by 1</td>
-            <td>Tourmaline worth 80 gp.</td>
-          </tr>
-          <tr>
-            <td>Shifting Sand</td>
-            <td>Move area of sands up to 15 feet as a move action</td>
-            <td>Turquoise worth 125 gp.</td>
-          </tr>
-       
-
-<br />
-      <tr>
-        <td>Soften Earth and Stone</td><td>Creatures can move only at a quarter their normal speed (minimum 5 feet) in areas of mud and loose dirt</td><td>Fluorite worth 100 gp.</td>
-      </tr>
-      <tr>
-        <td>Spike Stones </td><td> +1 piercing damage; spikes deal 1 point of bleed damage </td><td> Topaz worth 300 gp.</td>          </tr>
-        <tr>
-        <td>Stone Shape </td><td> Shapes that include moving parts have only 5% chance of not working </td><td> Opal worth 250 gp.</td>          </tr>
-        <tr>
-        <td>Stone Shield </td><td> If your opponent’s attack strikes the stone shield, its full damage roll is also apptded to its weapon. Unarmed strikes and natural attacks are not affected </td><td> Jade worth 75 gp.</td>          </tr>
-        <tr>
-        <td>Stoneskin </td><td> The cost of this spell’s expensive material component can be reduced or increased to affect the spell’s power accordingly. With reduced components, the spell grants DR 10/silver (instead of adamantine); with increased components, the spell absorbs 15 points of damage per caster level before it’s discharged </td><td> Diamonds worth 150 gp (reduced); diamonds worth 500 gp (increased).</td>          </tr>
-        <tr>
-        <td>Wall of Stone </td><td> Wall is 1 inch thick per 3 caster levels. </td><td> Sapphire worth 400 gp.</td>          </tr>
-        <tr>
-
-  </table><br />
-  <table >
-    <thead>
-      <tr>
-        <th>Favored Class Options</th>
-      </tr>
-    </thead>
-    </table>
-
-</tr>
-    The following favored class options are available to all characters of this race who have the listed<br> favored class, and unless otherwise stated, the bonus applies each time you select the favored class reward.<br /><br />
-
-<ul>
-  <li>Bard Add +5 feet to the range of one of the bard’s bardic performances (max +30 feet to any one performance).</li>
-  <li>Cleric Add a +1/2 bonus on Knowledge (planes) checks relating to the Plane of Earth and creatures with the earth subtype.</li>
-  <li>Druid Add a +1/2 bonus on Knowledge (nature) checks relating to plants and burrowing animals.</li>
-  <li>Fighter Add +1 to the Fighter’s CMD when resisting a bull rush or drag attempt.</li>
-  <li>Monk Add +1/3 on critical hit confirmation rolls made with unarmed strikes (maximum bonus of +5). This bonus does not stack with Critical Focus.</li>
-  <li>Paladin Add +1/4 to the bonus the paladin grants her allies with her aura of courage and aura of resolve special abilities.</li>
-  <li>Ranger Add +1/4 to the natural armor bonus of the ranger’s animal companion. If the ranger ever replaces his animal companion, the new animal companion gains this bonus.</li>
-  <li>Summoner Add a +1/4 natural armor bonus to the AC of the summoner’s eidolon.</li>
-</ul>
-
-<div>
-  <table >
-    <thead>
-      <tr>
-        <th>Racial Archetypes</th>
-      </tr>
-    </thead>
-    </table>
-
-  
-  <p>The following racial archetypes are available to oreads:</p>
-  <ul>
-    <li>Shaitan Binder (Summoner; Oread)</li>
-    <li>Student of Stone (Monk; Oread)</li>
-  </ul>
-  <table >
-    <thead>
-      <tr>
-        <th>Racial Feats</th>
-      </tr>
-    </thead>
-    </table>
-
-  <p>The following feats are available to an oread character who meets the prerequisites.</p>
-  <ul>
-    <li>Dwarf Blooded</li>
-    <li>Echoes of Stone</li>
-    <li>Elemental Jaunt</li>
-    <li>Murmurs of Earth</li>
-    <li>Oread Burrower</li>
-    <li>Oread Earth Glider</li>
-    <li>Stony Step</li>
-  </ul>
-</div>
-
-
-
-
-      <!--<p >Filth Oread (6 RP)
-    </p><p>Bite attack: Filth oread teeth grow rapidly, their teeth carry a disease - increase by level
-    </p><p>Random Oread Starting Ages
-    Adulthood	Intuitive1	Self-Taught2	Trained3
-    60 years	+4d6 years
-    (64 – 84 years)	+6d6 years
-    (66 – 96 years)	+8d6 years
-    (68 – 108 years)
-    1 This category includes barbarians, oracles, rogues, and sorcerers.
-    2 This category includes bards, cavaliers, fighters, gunslingers, paladins, rangers, summoners, and witches.
-    3 This category includes alchemists, clerics, druids, inquisitors, magi, monks, and wizards.
-    </p><p>Random Oread Height and Weight
-    Gender	Base Height	Height Modifier	Base Weight	Weight Modifier
-    Male	4 ft. 0 in.	+2d6 in.
-    (4 ft. 2 in. – 5 ft.)	150 lbs.	+(2d6×7 lbs.)
-    (164 – 234 lbs.)
-    Female	3 ft. 9 in.	+2d6 in.
-    (3 ft. 11 in. – 4 ft. 9 in.)	120 lbs.	+(2d6×7 lbs.)
-    (134 – 204 lbs.)
-    Table: Race Point Costs
-    Racial Traits	Race Point Cost
-    Type	Outsider (native)	3
-    Size	Medium	0
-    Base Speed	Slow	–1
-    Ability Score Modifiers	Standard (+2 Str, +2 Wis, –2 Cha)	0
-    Languages	Standard	1
-    Filth Oread are immune to bleed damage, death effects, disease, paralysis, poison, sleep effects, and stunning.
-    </p><p>Misc.	Elemental affinity (earth)	1
-    Spell-Like Ability	Lesser	1
-    Senses	Darkvision 60 ft.	2
-    Total	8
-    Oreads are humans whose ancestry includes the touch of an elemental being of earth somewhere along the line, often that of a shaitan genie. Stoic and contemplative, oreads are a race not easily moved, yet almost unstoppable when spurred to action. They remain a mystery to most of the world thanks to their reclusive nature, but those who seek them out in their secluded mountain hideaways find oreads to be quiet, dependable, and protective of their friends.
-    </p><p>Physical Description: Oreads are strong and solidly built, with skin and hair colored stony shades of black, brown, gray, or white. While all oreads appear vaguely earthy, a few bear more pronounced signs of their elemental heritage—skin that shines like polished onyx, rocky outcroppings protruding from their flesh, glowing gemstones for eyes, or hair like crystalline spikes. They often dress in earthy tones, wearing practical clothing well suited to vigorous physical activity and preferring fresh flowers, simple gemstones, and other natural accents to complex manufactured jewelry.
-    </p><p>Society: As a minor offshoot of the human race, oreads have no real established society of their own. Instead, most oreads grow up in human communities learning the customs of their parents. Adult oreads have a well-deserved reputation among other races for being hermits and loners. Few take well to the bustle of city life, preferring instead to spend their days in quiet contemplation atop some remote mountain peak or deep below the earth in a secluded cavern. Oreads with a greater tolerance for life among humans often join the city watch, or find some other way to serve their community in a position of responsibility.
-    </p><p>Relations: Oreads feel comfortable in the company of dwarves, with whom they have much in common. They find gnomes too strange and many halflings far too brash, and so avoid these races in general. Oreads gladly associate with half-orcs and half-elves, feeling a sense of kinship with the other part-human races despite inevitable personality conflicts. Among the elemental-touched races, oreads have few friends but no true enemies.
-    </p><p>Alignment and Religion: Oreads are, perhaps above all else, set in their ways, and any disruption of their routine is met with quiet disapproval. Oreads are fiercely protective of their friends, but don’t seem particularly concerned with the well-being of those outside their small circle of acquaintances. As such, most oreads are lawful neutral. Religious life comes easily to the earth-touched. They appreciate the quiet, contemplative life of the monastic order, and most dedicate themselves to the worship of earth- or nature-related deities.
-    </p><p>Adventurers: Oreads are initially hesitant adventurers. They dislike leaving their homes and don’t handle the shock of new experiences well. Usually it takes some outside force to rouse oreads into action, often by threatening their homes, lives, or friends. Once the initial threat is dealt with, however, oreads often find they’ve grown accustomed to the adventuring life, and continue to pursue it through the rest of their days. Oreads make good monks and fighters thanks to their prodigious strength and self-discipline.
-    </p><p>Male Names: Andanan, Jeydavu, Mentys, Oret, Sithundan, Urtar.
-    </p><p>Female Names: Besthana, Echane, Ghatiyara, Irice, Nysene, Pashe.
-    </p><p>Standard Racial Traits
-    Ability Score Modifiers: Oreads are strong, solid, stable, and stoic. They gain +2 Strength, +2 Wisdom, and –2 Charisma.
-    Type: Oreads are outsiders with the native subtype.
-    Size: Oreads are Medium creatures and thus have no bonuses or penalties due to their size.
-    Speed (Slow): Oreads have a base speed of 20 feet.
-    Languages: Oreads begin play speaking Common and Terran. Oreads with high Intelligence scores can choose from the following: Aquan, Auran, Dwarven, Elven, Gnome, Halfling, Ignan, and Undercommon. See the Linguistics skill page for more information about these languages.
-    Defense Racial Traits
-    </p><p>Energy Resistance: Oreads have acid resistance 5.
-    Magical Racial Traits
-    </p><p>Spell-Like Ability (Sp) Oread can use magic stone 1/day (caster level equals the oread‘s total level; DC 11 + Charisma modifier).
-    Senses Racial Traits
-    </p><p>Darkvision: Oreads can see perfectly in the dark up to 60 feet.
-    Other Racial Traits
-    </p><p>Earth Affinity: Oread sorcerers with the elemental (earth) bloodline treat their Charisma score as 2 points higher for all sorcerer spells and class abilities. Oread clerics with the Earth domain use their domain powers and spells at +1 caster level.
-    Alternate Racial Traits
-    The following alternate racial traits may be selected in place of one or more of the standard racial traits above. Consult your GM before selecting any of these new options.
-    </p><p>Crystalline Form: Oreads with this trait gain a +2 racial bonus to AC against rays thanks to their reflective crystalline skin. In addition, once per day, they can deflect a single ray attack targeted at them as if they were using the Deflect Arrows feat. This racial trait replaces earth affinity.
-    Earth Insight: Oread spellcasters sometimes find that their elemental heritage makes creatures of earth more willing to serve them. Summon monster and summon nature’s ally spells that such oreads cast last 2 rounds longer than normal when used to summon creatures with the earth subtype. This racial trait replaces earth affinity.
-    Ferrous Growth: Oreads with this racial trait learn how to mimic the magic of their shaitan ancestors. Once per day, such an oread can cause a touched piece of non-magical iron or steel to grow into an object up to 10 pounds in weight, such as a sword, crowbar, or light steel shield. This object remains in this form for 10 minutes or until broken or destroyed, at which point it shrinks back to its original size and shape. This racial trait replaces the spell-like ability racial trait.
-    Fertile Soil: Oread sorcerers with the verdant bloodline treat their Charisma score as 2 points higher for all sorcerer spells and class abilities. Oread clerics with the Plant domain use their domain powers and spells at +1 caster level. This racial trait replaces earth affinity.
-    Granite Skin: Rocky growths cover the skin of oreads with this racial trait. They gain a +1 racial bonus to natural armor. This racial trait replaces energy resistance.
-    Isolated: Many oreads are loners and raise their families in isolated groups, either in deep caverns or high mountains. They gain a +2 racial bonus on Perception checks and Knowledge (dungeoneering) checks, and they can use Knowledge (dungeoneering) untrained. They begin play speaking only Terran, rather than Common and Terran. This racial trait replaces energy resistance and alters the oread’s starting languages. Source PZO9280
-    Mountain-Born: Oreads are drawn to mountains and other high places, and after many generations they’ve grown well suited to their environment. Oreads with this racial trait gain a +2 racial bonus on Acrobatics checks made to cross narrow ledges and on saves against altitude fatigue and sickness. This racial trait replaces the spell-like ability racial trait.
-    Mostly Human: A few oreads have appearances much closer to those of their human ancestors; in fact, they may not even realize their true race. Such geniekin appear to be human, save perhaps minor features like unusual eye color, and they count as humanoid (human) as well as outsider (native) for all purposes (such as humanoid-affecting spells such as charm person or enlarge person). These geniekin do not automatically gain their associated elemental language (but may select it as a bonus language if their Intelligence is high enough). This ability alters the geniekin’s type, subtype, and languages. Source PZO9280
-    Oread Gem Magic (1 RP): Oreads’ proclivity for long ps of study and concentration makes them natural wizards, witches, and oracles. Oreads with this racial trait can augment their earth-related spells and spell-like abilities through the use of precious and semiprecious gemstones as additional material components (see Table: Oread Gem Magic below). The gems are destroyed in the process, granting the spell the listed effects in addition to its normal effects unless otherwise noted. Only one instance of oread gem magic can be applied to a spell at a time; excess expended gems do not stack. This racial trait replaces the earth affinity racial trait. Source: PPC:BotE
-    Stone in the Blood: Oreads with this racial trait mimic the healing abilities of the mephits, gaining fast healing 2 for 1 round anytime they are subject to acid damage (the acid damage does not need to overcome the oread’s resistances or immunities to activate this ability). The oread can heal up to 2 hit points per level per day with this ability, after which it ceases to function. This racial trait replaces earth affinity.
-    Treacherous Earth: Once per day, an oread with this racial trait can will the earth to rumble and shift, transforming a 10-foot-radius patch of earth, unworked stone, or sand into an area of difficult terrain, centered on an area the oread touches. This lasts for a number of minutes equal to the oread’s level, after which the ground returns to normal. This racial trait replaces the spell-like ability racial trait.
-    Alternate Elemental Heritages
-    Note Geniekin trace their lineage to beings from the various Elemental Planes. Though their progenitors are typically genies, this ancestry can derive from any number of elemental creatures. Furthermore, even geniekin whose ancestry includes only genies can manifest their elemental heritage in uncommon ways. The following heritages represent geniekin variants who have an affinity for different aspects of the elements, with new ability modifiers, spell-like abilities, and elemental affinities that replace the default racial traits.
-
-    </p><p>Gemsoul (Crystal Oread)
-    Typical Alignment N
-    Ability Modifiers +2 Str, +2 Cha, –2 Wis
-    Alternate Spell-Like Ability Gemsouls gain color spray as a spell-like ability.
-    </p><p>With scintillating personalities to match their captivating appearances, gemsoul oreads command attention—and prefer it that way. Gemsouls tend to have large egos and are flashy in their relationships. They gravitate towards artistic pursuits, most frequently of a performative nature, though they also have a strong tradition of symmetric poetry. Gemsouls prefer to make their homes in flamboyant societies or places where they can make meaningful personal contributions, as well as in nations that appreciate cultivated beauty. Gemsouls typically have dazzling, faceted skin, along with a cluster of crystalline formations instead of hair and pupil-less eyes of vivid colors. Some favor tattoos in complex, branching geometric shapes, and they can frequently be seen wearing silks or brightly dyed linen to contrast their complexions.
-    </p><p>Crystal Affinity This racial trait functions as and can be replaced as the base oread’s earth affinity, except it benefits sorcerers with the deep earth bloodline and spellcasters with the Charm domain.
-    Ironsoul (Metal Oread)
-    Typical Alignment LN
-    Ability Modifiers +2 Con, +2 Wis, –2 Dex
-    Alternate Spell-Like Ability Ironsouls gain unerring weapon as a spell-like ability.
-    </p><p>Stolid and indomitable, ironsoul oreads undertake great works, both physical and conceptual, with unwavering determination. Possessed of patience and a sense of self-refinement through struggle, ironsouls reflect their ancestry in their continuous and determined efforts towards self-improvement. Ironsouls are most at home in areas that reflect that same sense of directed and intentional growth, and they operate best within existing formal structures. Ironsouls wear their elemental heritage on their skin, with most having some amount of metallic sheen. Their skin tone varies, with colors ranging from gold and silver to copper-green and dull, oxide gray.
-    </p><p>Metal Affinity This racial trait functions as and can be replaced as the base oread’s earth affinity, except it benefits sorcerers with the shaitan bloodline and spellcasters with the Metal subdomain.
-    Table: Oread Gem Magic
-    Spell/Spell-Like Ability	Effect	Cost
-    Binding Earth	+1 damage; +1 to DC of Strength checks	Garnet worth 50 gp.
-    Binding Earth, Mass	As binding earth augmentation, affecting all targets of the augmented spell	Garnets worth 250 gp.
-    Calcific Touch	+1 Dexterity damage	Aquamarine worth 250 gp.
-    Clashing Rocks	+1 damage per damage die	Emeralds worth 1,500 gp.
-    Earthquake	+2 Reflex save DC in whatever application the spell is used; area increases to 100-foot-radius shapeable spread	Jet worth 500 gp.
-    Elemental Body	Duration increases to 10 minutes/level.	Amber worth 250 gp for elemental body I, +100 gp per spell level for greater versions.
-    Elemental Swarm	Earth elementals summoned gain the advanced simple template (this does not stack with the Augment Summoning feat)	Rubies worth 1,200 gp.
-    Magic Stone	Range increment increases by 10 feet.	Moonstone worth 25 gp.
-    Meld into Stone	Can bring up to 200 pounds of equipment with you; you can see as normal out of the stone	Peridots worth 150 gp.
-    Mighty Fist of Earth	Increase unarmed strike damage by one step (to 1d4 in most instances)	Sard or sardonyx worth 25 gp.
-    Raging Rubble	Rubble deals +1 damage; distraction DC increases by 1	Tourmaline worth 80 gp.
-    Shifting Sand	Move area of sands up to 15 feet as a move action	Turquoise worth 125 gp.
-    Soften Earth and Stone	Creatures can move only at a quarter their normal speed (minimum 5 feet) in areas of mud and loose dirt	Fluorite worth 100 gp.
-    Spike Stones	+1 piercing damage; spikes deal 1 point of bleed damage	Topaz worth 300 gp.
-    Stone Shape	Shapes that include moving parts have only 5% chance of not working	Opal worth 250 gp.
-    Stone Shield	If your opponent’s attack strikes the stone shield, its full damage roll is also applied to its weapon. Unarmed strikes and natural attacks are not affected	Jade worth 75 gp.
-    Stoneskin	The cost of this spell’s expensive material component can be reduced or increased to affect the spell’s power accordingly. With reduced components, the spell grants DR 10/silver (instead of adamantine); with increased components, the spell absorbs 15 points of damage per caster level before it’s discharged	Diamonds worth 150 gp (reduced); diamonds worth 500 gp (increased).
-    Wall of Stone	Wall is 1 inch thick per 3 caster levels.	Sapphire worth 400 gp.
-    Favored Class Options
-    The following favored class options are available to all characters of this race who have the listed favored class, and unless otherwise stated, the bonus applies each time you select the favored class reward.
-    </p><p>Bard Add +5 feet to the range of one of the bard’s bardic performances (max +30 feet to any one performance).
-    Cleric Add a +1/2 bonus on Knowledge (planes) checks relating to the Plane of Earth and creatures with the earth subtype.
-    Druid Add a +1/2 bonus on Knowledge (nature) checks relating to plants and burrowing animals.
-    Fighter Add +1 to the Fighter’s CMD when resisting a bull rush or drag attempt.
-    Monk Add +1/3 on critical hit confirmation rolls made with unarmed strikes (maximum bonus of +5). This bonus does not stack with Critical Focus.
-    Paladin Add +1/4 to the bonus the paladin grants her allies with her aura of courage and aura of resolve special abilities.
-    Ranger Add +1/4 to the natural armor bonus of the ranger’s animal companion. If the ranger ever replaces his animal companion, the new animal companion gains this bonus.
-    Summoner Add a +1/4 natural armor bonus to the AC of the summoner’s eidolon.
-    Racial Archetypes
-    The following racial archetypes are available to oreads:
-    </p><p>Shaitan Binder (Summoner; Oread)
-    Student of Stone (Monk; Oread)
-    Racial Feats
-    The following feats are available to an oread character who meets the prerequisites.
-    </p><p>Dwarf Blooded
-    Echoes of Stone
-    Elemental Jaunt
-    Murmurs of Earth
-    Oread Burrower
-    Oread Earth Glider
-    Stony Step
-  </div></div>
-    
-    </p>
-  </div></div>
-</div>
-
-<div class="parallax"></div> 
-
-Filth Oread (6 RP)
-
-Bite attack: Filth oread teeth grow rapidly, their teeth carry a disease - increase by level.
-
-Random Oread Starting Ages:
-
-| Adulthood | Intuitive1 | Self-Taught2 | Trained3 |
-| --------- | ---------- | ------------ | -------- |
-| 60 years | +4d6 years (64 – 84 years) | +6d6 years (66 – 96 years) | +8d6 years (68 – 108 years) |
-
-1. This category includes barbarians, oracles, rogues, and sorcerers.
-2. This category includes bards, cavaliers, fighters, gunslingers, paladins, rangers, summoners, and witches.
-3. This category includes alchemists, clerics, druids, inquisitors, magi, monks, and wizards.
-
-Random Oread Height and Weight:
-
-| Gender | Base Height | Height Modifier | Base Weight | Weight Modifier |
-| ------ | ---------- | -------------- | ---------- | --------------- |
-| Male | 4 ft. 0 in. | +2d6 in. (4 ft. 2 in. – 5 ft.) | 150 lbs. | +(2d6×7 lbs.) (164 – 234 lbs.) |
-| Female | 3 ft. 9 in. | +2d6 in. (3 ft. 11 in. – 4 ft. 9 in.) | 120 lbs. | +(2d6×7 lbs.) (134 – 204 lbs.) |
-
-Table: Race Point Costs
-
-| Racial Traits | Race Point Cost |
-| ------------- | --------------- |
-| Type | Outsider (native) | 3 |
-| Size | Medium | 0 |
-| Base Speed | Slow | –1 |
-| Ability Score Modifiers | Standard (+2 Str, +2 Wis, –2 Cha) | 0 |
-| Languages | Standard | 1 |
-
-Filth Oread are immune to bleed damage, death effects, disease, paralysis, poison, sleep effects, and stunning.
-
-Misc.
-
-| Elemental affinity | earth | 1 |
-| Spell-Like Ability | Lesser | 1 |
-| Senses | Darkvision 60 ft. | 2 |
-| Total | 8 |
-
-Oreads are humans whose ancestry includes the touch of an elemental being of earth somewhere along the line, often that of a shaitan genie. Stoic and contemplative, oreads are a race not easily moved, yet almost unstoppable when spurred to action. They remain a mystery to most of the world thanks to their reclusive nature, but those who seek them out in their secluded mountain hideaways find oreads to be quiet, dependable, and protective of their friends.
-
-Physical Description:
-
-Oreads are strong and solidly built, with skin and hair colored stony shades of black, brown, gray, or white. While all oreads appear vaguely earthy, a few bear more pronounced signs of their elemental heritage—skin that shines like polished onyx, rocky outcroppings protruding from their flesh, glowing gemstones for eyes, or hair like crystalline spikes. They often dress in earthy tones, wearing practical clothing well suited to vigorous physical activity and preferring fresh flowers, simple gemstones, and other natural accents to complex manufactured jewelry.
-
-Society:
-
-As a minor offshoot of the human race, oreads have no real established society of their own. Instead, most oreads grow up in human communities learning the customs of their parents. Adult oreads have a well-deserved reputation among other races for being hermits and loners. Few take well to the bustle of city life,preferring instead to spend their days in quiet contemplation atop some remote mountain peak or deep below the earth in a secluded cavern. Oreads with a greater tolerance for life among humans often join the city watch, or find some other way to serve their community in a position of responsibility.
-</p><p>Relations: Oreads feel comfortable in the company of dwarves, with whom they have much in common. They find gnomes too strange and many halflings far too brash, and so avoid these races in general. Oreads gladly associate with half-orcs and half-elves, feeling a sense of kinship with the other part-human races despite inevitable personality conflicts. Among the elemental-touched races, oreads have few friends but no true enemies.
-
-------
-
-Alignment and Religion: Oreads are known for being set in their ways, and any disruption of their routine is met with quiet disapproval. They are fiercely protective of their friends, but don’t seem particularly concerned with the well-being of those outside their small circle of acquaintances. As such, most oreads are lawful neutral. The earth-touched appreciate the quiet, contemplative life of the monastic order, and most dedicate themselves to the worship of earth- or nature-related deities.
-
-Adventurers: Oreads are initially hesitant adventurers. They dislike leaving their homes and don’t handle the shock of new experiences well. Usually, it takes some outside force to rouse oreads into action, often by threatening their homes, lives, or friends. Once the initial threat is dealt with, however, oreads often find they’ve grown accustomed to the adventuring life, and continue to pursue it through the rest of their days. Oreads make good monks and fighters thanks to their prodigious strength and self-discipline.
-
-Male Names: Andanan, Jeydavu, Mentys, Oret, Sithundan, Urtar.
-
-Female Names: Besthana, Echane, Ghatiyara, Irice, Nysene, Pashe.
-
-Standard Racial Traits:
-
-Ability Score Modifiers: Oreads are strong, solid, stable, and stoic. They gain +2 Strength, +2 Wisdom, and –2 Charisma.
-
-Type: Oreads are outsiders with the native subtype.
-
-Size: Oreads are Medium creatures and thus have no bonuses or penalties due to their size.
-
-Speed: Oreads have a base speed of 20 feet.
-
-Languages: Oreads begin play speaking Common and Terran. Oreads with high Intelligence scores can choose from the following: Aquan, Auran, Dwarven, Elven, Gnome, Halfling, Ignan, and Undercommon. See the Linguistics skill page for more information about these languages.
-
-Defense Racial Traits:
-
-Energy Resistance: Oreads have acid resistance 5.
-
-Magical Racial Traits: None mentioned.
-
-------
-
-<p>Standard Racial Traits:</p>
-<ul>
-    <li>Ability Score Modifiers: Oreads are strong, solid, stable, and stoic. They gain +2 Strength, +2 Wisdom, and –2 Charisma.</li>
-    <li>Type: Oreads are outsiders with the native subtype.</li>
-    <li>Size: Oreads are Medium creatures and thus have no bonuses or penalties due to their size.</li>
-    <li>Speed (Slow): Oreads have a base speed of 20 feet.</li>
-    <li>Languages: Oreads begin play speaking Common and Terran. Oreads with high Intelligence scores can choose from the following: Aquan, Auran, Dwarven, Elven, Gnome, Halfling, Ignan, and Undercommon. See the Linguistics skill page for more information about these languages.</li>
-</ul>
-<p>Defense Racial Traits:</p>
-<ul>
-    <li>Energy Resistance: Oreads have acid resistance 5.</li>
-</ul>
-<p>Offense Racial Traits:</p>
-<ul>
-    <li>Spell-Like Ability (Sp): Oreads can use magic stone 1/day (caster level equals the oread's total level; DC 11 + Charisma modifier).</li>
-</ul>
-<p>Senses Racial Traits:</p>
-<ul>
-    <li>Darkvision: Oreads can see perfectly in the dark up to 60 feet.</li>
-</ul>
-<p>Other Racial Traits:</p>
-<ul>
-    <li>Earth Affinity: Oread sorcerers with the elemental (earth) bloodline treat their Charisma score as 2 points higher for all sorcerer spells and class abilities. Oread clerics with the Earth domain use their domain powers and spells at +1 caster level.</li>
-</ul>
-<p>Alternate Racial Traits:</p>
-<ul>
-    <li>Crystalline Form: Oreads with this trait gain a +2 racial bonus to AC against rays thanks to their reflective crystalline skin. In addition, once per day, they can deflect a single ray attack targeted at them as if they were using the Deflect Arrows feat. This racial trait replaces earth affinity.</li>
-    <li>Earth Insight: Oread spellcasters sometimes find that their elemental heritage makes creatures of earth more willing to serve them. Summon monster and summon nature’s ally spells that such oreads cast last 2 rounds longer than normal when used to summon creatures with the earth subtype. This racial trait replaces earth affinity.</li>
-</ul>
-
-------
-
-- Ferrous Growth: Oreads with this racial trait can use mimicry to cause a touched piece of non-magical iron or steel to grow into an object up to 10 pounds in weight, such as a sword, crowbar, or light steel shield. This object remains in this form for 10 minutes or until broken or destroyed. This racial trait replaces the spell-like ability racial trait.
-
-- Fertile Soil: Oread sorcerers with the verdant bloodline treat their Charisma score as 2 points higher for all sorcerer spells and class abilities. Oread clerics with the Plant domain use their domain powers and spells at +1 caster level. This racial trait replaces earth affinity.
-
-- Granite Skin: Oreads with this racial trait gain a +1 racial bonus to natural armor due to rocky growths covering their skin. This racial trait replaces energy resistance.
-
-- Isolated: Oreads with this racial trait gain a +2 racial bonus on Perception checks and Knowledge (dungeoneering) checks, and they can use Knowledge (dungeoneering) untrained. They begin play speaking only Terran, rather than Common and Terran. This racial trait replaces energy resistance and alters the oread's starting languages. Source PZO9280.
-
-- Mountain-Born: Oreads with this racial trait gain a +2 racial bonus on Acrobatics checks made to cross narrow ledges and on saves against altitude fatigue and sickness due to their affinity for mountains and other high places. This racial trait replaces the spell-like ability racial trait.
-
-- Mostly Human: Some oreads have appearances much closer to those of their human ancestors and count as humanoid (human) as well as outsider (native) for all purposes. These geniekin do not automatically gain their associated elemental language (but may select it as a bonus language if their Intelligence is high enough). This ability alters the geniekin’s type, subtype, and languages. Source PZO9280.
-
-- Oread Gem Magic (1 RP): Oreads with this racial trait can augment their earth-related spells and spell-like abilities through the use of precious and semiprecious gemstones as additional material components. See Table: Oread Gem Magic below for effects. Only one instance of oread gem magic can be applied to a spell at a time. This racial trait replaces the earth affinity racial trait. Source: PPC:BotE.
-
-- Stone in the Blood: Oreads with this racial trait gain fast healing 2 for 1 round anytime they are subject to acid damage (the acid damage does not need to overcome the oread’s resistances or immunities to activate this ability). The oread can heal up to 2 hit points per level per day with this ability, after which it ceases to function. This racial trait replaces earth affinity.
-
-- Treacherous Earth: Oreads with this racial trait can will the earth to rumble and shift, transforming a 10-foot-radius patch of earth, unworked stone, or sand into an area of difficult terrain, centered on an area the oread touches. This lasts for a number of minutes equal to the oread’s level, after which the ground returns to normal. This racial trait replaces the spell-like ability racial trait.
-
-- Alternate Elemental Heritages: Geniekin trace their lineage to beings from the various Elemental Planes, and their ancestry can derive from any number of elemental creatures. The following heritages represent geniekin variants who have an affinity for different aspects of the elements, with new ability modifiers, spell-like abilities, and elemental affinities that replace the default racial traits.
-
---------
-
-- Ferrous Growth: Oreads with this racial trait can use mimicry to cause a touched piece of non-magical iron or steel to grow into an object up to 10 pounds in weight, such as a sword, crowbar, or light steel shield. This object remains in this form for 10 minutes or until broken or destroyed. This racial trait replaces the spell-like ability racial trait.
-
-- Fertile Soil: Oread sorcerers with the verdant bloodline treat their Charisma score as 2 points higher for all sorcerer spells and class abilities. Oread clerics with the Plant domain use their domain powers and spells at +1 caster level. This racial trait replaces earth affinity.
-
-- Granite Skin: Oreads with this racial trait gain a +1 racial bonus to natural armor due to rocky growths covering their skin. This racial trait replaces energy resistance.
-
-- Isolated: Oreads with this racial trait gain a +2 racial bonus on Perception checks and Knowledge (dungeoneering) checks, and they can use Knowledge (dungeoneering) untrained. They begin play speaking only Terran, rather than Common and Terran. This racial trait replaces energy resistance and alters the oread's starting languages. Source PZO9280.
-
-- Mountain-Born: Oreads with this racial trait gain a +2 racial bonus on Acrobatics checks made to cross narrow ledges and on saves against altitude fatigue and sickness due to their affinity for mountains and other high places. This racial trait replaces the spell-like ability racial trait.
-
-- Mostly Human: Some oreads have appearances much closer to those of their human ancestors and count as humanoid (human) as well as outsider (native) for all purposes. These geniekin do not automatically gain their associated elemental language (but may select it as a bonus language if their Intelligence is high enough). This ability alters the geniekin’s type, subtype, and languages. Source PZO9280.
-
-- Oread Gem Magic (1 RP): Oreads with this racial trait can augment their earth-related spells and spell-like abilities through the use of precious and semiprecious gemstones as additional material components. See Table: Oread Gem Magic below for effects. Only one instance of oread gem magic can be applied to a spell at a time. This racial trait replaces the earth affinity racial trait. Source: PPC:BotE.
-
-- Stone in the Blood: Oreads with this racial trait gain fast healing 2 for 1 round anytime they are subject to acid damage (the acid damage does not need to overcome the oread’s resistances or immunities to activate this ability). The oread can heal up to 2 hit points per level per day with this ability, after which it ceases to function. This racial trait replaces earth affinity.
-
-- Treacherous Earth: Oreads with this racial trait can will the earth to rumble and shift, transforming a 10-foot-radius patch of earth, unworked stone, or sand into an area of difficult terrain, centered on an area the oread touches. This lasts for a number of minutes equal to the oread’s level, after which the ground returns to normal. This racial trait replaces the spell-like ability racial trait.
-
-- Alternate Elemental Heritages: Geniekin trace their lineage to beings from the various Elemental Planes, and their ancestry can derive from any number of elemental creatures. The following heritages represent geniekin variants who have an affinity for different aspects of the elements, with new ability modifiers, spell-like abilities, and elemental affinities that replace the default racial traits.
-
---------
-
-Gemsoul (Crystal Oread):
-- Typical Alignment: N
-- Ability Modifiers: +2 Str, +2 Cha, –2 Wis
-- Alternate Spell-Like Ability: Gemsouls gain color spray as a spell-like ability.
-- Description: With scintillating personalities to match their captivating appearances, gemsoul oreads command attention. They gravitate towards artistic pursuits, most frequently of a performative nature, though they also have a strong tradition of symmetric poetry. Gemsouls prefer to make their homes in flamboyant societies or places where they can make meaningful personal contributions, as well as in nations that appreciate cultivated beauty. Gemsouls typically have dazzling, faceted skin, along with a cluster of crystalline formations instead of hair and pupil-less eyes of vivid colors. Some favor tattoos in complex, branching geometric shapes, and they can frequently be seen wearing silks or brightly dyed linen to contrast their complexions.
-
-Crystal Affinity:
-- This racial trait functions as and can be replaced as the base oread’s earth affinity, except it benefits sorcerers with the deep earth bloodline and spellcasters with the Charm domain.
-
-Ironsoul (Metal Oread):
-- Typical Alignment: LN
-- Ability Modifiers: +2 Con, +2 Wis, –2 Dex
-- Alternate Spell-Like Ability: Ironsouls gain unerring weapon as a spell-like ability.
-- Description: Stolid and indomitable, ironsoul oreads undertake great works, both physical and conceptual, with unwavering determination. Possessed of patience and a sense of self-refinement through struggle, ironsouls reflect their ancestry in their continuous and determined efforts towards self-improvement. Ironsouls are most at home in areas that reflect that same sense of directed and intentional growth, and they operate best within existing formal structures. Ironsouls wear their elemental heritage on their skin, with most having some amount of metallic sheen. Their skin tone varies, with colors ranging from gold and silver to copper-green and dull, oxide gray.
-
-Metal Affinity:
-- This racial trait functions as and can be replaced as the base oread’s earth affinity, except it benefits sorcerers with the shaitan bloodline and spellcasters with the Metal subdomain.
-
-Table: Oread Gem Magic:
-- Binding Earth: +1 damage; +1 to DC of Strength checks; Cost: Garnet worth 50 gp.
-- Binding Earth, Mass: As binding earth augmentation, affecting all targets of the augmented spell; Cost: Garnets worth 250 gp.
-- Calcific Touch: +1 Dexterity damage; Cost: Aquamarine worth 250 gp.
-- Clashing Rocks: +1 damage per damage die; Cost: Emeralds worth 1,500 gp.
-
-------
-
-Gemsoul (Crystal Oread):
-- Typical Alignment: N
-- Ability Modifiers: +2 Str, +2 Cha, –2 Wis
-- Alternate Spell-Like Ability: Gemsouls gain color spray as a spell-like ability.
-
-With scintillating personalities to match their captivating appearances, gemsoul oreads command attention—and prefer it that way. Gemsouls tend to have large egos and are flashy in their relationships. They gravitate towards artistic pursuits, most frequently of a performative nature, though they also have a strong tradition of symmetric poetry. Gemsouls prefer to make their homes in flamboyant societies or places where they can make meaningful personal contributions, as well as in nations that appreciate cultivated beauty. Gemsouls typically have dazzling, faceted skin, along with a cluster of crystalline formations instead of hair and pupil-less eyes of vivid colors. Some favor tattoos in complex, branching geometric shapes, and they can frequently be seen wearing silks or brightly dyed linen to contrast their complexions.
-
-Crystal Affinity: This racial trait functions as and can be replaced as the base oread’s earth affinity, except it benefits sorcerers with the deep earth bloodline and spellcasters with the Charm domain.
-
-Ironsoul (Metal Oread):
-- Typical Alignment: LN
-- Ability Modifiers: +2 Con, +2 Wis, –2 Dex
-- Alternate Spell-Like Ability: Ironsouls gain unerring weapon as a spell-like ability.
-
-Stolid and indomitable, ironsoul oreads undertake great works, both physical and conceptual, with unwavering determination. Possessed of patience and a sense of self-refinement through struggle, ironsouls reflect their ancestry in their continuous and determined efforts towards self-improvement. Ironsouls are most at home in areas that reflect that same sense of directed and intentional growth, and they operate best within existing formal structures. Ironsouls wear their elemental heritage on their skin, with most having some amount of metallic sheen. Their skin tone varies, with colors ranging from gold and silver to copper-green and dull, oxide gray.
-
-Metal Affinity: This racial trait functions as and can be replaced as the base oread’s earth affinity, except it benefits sorcerers with the shaitan bloodline and spellcasters with the Metal subdomain.
-
-Table: Oread Gem Magic
-Spell/Spell-Like Ability | Effect | Cost
------------------------|--------|------
-Binding Earth | +1 damage; +1 to DC of Strength checks | Garnet worth 50 gp.
-Binding Earth, Mass | As binding earth augmentation, affecting all targets of the augmented spell | Garnets worth 250 gp.
-Calcific Touch | +1 Dexterity damage | Aquamarine worth 250 gp.
-Clashing Rocks | +1 damage per damage die | Emeralds worth 1,500 gp.
-
-------
-- Earthquake: +2 Reflex save DC in whatever application the spell is used; area increases to 100-foot-radius shapeable spread. Cost: Jet worth 500 gp.
-- Elemental Body: Duration increases to 10 minutes/level. Cost: Amber worth 250 gp for elemental body I, +100 gp per spell level for greater versions.
-- Elemental Swarm: Earth elementals summoned gain the advanced simple template (this does not stack with the Augment Summoning feat). Cost: Rubies worth 1,200 gp.
-- Magic Stone: Range increment increases by 10 feet. Cost: Moonstone worth 25 gp.
-- Meld into Stone: Can bring up to 200 pounds of equipment with you; you can see as normal out of the stone. Cost: Peridots worth 150 gp.
-- Mighty Fist of Earth: Increase unarmed strike damage by one step (to 1d4 in most instances). Cost: Sard or sardonyx worth 25 gp.
-- Raging Rubble: Rubble deals +1 damage; distraction DC increases by 1. Cost: Tourmaline worth 80 gp.
-- Shifting Sand: Move area of sands up to 15 feet as a move action. Cost: Turquoise worth 125 gp.
-- Soften Earth and Stone: Creatures can move only at a quarter their normal speed (minimum 5 feet) in areas of mud and loose dirt. Cost: Fluorite worth 100 gp.
-- Spike Stones: +1 piercing damage; spikes deal 1 point of bleed damage. Cost: Topaz worth 300 gp.
-- Stone Shape: Shapes that include moving parts have only 5% chance of not working. Cost: Opal worth 250 gp.
-
-------
-Stone Shield: If your opponent’s attack strikes the stone shield, its full damage roll is also applied to its weapon. Unarmed strikes and natural attacks are not affected. Jade worth 75 gp.
-
-Stoneskin: The cost of this spell’s expensive material component can be reduced or increased to affect the spell’s power accordingly. With reduced components, the spell grants DR 10/silver (instead of adamantine); with increased components, the spell absorbs 15 points of damage per caster level before it’s discharged. Diamonds worth 150 gp (reduced); diamonds worth 500 gp (increased).
-
-Wall of Stone: Wall is 1 inch thick per 3 caster levels. Sapphire worth 400 gp.
-
-Favored Class Options:
-The following favored class options are available to all characters of this race who have the listed favored class. Unless otherwise stated, the bonus applies each time you select the favored class reward.
-
-Bard: Add +5 feet to the range of one of the bard’s bardic performances (max +30 feet to any one performance).
-
-Cleric: Add a +1/2 bonus on Knowledge (planes) checks relating to the Plane of Earth and creatures with the earth subtype.
-
-Druid: Add a +1/2 bonus on Knowledge (nature) checks relating to plants and burrowing animals.
-
-Fighter: Add +1 to the Fighter’s CMD when resisting a bull rush or drag attempt.
-
-Monk: Add +1/3 on critical hit confirmation rolls made with unarmed strikes (maximum bonus of +5). This bonus does not stack with Critical Focus.
-
-Paladin: Add +1/4 to the bonus the paladin grants her allies with her aura of courage and aura of resolve special abilities.
-
-Ranger: Add +1/4 to the natural armor bonus of the ranger’s animal companion. If the ranger ever replaces his animal companion, the new animal companion gains this bonus.
-
-Summoner: Add a +1/4 natural armor bonus to the AC of the summoner’s eidolon.
-
-Racial Archetypes:
-- Shaitan Binder (Summoner; Oread)
-- Student of Stone (Monk; Oread)
-
-Racial Feats:
-- Dwarf Blooded
-- Echoes of Stone
-- Elemental Jaunt
-- Murmurs of Earth
-- Oread Burrower
-- Oread Earth Glider
-- Stony Step
-
-
-
-
-
--->
-
   </body>
 
 </head></html>
