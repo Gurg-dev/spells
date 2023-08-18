@@ -5,7 +5,7 @@
 
 
 	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width" initial-scale=1.0>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="spells">
 	<meta name="keywords" content="spells, pathfinder">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,31 +18,15 @@
         width: 100%;
 
       }
-      body, html {
-        margin: 0 0px;
+      body, h1, h2, h3, p, ul, ol, li {
+        margin: 0;
         padding: 0;
-        margin-top: 0;
-        margin-bottom: 0;
-        background-color: #181818;
-
-        height: fit-content;
-        width: fit-content;
-        background-attachment: fixed;
-
-        justify-content: center;
-        align-items: center;
-        display: all;
-        z-index: 1.0;
-        background-color: rgb(20, 20, 20);
-        /*
-        background-image: url(project.png), url(project1.png), url(project2.png), url(project4.png), url(project6.png);
-
-        background-blend-mode:screen;
-        background-position:unset;
-        background-repeat:repeat;
-        */
+    }
+      main {
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
       }
-
       .box {
       content:"";
       padding-inline-start: 50px;
@@ -101,7 +85,7 @@
     .bgmother {
       background-image:url("Mother2.png");
       background-repeat: no-repeat;
-      background-position:right;
+      background-position:top;
       background-size:contain;
       border: 2px groove #46464646;
       border-style: inset;
@@ -113,19 +97,63 @@
     .bgmotherword {
         width: 550px; /* adjust as needed */
         word-wrap: break-word;
-        background-color: #630000b6;
+        background-color: #6300007e;
         background-repeat: no-repeat;
-        border: 2px groove #de0d0d;
+        border: 0px groove #de0d0d;
         border-style: inset;
         border-radius: 8px;
         clip-path: inset(0% 0% 0% 0% round var(--border-radius));
     }
+    .text-class {
+      width: 550px; /* adjust as needed */
+      word-wrap: break-word;
+      background-color: #000000e3;
+      background-repeat: no-repeat;
+      border: 0px groove #de0d0d;
+      border-style: inset;
+      border-radius: 8px;
+      clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+      }
+      .text {
+        width: fit-content; /* adjust as needed */
+        word-wrap: break-word;
+        background-color: #00000000;
+        background-repeat: no-repeat;
+        border: 0px groove #de0d0d;
+        border-style: inset;
+        border-radius: 8px;
+        clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+        text-align:left;
+      }
+
+  .text-eald {
+    width: fit-content; /* adjust as needed */
+    word-wrap: break-word;
+    background-color: #00000000;
+    background-repeat: no-repeat;
+    border: 0px groove #de0d0d;
+    border-style: inset;
+    border-radius: 8px;
+    clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+    padding-top: 550px;
+  }
+  .text-mother {
+    width: fit-content; /* adjust as needed */
+    word-wrap: break-word;
+    background-color: #00000000;
+    background-repeat: no-repeat;
+    border: 0px groove #de0d0d;
+    border-style: inset;
+    border-radius: 8px;
+    clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+    padding-top: 450px;
+  }
     .bgeald {
       background-image:url("Eald.png");
       background-repeat: no-repeat;
-      background-position:bottom;
+      background-position:top;
       background-size:contain;
-      border: 2px groove #44444446;
+      border: 0px groove #44444446;
       border-style: inset;
       border-radius: 8px;
       clip-path: inset(0% 0% 0% 0% round var(--border-radius));
@@ -133,17 +161,7 @@
       height:calc(100% - 8px);
     }
     .bgealdword {
-      width: 550px; /* adjust as needed */
-      word-wrap: break-word;
-      background-color: #123a00b6;
-      background-repeat: no-repeat;
-      border: 1px groove #000000;
-      border-style: inset;
-      border-radius: 8px;
-      clip-path: inset(0% 0% 0% 0% round var(--border-radius));
-      color:#ececec;
-      padding: 0px;
-      margin:0%;
+
     }
     .Anpu {
       background-image:url("Anpu.png");
@@ -262,7 +280,11 @@
 
         .texti {
         size: 10px;
-        width: -moz-fit-content;
+
+        max-width: 1200px; /* Adjust this value as needed */
+        margin: 0 auto; /* Center the container horizontally */
+        padding: 20px; /* Add padding for spacing from the edges */
+        
         color: #ffffff;
         text-shadow: 1px 0px 2px rgb(197, 0, 0); 
         background-color: #000000c0; /* specify a background color to ensure readability */
@@ -477,7 +499,8 @@ body {
     });
   </script>
 
-   
+  <div class="container">
+    <main>
  <div class="texti">
   <div class="bgimg-4"></div>
   <!--<nav>
@@ -489,7 +512,7 @@ body {
     <a href="Oread.html" class="link">Race: Oread</a></h2></nav> -->
       
 
-                <h1><p class="inner_text_shadow otsikko fadein">World of Mordia</h1> </p> <div class="link-wrap">
+                <h1><p class="inner_text_shadow otsikko fadein">Islands of Mordia</h1> </p> <div class="link-wrap">
                           
 
         <div>
@@ -580,50 +603,73 @@ body {
       <h2 id="Gods" class="otsikko fadein">☥ Gods of Mordia ☥</h2>
       <p class="fadein">In addition to following Gods, island of Mordia Campaign you can use all gods from Pathfinder 1E world. And then some.</p>
       <br />
-      <div class="bgmother"><div class="bgmotherword">
-      <h2><p class="otsikko fadein">Mother</p></h2> <br>
-      <p class="fadein">Alignment: Chaotic Evil
-      <br>
-      Domains: Air, Chaos, Healing, Evil
-      <br> Symbol: Golden bouquet of Roses<br>
-      Garb: Long robes, sandals, and ceremonial head-dress (beast mask), Golden bouquet of
-      Roses (holy symbol)<br>
-      Favored Weapons: quarterstaff, spear, poisoned weapons<br>
-      Typical Worshipers: Evil power-seeking humanoids, evil monks, assassins, concubines,
-      cultists
-      <br><br>
-      Mother *hidden true name* is a greater god, worshiped by some denizens on Mordia. Organized groups of assassins are known to be dedicated to her worship.
-      Her worshipers, mainly clerics use a long robe and a mask to cover their face. Tales tell of her showing her self around Mordia, but many of the ones who saw
-      her - never did again. Many of his worshipers tattoo themselves with roses and embroider clothing in same way.</p>
-      <p>The Mother was released from her currently unknown prison of sorts. Her son assembled a number of artifacts to summon her out, and he did. The summoning portal was destroyed and she fled because of the damage she sustained during the summoning. Her son Bata punished everyone that let this explosion sabotage to happen. This is not the last people will hear of her...</p>
-      <br>
-      <br></div></div><br />
-      <div class="bgeald"><div class="bgealdword">
-      <h2 class="otsikko fadein">Ealdthryn</h2> <p class="fadein">Alignment: Chaotic Good <br>Domains: Earth, Protection, Knowledge<br></p>
-      <p class="fadein">Symbol: Book
-      Garb: Staff, Long robes
-      Favored Weapons: Staff
-      Typical Worshipers: Good humanoids, good monks,philosophers, planar creatures In the pantheon of the gods.
-      Ealdthryn is known as the deity of wisdom and knowledge. It is said that Ealdthryn's vast intellect
-      is matched only by their insatiable hunger for learning and understanding. Ealdthryn is often depicted as a wise old figure with a long white beard, deep-set
-      eyes, and a serene expression. They are typically depicted holding a staff or book, symbolizing their mastery over knowledge. According to legend, Ealdthryn
-      was one of the first beings to emerge from the void at the beginning of creation. As the universe took shape around them, Ealdthryn set about cataloging and
-      studying every aspect of it, from the movement of the stars to the behavior of the smallest subatomic particles. Ealdthryn's quest for knowledge was unquenchable,
-      and they spent countless eons traveling the cosmos, exploring every corner of it. Over time, Ealdthryn became revered by mortal beings for their vast knowledge
-      and wisdom. Temples were built in their honor, and they were worshipped by scholars, sages, and philosophers alike. Ealdthryn was seen as a source of guidance
-      and inspiration, and their followers sought their counsel on matters of science, philosophy, and magic. Ealdthryn's teachings are focused on the importance
-      of learning and self-improvement.They believe that the pursuit of knowledge is a sacred duty, and that every being has the potential to grow and expand their
-      understanding of the universe. Ealdthryn's followers are encouraged to seek out new experiences, learn from their mistakes, and constantly strive to better
-      themselves. Despite their immense wisdom, Ealdthryn is not infallible. There are many stories of Ealdthryn making mistakes or underestimating the power of
-      their own creations. However, these missteps are seen as learning opportunities, and Ealdthryn is always quick to rectify their errors and use them to expand
-      their understanding of the universe. In combat, Ealdthryn is rarely directly involved, preferring instead to use their vast intellect to outmaneuver and outwit
-      their opponents. Ealdthryn's followers are often powerful mages, using their knowledge of the arcane to manipulate reality itself and gain an edge in battle.
-      Ealdthryn's enemies are those who seek to suppress knowledge and keep others in ignorance. They view such beings as threats to the natural order of the universe,
-      and will go to great lengths to thwart their plans. Ealdthryn's followers are also sworn enemies of any who seek to use knowledge for personal gain or to subjugate
-      others.
-</p>
+      <div class="bgmother">
+        <table class="styled-table">
+          <tr>                                    
+              <h2><p class="fadein">Mother</p></h2> <br>
+                     <p class="fadein">Alignment: Chaotic Evil
+            <br>
+            Domains: Air, Chaos, Healing, Evil
+            <br> Symbol: Golden bouquet of Roses<br>
+            Garb: Long robes, sandals, <br>and ceremonial head-dress (beast mask), <br>Golden bouquet of
+            Roses (holy symbol)<br>
+            Favored Weapons: quarterstaff, <br>spear, poisoned weapons<br>
+            Typical Worshipers: Evil power-seeking humanoids,<br> evil monks, assassins, concubines,
+            cultists
+            <br><br>
 
-   </div>   </div>
+                            <p class="text-mother fadein">
+                              Mother *hidden true name* is a greater god, worshiped by some denizens on Mordia. Organized groups of assassins are known to be dedicated to her worship.
+                              Her worshipers, mainly clerics use a long robe and a mask to cover their face. Tales tell of her showing her self around Mordia, but many of the ones who saw
+                              her - never did again. Many of his worshipers tattoo themselves with roses and embroider clothing in same way.<br>
+                              The Mother was released from her currently unknown prison of sorts. Her son assembled a number of artifacts to summon her out, and he did. The summoning portal was destroyed and she fled because of the damage she sustained during the summoning. Her son Bata punished everyone that let this explosion sabotage to happen. This is not the last people will hear of her...</p>
+                            </p>
+          </td>
+              <td class="text-side">
+              </td>
+              <td class="image-side">
+                <div class="bgmotherword"></div>
+              </td>
+          </tr>
+      </table>
+      </div></div><br />
+      <div class="bgeald">
+        <table class="styled-table">
+          <tr>
+              <td class="text-eald fadein">
+                  Ealdthryn is known as the deity of wisdom and knowledge. It is said that Ealdthryn's vast intellect
+                  is matched only by their insatiable hunger for learning and understanding. Ealdthryn is often depicted as a wise old figure with a long white beard, deep-set
+                  eyes, and a serene expression. They are typically depicted holding a staff or book, symbolizing their mastery over knowledge. According to legend, Ealdthryn
+                  was one of the first beings to emerge from the void at the beginning of creation. As the universe took shape around them, Ealdthryn set about cataloging and
+                  studying every aspect of it, from the movement of the stars to the behavior of the smallest subatomic particles. Ealdthryn's quest for knowledge was unquenchable,
+                  and they spent countless eons traveling the cosmos, exploring every corner of it. Over time, Ealdthryn became revered by mortal beings for their vast knowledge
+                  and wisdom. Temples were built in their honor, and they were worshipped by scholars, sages, and philosophers alike.<br> Ealdthryn was seen as a source of guidance
+                  and inspiration, and their followers sought their counsel on matters of science, philosophy, and magic. Ealdthryn's teachings are focused on the importance
+                  of learning and self-improvement.They believe that the pursuit of knowledge is a sacred duty, and that every being has the potential to grow and expand their
+                  understanding of the universe. Ealdthryn's followers are encouraged to seek out new experiences, learn from their mistakes, and constantly strive to better
+                  themselves. Despite their immense wisdom, Ealdthryn is not infallible.<br> There are many stories of Ealdthryn making mistakes or underestimating the power of
+                  their own creations. However, these missteps are seen as learning opportunities, and Ealdthryn is always quick to rectify their errors and use them to expand
+                  their understanding of the universe. In combat, Ealdthryn is rarely directly involved, preferring instead to use their vast intellect to outmaneuver and outwit
+                  their opponents. Ealdthryn's followers are often powerful mages, using their knowledge of the arcane to manipulate reality itself and gain an edge in battle.
+                  <br>Ealdthryn's enemies are those who seek to suppress knowledge and keep others in ignorance. They view such beings as threats to the natural order of the universe,
+                  and will go to great lengths to thwart their plans. Ealdthryn's followers are also sworn enemies of any who seek to use knowledge for personal gain or to subjugate
+                  others.
+            </p>
+              </td>
+              <div class="text">
+                  <p class="fadein">
+                    <h2 class="fadein">Ealdthryn</h2><br> <p class="fadein">Alignment: Chaotic Good <br>Domains: Earth, Protection, Knowledge<br>
+                  Symbol: Book<br>
+                  Garb: Staff, Long robes<br>
+                  Favored Weapons: Staff<br>
+                  Typical Worshipers: good humanoids, good monks, philosophers,<br> planar creatures In the pantheon of the gods.<br><br></p>
+</div>
+          </tr>
+      </table>
+
+
+</main>
+   </div>   </div></div>
   </body>
 
 </head></html>

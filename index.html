@@ -34,6 +34,7 @@
 		  }
 		iframe {
 			border:none;
+
 		}
 		.box {
 			align-items:last baseline;
@@ -50,6 +51,7 @@
 			clip-path: inset(0% 0% 0% 0% round var(--border-radius));
 			scroll-snap-stop:unset;
 			width: fit-content;
+			margin-right: 20px; /* Adjust the value as needed */
  		}
 		.shadow:before {
 			content:"";
@@ -82,7 +84,13 @@
 			background-color: rgba(19, 19, 19, 0.795);
 		}
 		.link {
-			color: #fff;
+			color: #ffffff;
+			font-size:larger;
+			border-radius: 8px;
+			transition: background-color 0.3s ease-in-out;
+		}
+		.link2 {
+			color: #de0d0d;
 			font-size:larger;
 			border-radius: 8px;
 			transition: background-color 0.3s ease-in-out;
@@ -130,7 +138,7 @@
 			<a href="https://aonprd.com/OccultRituals.aspx?ItemName=All#ctl00_MainContent_GridViewOccultRituals"  class="link" id="scroll-to-iframe" Target="myFrame">Occult Rituals</a>
 			<!-- otettu pois Target="myFrame" ja alempaa #global-navigation-user-icon-->
 			<a href="Divi.html"  class="link">☥Divination:Vatic☥</a>
-			<a href="Mordia.html"  class="link">☼Mordia☼</a>
+			<a href="Mordia.html"  class="link2">☼Mordia☼</a>
 	</h3>
 		
 
