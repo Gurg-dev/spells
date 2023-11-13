@@ -2,23 +2,34 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "C/C++ Runner: Debug Session",
-      "type": "cppdbg",
+      "name": "Python: Flask Server",
+      "type": "python",
       "request": "launch",
+      "program": "${workspaceFolder}/pythonDB.py",
       "args": [],
-      "stopAtEntry": false,
-      "externalConsole": true,
-      "cwd": "c:/Users/Gurgle/Documents/GitHub/spells",
-      "program": "c:/Users/Gurgle/Documents/GitHub/spells/build/Debug/outDebug",
-      "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ]
+      "cwd": "${workspaceFolder}",
+      "env": {},
+      "stopOnEntry": false,
+      "pythonPath": "${config:python.pythonPath}",
+      "debugOptions": [],
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "name": "HTML Server",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/http-server/bin/http-server",
+      "args": ["Pikku"],
+      "stopOnEntry": false,
+      "cwd": "${workspaceFolder}",
+      "protocol": "auto",
+      "port": 8080
+    },
+    {
+      "name": "Run Both Servers",
+      "type": "compound",
+      "preLaunchTask": "Python: Flask Server",
+      "configurations": ["HTML Server"]
     }
   ]
 }

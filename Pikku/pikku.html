@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> <!-- uus koodi image button -->
+
+
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="spells">
+	<meta name="keywords" content="spells, pathfinder">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+    <style>
+      html {
+        height: 100%;
+        width: 100%;
+
+      }
+      body, h1, h2, h3, p, ul, ol, li {
+        margin: 0;
+        padding: 0;
+    }
+  
+      main {
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+/*
+
+      .box {
+      content:"";
+      padding-inline-start: 50px;
+      }
+      .shadow:before {
+			content:"";
+			box-shadow:"" ;
+			position: absolute;
+			inset: 0;
+			transform: translate3d(-5,10,-1px);
+			background: conic-gradient(from 90deg at 40% -25%, #0004ff, #22074e, #ee6907, #dfff2a, #b14949, #d61039, #cf1261, #8f0f60, #7c0b3a, #a10c2a, #de0d0d, #ee6907, #f79d03, #ffd700, #ffd700, #ffd700);
+			filter: blur(5px);
+			clip-path: polygon(-100vmax -100vmax,100vmax -100vmax,100vmax 100vmax,-100vmax 100vmax,-100vmax -100vmax,0 0,0 100%,100% 100%,100% 0,0 0);
+		}
+
+
+    .link {
+
+      text-decoration: none;
+      font-size: 40px;
+			transition: background-color 0.2s ease-in-out;
+		}
+    .jump {
+
+      text-decoration: none;
+      font-size: 40px;
+			transition: background-color 0.2s ease-in-out;
+		}
+
+		.link:hover{
+      text-decoration: none;
+      color:white;
+      background-color: #df000093;
+		}
+    .button {
+      display: inline-block;
+      padding: 1px 6px;
+      font-size: 18px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #370058;
+      border: none;
+      border-radius: 18px;
+      box-shadow: 0 6px #00000070;
+    }
+      .button:hover {background-color: #9d00db}
+
+        .button:active {
+          background-color: #a200b8;
+          transform: translateY(4px);
+        }
+
+    .bgmother {
+      background-image:url("Mother2.png");
+      background-repeat: no-repeat;
+      background-position:top;
+      background-size:contain;
+      border: 2px groove #46464646;
+      border-style: inset;
+      border-radius: 8px;
+      clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+      width:100%;
+      height:calc(100% - 8px);
+    }
+    .bgmotherword {
+        width: 550px; /* adjust as needed 
+        word-wrap: break-word;
+        background-color: #6300007e;
+        background-repeat: no-repeat;
+        border: 0px groove #de0d0d;
+        border-style: inset;
+        border-radius: 8px;
+        clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+    }
+    .text-class {
+      width: 550px; /* adjust as needed 
+      word-wrap: break-word;
+      background-color: #000000e3;
+      background-repeat: no-repeat;
+      border: 0px groove #de0d0d;
+      border-style: inset;
+      border-radius: 8px;
+      clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+      }
+      .text {
+        width: fit-content; /* adjust as needed 
+        word-wrap: break-word;
+        background-color: #00000000;
+        background-repeat: no-repeat;
+        border: 0px groove #de0d0d;
+        border-style: inset;
+        border-radius: 8px;
+        clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+        text-align:left;
+      }
+
+  .text-eald {
+    width: fit-content; /* adjust as needed 
+    word-wrap: break-word;
+    background-color: #00000000;
+    background-repeat: no-repeat;
+    border: 0px groove #de0d0d;
+    border-style: inset;
+    border-radius: 8px;
+    clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+    padding-top: 550px;
+  }
+  .text-mother {
+    width: fit-content; /* adjust as needed
+    word-wrap: break-word;
+    background-color: #00000000;
+    background-repeat: no-repeat;
+    border: 0px groove #de0d0d;
+    border-style: inset;
+    border-radius: 8px;
+    clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+    padding-top: 450px;
+  }
+    .bgeald {
+      background-image:url("Eald.png");
+      background-repeat: no-repeat;
+      background-position:top;
+      background-size:contain;
+      border: 0px groove #44444446;
+      border-style: inset;
+      border-radius: 8px;
+      clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+      width:100%;
+      height:calc(100% - 8px);
+    }
+    .bgealdword {
+
+    }
+    .Anpu {
+      background-image:url("Anpu.png");
+      background-repeat: no-repeat;
+      background-position:center;
+      background-size:contain;
+      background-clip: padding-box;
+      border: 2px groove #de0d0d;
+      border-style: inset;
+      border-radius: 8px;
+      clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+      width: 100%;
+      height: 400px;
+    }
+
+        .bgimg-1 {
+          background-image:url("bgold.png");
+          background-repeat: no-repeat;
+          background-position:right;
+          background-size:cover;
+          background-clip: padding-box;
+          border: 2px groove #de0d0d;
+          border-style: inset;
+          border-radius: 8px;
+          clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+          width: 100%;
+          height: 400px;
+        }
+        .bgimg-2 {
+          background-image: url("mordgola.png");
+          background-repeat: no-repeat;
+          background-position:right;
+          background-size:cover;
+          background-clip: padding-box;
+          border: 2px groove #de0d0d;
+          border-style: inset;
+          border-radius: 8px;
+          clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+          width: 100%;
+          height: 600px;
+          
+        }
+        div img {
+          height: 100%; /* adjust as needed 
+        }
+        .bgimg-3 {
+          background-image: url("TS_1624027005.png");
+          background-repeat: no-repeat;
+          background-position:right;
+          background-size:cover;
+          background-clip: padding-box;
+          border: 2px groove #de0d0d;
+          border-style: inset;
+          border-radius: 8px;
+          clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+          width: 100%;
+          height: 500px;
+        }
+        .bgimg-4 {
+          background-image: url("Mordia.jpg");
+          background-repeat: no-repeat;
+          background-position:top;
+          background-size:cover;
+          background-clip: padding-box;
+          border: 2px groove #de0d0d;
+          border-style: inset;
+          border-radius: 8px;
+          clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+          width: 100%;
+          height: 700px;
+        }
+        .textibox {
+          background-image: url("papyrus.jpg");
+          background-repeat: no-repeat;
+          background-position:right;
+          background-size:cover;
+          background-clip: padding-box;
+          border: 2px groove #de0d0d;
+          border-style: inset;
+          border-radius: 8px;
+          clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+          width: 100%;
+          height: 400px;
+        }
+        nav {
+          padding-inline-start: 5px;
+          margin-top: 250px;
+          top: 0;
+          left: 0;
+          transform: translateY(-50%);
+          z-index: 0.8;
+
+        }
+        
+
+        
+        a {
+          display:block;
+          padding:5px;
+          padding-inline-start: 39px;
+          margin:10px;
+          color: #830000fa;
+          text-decoration: none;
+          border-radius: 5px;
+          transition: background-color 0.3s ease;
+          height:calc(100% - 8px);
+          width: -moz-fit-content;
+          text-shadow: 2px 1px 2px rgb(0, 0, 0);
+          background-color: #b9000000; 
+        }
+        
+        a:hover {
+          background-color: rgba(0, 0, 0, 0.308);
+          text-shadow: 2px 0px 2px rgb(0, 0, 0);
+        }
+
+        .texti {
+        size: 10px;
+
+        max-width: 1200px; 
+        margin: 0 auto; 
+        padding: 20px; 
+        
+        color: #ffffff;
+        text-shadow: 1px 0px 2px rgb(197, 0, 0); 
+        background-color: #000000c0; 
+        }
+        p {
+        text-align:justify;
+        size: 14px;
+        margin:3px;
+        }
+        .fadein {
+          opacity: 0;
+          transition: opacity 2s;
+        }
+        .otsikko {
+          text-align:center;
+          size: 14px;
+          margin:3px;
+          }
+          .parent {
+            text-align: center;
+          }
+        td {
+        padding-right:10px;
+        min-width:fit-content;
+        }
+        th {
+          padding-right:10px;
+          min-width:fit-content;
+          }
+          ul {
+            list-style: none;
+            margin: 0;
+            padding-right:10px;
+            min-width:fit-content;
+          }
+          
+          li {
+            margin-bottom: 10px;
+            padding-right:10px;
+            min-width:fit-content;
+          }
+          */
+        /*
+        .left {
+          display: table-cell;
+          vertical-align: middle;
+          width: 600px;
+          margin: 0;
+          padding: 0;
+          height: fit-content;
+        }
+        
+        .right {
+          display: table-cell;
+          vertical-align: right;
+
+          padding: 0 10px;
+        }
+        .container {
+          width: 600px;
+          display: inline-block;
+          height: 80px;
+          margin-right: 10px;
+          padding: 0;
+        } */
+/*
+#yellow {
+  font-size: 30px;
+  color: yellow;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.288);
+}
+
+
+body {
+  margin: 0;
+
+    background-image: url("bg2.png");
+
+    height: 650px;
+    position: relative;
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border:transparent;
+  
+ 
+    min-height: 500px; 
+  
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
+
+
+
+
+
+
+
+/*.parallax {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.parallax-layer {
+    position: sticky;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("bg2.png");
+}
+.parallax-layer.layer1 {
+
+  transform:translateZ(-0.1px);
+  top: 10rem;
+
+  width: 100%;
+  height: 50rem;  
+
+  min-height: 500px; 
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}*/
+
+
+
+
+
+
+
+
+
+/* Turn off parallax scrolling for tablets and phones 
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+      background-attachment: scroll;
+    }
+    }
+    .content {
+    padding: 50px;
+    text-align: center;
+    color: rgba(255, 0, 0, 0.76);
+    }
+    class.mw-headline{
+    background-color: #250047;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');*/
+    </style>
+
+<body>
+
+<!-- uus button ja script
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Open Modal</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="mordgola.jpg" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="<URL>" integrity="<URL>" crossorigin="<URL>"></script>
+ -->
+<!-- uus button ja script  -->
+
+  
+  <script>
+    function search() {
+      // Get the search query
+      const query = document.getElementById("search-input").value;
+  
+      // Find all the elements on the page that contain the search query
+      const elements = [...document.querySelectorAll("*")].filter(element => element.textContent.includes(query));
+  
+      // If any elements were found, scroll to the first one
+      if (elements.length > 0) {
+        elements[0].scrollIntoView();
+      }
+    }
+
+    window.addEventListener('scroll', function() {
+      var elements = document.querySelectorAll('.fadein');
+    
+      elements.forEach(function(element) {
+        var position = element.getBoundingClientRect();
+    
+        // checking whether partially visible
+        if(position.top < window.innerHeight && position.bottom >= 0) {
+          element.style.opacity = 1;
+        } else {
+          element.style.opacity = 0;
+        }
+      });
+    });
+  </script>
+
+
+  <div class="container">
+ <div class="texti"><p><h2>Kategoriat↓
+
+  <form action="http://127.0.0.1:5000/search" method="GET">
+  <input type="text" name="search_query" placeholder="Etsi ilmoituksista...">
+  <button type="submit">Hae</button>
+</form></h2></p> 
+  <div class="bgimg-4"></div>
+  <!--<nav>
+    <a class="jump">Jump to:</a>
+    <a href="#Mordia" class="link">Mordia</a>
+    <a href="#Village" class="link">Bleakburn</a>
+    <a href="#Sutekh" class="link">Sutekh</a>
+    <a href="#Gods" class="link">Gods</a>
+    <a href="Oread.html" class="link">Race: Oread</a></h2></nav> 
+      
+
+                <h1><p class="inner_text_shadow otsikko fadein">Islands of Mordia</h1> </p> <div class="link-wrap">
+                          
+
+        <div>
+        <p class="fadein parent">Mordia is located direct east of Katapesh coast line, Between Qadira and Katapesh, Amidst of the Obari Ocean... </p>
+        </div>
+          <br />
+          
+          <div class="bgimg-2"><button button type="button" onclick="window.location.href='MordiaGOLA.png';" target="_blank" class="button" class="expand">Expand</button>
+          </div>
+    <h2><p id="Mordia" class="otsikko fadein">Mordia, First Day - the Disaster.</p></h2>
+    <div class="container"></div>
+    <div class="bgimg-3"><button button type="button" onclick="window.location.href='TS_1624027005.png';" target="_blank" class="button" class="expand">Expand</button>
+    </div>
+   
+    <p class="fadein">Katapesh: The yellow-sailed ships from the Katapeshi city of Okeno are the most well-known and feared agents of the slave trade on the Inner Sea. Okeno originally
+      began as a convenient spot for pirates to stop by to collect water and provisions without relying on the ports of the mainland nations. Keleshite Captain
+      Xiren Bhey is the current leader of Okeno Slavers. He arrived in Okeno more than ten years ago and gained the reputation of a ruthless slaver. Captain Xiren
+      Bhey (aka Stanley Pike) killed the leader of Okeno Slavers in a duel and established himself as the new leader. He captains the galley Undertow.
+      </p>
+    <p class="fadein">Undertow sank in the shoreline when it was heading to sell slaves to Blackmouth village for the Blessed Kingdom.</p>
+    <p class="fadein">You remember being on a ship for a while and wondering where and who you are. No one remembers their names. Some weird fog covers the air,
+       until suddenly you hear the bottom of the ship screeching and after the crash upon some stones, the ship went over the rocky coral reef
+        and rose on top of it. Your ship sank because the captain could no longer remember where the reefs were on the shore. The ship sank 
+        next to a river mouth. Your ship must have been carrying resources because the flag had a gold coin on hand.  The beaches are also quite deep.
+         The adventurers managed to get off the ship, alive. You swim ashore and watch as the ship continues to sink offshore...</p>
+  
+      <br />
+  <h2 id="Sutekh" class="otsikko fadein">Sutekh City</h2>
+      <div class="bgimg-1"><button button type="button" onclick="window.location.href='bgold.png';" target="_blank" class="button" class="expand">Expand</button>
+      </div>
+    <p class="fadein">City established in the Valley of Sand next to the inner sea of Mordia. Sutekh was captured by Bata's forces some years ago. Since then, Bata has lead the city
+       with his evil minions - 
+       ruling with an iron fist. First adventurers that arrived there were hauling a mysterious artifact for Bata. City council has been plotting the demice
+       of Bata. The party of people with help of Mantis Guild in the city is planning to overthrow the unrightful tyrant.  Their arrival started a series of events
+       leading to Bata using Artifacts only known to him to free his mother from her higher domain. Now Bata's mother is free in Mordia, and the story continues...
+      </p>
+    
+     
+ <h2>
+    <p class="otsikko fadein">Important people</p></h2>
+            
+    
+    <p class="fadein">Lady Elspeth von Carstein - Human noble - Trading Company: Lady Elspeth comes from a wealthy and influential family that has long held a significant position in
+       the city's political scene. She is known for her sharp intellect, political savvy, and unwavering dedication to the city's well-being. She believes the city's 
+       prosperity depends on strong trade relationships with neighboring kingdoms and works constantly to improve these relationships. Lady Elspeth is often seen 
+       dressed in the latest fashion trends and behaves in a regal manner. - burned down a rival clothing merchant's warehouse
+    
+    </p>
+    <p class="fadein">Thorne Ironfist - Dwarf paladin - Corrupt police chief: Thorne is a rough and outspoken member of the city council. He takes his duties very seriously and is 
+      dedicated to maintaining law and protecting the city's residents. He is a skilled fighter and is not afraid to get his hands dirty when necessary. Thorne is loyal
+       to his deity Moradin and often speaks of the importance of honor, loyalty, and duty. Although his stiff demeanor can be intimidating, he is popular with many of
+        the city's residents.
+    
+    </p>
+    <p class="fadein">Mirielle d'Arc - Halfling bard - City entertainment director: Mirielle is a charismatic and charming member of the city council. She has a way of speaking that
+    </p>
+    <p class="fadein">
+    Xalara Bloodblade - 
+    Xalara is the current leader of the Red Mantis assassins in Sutekh. She rose to the position through sheer skill and ruthlessness, having climbed the ranks of
+    the organization over many years. Xalara is highly respected among the Red Mantis for her strategic thinking and deadly efficiency. Characteristics: Xalara is
+    a cold and calculating individual who rarely shows emotion. She is highly intelligent and a skilled strategist, often planning out complex operations with meticulous
+    attention to detail. Xalara is also a master of disguise, able to blend seamlessly into any crowd and manipulate those around her to achieve her goals.
+    </p>
+  
+      <h2 class="mw-headline otsikko fadein" id="Rerakth_city">Rerakth city
+      </h2>
+      <div class="Anpu"><button button type="button" onclick="window.location.href='Anpu.png';" target="_blank" class="button" class="expand">Expand</button>
+      </div>
+      <p class="fadein">The city of Rerakth is located on the eastern shore of the Green sea of Mordia. Other side of the ocean from the Green Wastes. There was a sudden change in rulership when the queen got sick, her new husband she married a year ago took over for her while the queen is twindling away in bed. The current ruler of Rerakth is Anpu. Rumors say he caused the queens affliction, but no proof has been found.</p>
+
+      <h2>
+    <p id="Village" class="otsikko fadein">Village of Bleakburn</h2></p>
+ 
+    <p class="fadein">This village was taken over by the Sand Kingdom with the help by group of players some time ago.</p>
+
+    <h3>
+      <p class="otsikko fadein">Important people</p></h3>
+    <p class="fadein">Ashii - The current appointed village leader Astomoi Cleric Ashii, She has a long ceremonial cloak covering her body,
+      unlike like most Astomoi. Behind her mask, you only see darkness and some light beams. Astomoi like company even if they don't eat or drink. She can sense
+      thoughts and thus has been voted for a temporary leader of the village after a short ceremony when it was taken over by her and her associates.
+    </p>
+    <p class="fadein">Hera - Temporary The guard Commander, Dark Elf Magus Hera, Covered in a dark cloak, wielding a longsword. Ashii assigned
+      her as the guard Captain for the village.</p>
+    <p class="fadein">Will - The current tavern keep, Axel Willis "Will" This is a big guy, pure barbaric muscle. Wielding a huge
+      Earthbreaker. Lightly armored, currently running a tavern.</p>
+  
+      <br />
+      <h2 id="Gods" class="otsikko fadein">☥ Gods of Mordia ☥</h2>
+      <p class="fadein">In addition to following Gods, island of Mordia Campaign you can use all gods from Pathfinder 1E world. And then some.</p>
+      <br />
+      <div class="bgmother">
+        <table class="styled-table">
+          <tr>                                    
+              <h2><p class="fadein">Mother</p></h2> <br>
+                     <p class="fadein">Alignment: Chaotic Evil
+            <br>
+            Domains: Air, Chaos, Healing, Evil
+            <br> Symbol: Golden bouquet of Roses<br>
+            Garb: Long robes, sandals, <br>and ceremonial head-dress (beast mask), <br>Golden bouquet of
+            Roses (holy symbol)<br>
+            Favored Weapons: quarterstaff, <br>spear, poisoned weapons<br>
+            Typical Worshipers: Evil power-seeking humanoids,<br> evil monks, assassins, concubines,
+            cultists
+            <br><br>
+
+                            <p class="text-mother fadein">
+                              Mother *hidden true name* is a greater god, worshiped by some denizens on Mordia. Organized groups of assassins are known to be dedicated to her worship.
+                              Her worshipers, mainly clerics use a long robe and a mask to cover their face. Tales tell of her showing her self around Mordia, but many of the ones who saw
+                              her - never did again. Many of his worshipers tattoo themselves with roses and embroider clothing in same way.<br>
+                              The Mother was released from her currently unknown prison of sorts. Her son assembled a number of artifacts to summon her out, and he did. The summoning portal was destroyed and she fled because of the damage she sustained during the summoning. Her son Bata punished everyone that let this explosion sabotage to happen. This is not the last people will hear of her...</p>
+                            </p>
+          </td>
+              <td class="text-side">
+              </td>
+              <td class="image-side">
+                <div class="bgmotherword"></div>
+              </td>
+          </tr>
+      </table>
+      </div></div><br />
+      <div class="bgeald">
+        <table class="styled-table">
+          <tr>
+              <td class="text-eald fadein">
+                  Ealdthryn is known as the deity of wisdom and knowledge. It is said that Ealdthryn's vast intellect
+                  is matched only by their insatiable hunger for learning and understanding. Ealdthryn is often depicted as a wise old figure with a long white beard, deep-set
+                  eyes, and a serene expression. They are typically depicted holding a staff or book, symbolizing their mastery over knowledge. According to legend, Ealdthryn
+                  was one of the first beings to emerge from the void at the beginning of creation. As the universe took shape around them, Ealdthryn set about cataloging and
+                  studying every aspect of it, from the movement of the stars to the behavior of the smallest subatomic particles. Ealdthryn's quest for knowledge was unquenchable,
+                  and they spent countless eons traveling the cosmos, exploring every corner of it. Over time, Ealdthryn became revered by mortal beings for their vast knowledge
+                  and wisdom. Temples were built in their honor, and they were worshipped by scholars, sages, and philosophers alike.<br> Ealdthryn was seen as a source of guidance
+                  and inspiration, and their followers sought their counsel on matters of science, philosophy, and magic. Ealdthryn's teachings are focused on the importance
+                  of learning and self-improvement.They believe that the pursuit of knowledge is a sacred duty, and that every being has the potential to grow and expand their
+                  understanding of the universe. Ealdthryn's followers are encouraged to seek out new experiences, learn from their mistakes, and constantly strive to better
+                  themselves. Despite their immense wisdom, Ealdthryn is not infallible.<br> There are many stories of Ealdthryn making mistakes or underestimating the power of
+                  their own creations. However, these missteps are seen as learning opportunities, and Ealdthryn is always quick to rectify their errors and use them to expand
+                  their understanding of the universe. In combat, Ealdthryn is rarely directly involved, preferring instead to use their vast intellect to outmaneuver and outwit
+                  their opponents. Ealdthryn's followers are often powerful mages, using their knowledge of the arcane to manipulate reality itself and gain an edge in battle.
+                  <br>Ealdthryn's enemies are those who seek to suppress knowledge and keep others in ignorance. They view such beings as threats to the natural order of the universe,
+                  and will go to great lengths to thwart their plans. Ealdthryn's followers are also sworn enemies of any who seek to use knowledge for personal gain or to subjugate
+                  others.
+            </p>
+              </td>
+              <div class="text">
+                  <p class="fadein">
+                    <h2 class="fadein">Ealdthryn</h2><br> <p class="fadein">Alignment: Chaotic Good <br>Domains: Earth, Protection, Knowledge<br>
+                  Symbol: Book<br>
+                  Garb: Staff, Long robes<br>
+                  Favored Weapons: Staff<br>
+                  Typical Worshipers: good humanoids, good monks, philosophers,<br> planar creatures In the pantheon of the gods.<br><br></p>
+</div>
+          </tr> 
+      </table>
+
+
+</main>
+   </div>   </div></div> -->
+  </body>
+
+</head></html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Results</title>
+    <style>
+        /* Your CSS styles here */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+                scroll-behavior: auto;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay img {
+            max-width: 90%;
+            max-height: 80%;
+        }
+
+        .results-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2px;
+            justify-content: center;
+            max-width: 1200px; /* Adjust as needed */
+            padding: 2px;
+        }
+
+        .result-box {
+            flex-basis: calc(50% - 10px); /* Two boxes per row with spacing */
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .result-text {
+            margin-top: 10px;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .pagination a {
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Query Results</h1>
+    <div class="overlay" id="imageOverlay">
+        <img id="overlayImage">
+    </div>
+    
+    <div class="results-container">
+        {% for info, image_urls in results %}
+        <div class="result-box">
+            {% for image_url in image_urls %}
+                <a href="#" onclick="showOverlay('{{ image_url }}'); return false;">
+                    <img src="{{ image_url }}" alt="Image" width="100%">
+                </a>
+            {% endfor %}
+            <p class="result-text">
+                {% if info|wordcount > 20 %}
+                    {{ info|truncate(120, True) }}
+                {% else %}
+                    {{ info }}
+                {% endif %}
+            </p>
+        </div>
+        {% if loop.index is divisibleby 2 %}
+        </div><div class="results-container">
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="pagination">
+        {% if results|length > 50 %}
+            <a href="#second-part">Second Part</a>
+        {% endif %}
+    </div>
+
+    <script>
+        var overlay = document.getElementById('imageOverlay');
+        overlay.addEventListener('click', closeOverlay);
+
+        function showOverlay(imageUrl) {
+            var overlayImage = document.getElementById('overlayImage');
+            overlayImage.src = imageUrl;
+            overlay.style.display = 'flex';
+        }
+
+        function closeOverlay(event) {
+            if (event.target === overlay || event.target === overlayImage) {
+                overlay.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
