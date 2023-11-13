@@ -13,10 +13,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       html, body {
         height: 100%;
 
-        min-width: 320px; 
+        min-width: 780px; 
         background-color: #0e0e0e; /* Set background color for the entire page */
       }
       
@@ -45,6 +51,9 @@
         background: conic-gradient(from 90deg at 40% -25%, #0004ff, #22074e, #ee6907, #dfff2a, #b14949, #d61039, #cf1261, #8f0f60, #7c0b3a, #a10c2a, #de0d0d, #ee6907, #f79d03, #ffd700, #ffd700, #ffd700);
         filter: blur(5px);
         clip-path: polygon(-100vmax -100vmax,100vmax -100vmax,100vmax 100vmax,-100vmax 100vmax,-100vmax -100vmax,0 0,0 100%,100% 100%,100% 0,0 0);
+      }
+      @media only screen and (max-width: 600px) {
+        /* Styles for screens with a maximum width of 600px (typical for phones) */
       }
 
 
