@@ -34,9 +34,59 @@
       main {
         padding: 2vw;
         background-color: #000000; /* Set background color for the main content area */
-        box-shadow: 0px 0px 10px rgba(77, 77, 77, 0.438);
+        box-shadow: 0px 0px 8px rgb(255, 9, 9);
       }
       
+      .top-section {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #0e0e0e; 
+        box-shadow: 0px 0px 8px rgb(255, 9, 9);
+        color: white;
+        padding: 5px;
+        padding-left: 18vw;
+        text-align:initial;
+        z-index: 1000; /* Ensure the dropdown is above other elements */
+      }
+  
+      .dropdown {
+        color: rgb(255, 0, 0);
+        display:flex;
+
+      }
+  
+      .dropdown-content {
+        display: none;
+        position:absolute;
+        z-index: 1;
+        left: 0;
+        top: 100%;
+        width:max-content; /* Set the width of the box */
+        padding: 10px;/* Add padding for spacing inside the box */
+        border: 8px solid #fff; /* Add a border for a box-like appearance */
+        border-radius: 1px; /* Optional: Add rounded corners */
+        background-color: transparent; /* Set background color to transparent */
+      }
+  
+      .dropdown:hover .dropdown-content {
+        display:contents;
+
+      }
+  
+      .dropdown-content a {
+        color: rgb(255, 24, 24);
+        display:table-cell;
+        text-decoration: none;
+        padding: 16px 0 0; /* Adjust the padding for link items inside the box */
+      }
+  
+      section {
+        margin-top: 10px; /* Adjust this margin to account for the fixed top section */
+        padding: 10px;
+      }
+
       .box {
         content: "";
         padding-inline-start: 50px;
@@ -101,7 +151,7 @@
       background-repeat: no-repeat;
       background-position:top;
       background-size:contain;
-      border: 2px groove #46464646;
+      border: 2px groove #46464600;
       border-style: inset;
       border-radius: 8px;
       clip-path: inset(0% 0% 0% 0% round var(--border-radius));
@@ -289,8 +339,8 @@
         }
         
         a:hover {
-          background-color: rgba(0, 0, 0, 0.308);
-          text-shadow: 2px 0px 2px rgb(0, 0, 0);
+
+          text-shadow: 2px 1px 2px rgb(0, 0, 0);
         }
 
         .texti {
@@ -456,33 +506,6 @@ body {
 
 <body>
 
-<!-- uus button ja script
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Open Modal</button>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <img src="mordgola.jpg" />
-            </div>
-        </div>
-    </div>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="<URL>" integrity="<URL>" crossorigin="<URL>"></script>
- -->
-<!-- uus button ja script 
-  <input type="text" id="search-input" placeholder="Enter your search query">
-  <button onclick="search()">Search</button> -->
   
   <script>
     function search() {
@@ -513,6 +536,18 @@ body {
       });
     });
   </script>
+
+<div class="top-section">
+  <div class="dropdown">
+    <span>Quicklinks</span>
+    <div class="dropdown-content">
+      <a href="#Sutekh">Sutekh City</a>
+      <a href="#Rerakth">Rerakth City</a>
+      <a href="#Gods">Gods</a>
+    </div>
+  </div>
+</div>
+
 
   <div class="container">
     <main>
@@ -553,9 +588,8 @@ body {
         and rose on top of it. Your ship sank because the captain could no longer remember where the reefs were on the shore. The ship sank 
         next to a river mouth. Your ship must have been carrying resources because the flag had a gold coin on hand.  The beaches are also quite deep.
          The adventurers managed to get off the ship, alive. You swim ashore and watch as the ship continues to sink offshore...</p>
-  
-      <br />
-  <h2 id="Sutekh" class="otsikko fadein">Sutekh City</h2>
+      <section id="Sutekh"><br>
+    <h2 id="Sutekh" class="otsikko fadein">Sutekh City</h2>
       <div class="bgimg-1"><button button type="button" onclick="window.location.href='bgold.png';" target="_blank" class="button" class="expand">Expand</button>
       </div>
     <p class="fadein">City established in the Valley of Sand next to the inner sea of Mordia. Sutekh was captured by Bata's forces some years ago. Since then, Bata has lead the city
@@ -591,7 +625,8 @@ body {
     a cold and calculating individual who rarely shows emotion. She is highly intelligent and a skilled strategist, often planning out complex operations with meticulous
     attention to detail. Xalara is also a master of disguise, able to blend seamlessly into any crowd and manipulate those around her to achieve her goals.
     </p>
-  
+  </section>
+  <section id="Rerakth"><br>
       <h2 class="mw-headline otsikko fadein" id="Rerakth_city">Rerakth city
       </h2>
       <div class="Anpu"><button button type="button" onclick="window.location.href='Anpu.png';" target="_blank" class="button" class="expand">Expand</button>
@@ -614,7 +649,8 @@ body {
     <p class="fadein">Will - The current tavern keep, Axel Willis "Will" This is a big guy, pure barbaric muscle. Wielding a huge
       Earthbreaker. Lightly armored, currently running a tavern.</p>
   
-      <br />
+      <br /></section>
+      <section id="Gods"><br>
       <h2 id="Gods" class="otsikko fadein">☥ Gods of Mordia ☥</h2>
       <p class="fadein">In addition to following Gods, island of Mordia Campaign you can use all gods from Pathfinder 1E world. And then some.</p>
       <br />
@@ -678,7 +714,7 @@ body {
                   Garb: Staff, Long robes<br>
                   Favored Weapons: Staff<br>
                   Typical Worshipers: good humanoids, good monks, philosophers,<br> planar creatures In the pantheon of the gods.<br><br></p>
-</div>
+                    </section></div>
           </tr>
       </table>
 

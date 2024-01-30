@@ -10,7 +10,7 @@
       "cwd": "${workspaceFolder}",
       "env": {},
       "stopOnEntry": false,
-      "pythonPath": "${config:python.pythonPath}",
+      "python": "${command:python.interpreterPath}",
       "debugOptions": [],
       "envFile": "${workspaceFolder}/.env"
     },
