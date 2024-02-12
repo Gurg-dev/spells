@@ -13,6 +13,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
     <style>
+      /* Hide the dropdown content by default */
+      .dropdown-contentmenu {
+        display: none;
+      }
+      
+      /* Show the dropdown content when the span is clicked */
+      .show {
+        display: block;
+      }
+            
       * {
         margin: 0;
         padding: 0;
@@ -506,7 +516,24 @@ body {
 
 <body>
 
-  
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById("myDropdown");
+      dropdown.classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropdown span')) {
+        const dropdowns = document.getElementsByClassName("dropdown-content");
+        for (const dropdown of dropdowns) {
+          if (dropdown.classList.contains('show')) {
+            dropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
   <script>
     function search() {
       // Get the search query
@@ -536,31 +563,29 @@ body {
       });
     });
   </script>
-
-<div class="top-section">
-  <div class="dropdown">
-    <span>Quicklinks</span>
-    <div class="dropdown-content">
-      <a href="#Sutekh">Sutekh City</a>
-      <a href="#Rerakth">Rerakth City</a>
-      <a href="#Gods">Gods</a>
-      <a href="#Story">Campaign</a>
+  <div class="container">
+    <div class="sidebar">
+      <div class="dropdown">
+        <span onclick="toggleDropdown()">Quicklinks</span>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="#Sutekh">Sutekh City</a>
+          <a href="#Rerakth">Rerakth City</a>
+          <a href="#Gods">Gods</a>
+          <a href="#Story">Campaign</a>
+        </div>
+      </div>
+    </div>
+    <div class="main-content">
+      <!-- Your main content goes here -->
     </div>
   </div>
-</div>
 
 
   <div class="container">
     <main>
  <div class="texti">
   <div class="bgimg-4"></div>
-  <!--<nav>
-    <a class="jump">Jump to:</a>
-    <a href="#Mordia" class="link">Mordia</a>
-    <a href="#Village" class="link">Bleakburn</a>
-    <a href="#Sutekh" class="link">Sutekh</a>
-    <a href="#Gods" class="link">Gods</a>
-    <a href="Oread.html" class="link">Race: Oread</a></h2></nav> -->
+
       
 
                 <h1><p class="inner_text_shadow otsikko fadein">Islands of Mordia</h1> </p> <div class="link-wrap">
