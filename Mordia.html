@@ -29,15 +29,8 @@
         display: block;
       }
             
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
       html, body {
         height: 100%;
-
         min-width: 780px; 
         background-color: #0e0e0e; /* Set background color for the entire page */
       }
@@ -66,11 +59,17 @@
         text-align:initial;
         z-index: 1000; /* Ensure the dropdown is above other elements */
       }
+      .dropbtn
+      {
+        box-shadow: 0px 0px 8px rgb(255, 9, 9);
+        color: rgb(255, 0, 0);
+        background-color: #0e0e0e; /* Set background color for the entire page */
+      }
   
       .dropdown {
         color: rgb(255, 0, 0);
         display:flex;
-
+        width:max-content; /* Set the width of the box */
       }
   
       .dropdown-content {
@@ -80,23 +79,19 @@
         left: 0;
         top: 100%;
         width:max-content; /* Set the width of the box */
-        padding: 10px;/* Add padding for spacing inside the box */
-        border: 8px solid #fff; /* Add a border for a box-like appearance */
+        padding: 2px;/* Add padding for spacing inside the box */
+        border: 1px solid #fff; /* Add a border for a box-like appearance */
         border-radius: 1px; /* Optional: Add rounded corners */
         background-color: transparent; /* Set background color to transparent */
       }
   
       .dropdown:hover .dropdown-content {
         display:contents;
-
+        width: fit-content; /* adjust as needed */
+        word-wrap: break-word;
       }
   
-      .dropdown-content a {
-        color: rgb(255, 24, 24);
-        display:table-cell;
-        text-decoration: none;
-        padding: 16px 0 0; /* Adjust the padding for link items inside the box */
-      }
+
   
       section {
         margin-top: 10px; /* Adjust this margin to account for the fixed top section */
@@ -143,7 +138,7 @@
 		}
     .button {
       display: inline-block;
-      padding: 1px 6px;
+      padding: 1px 1px;
       font-size: 18px;
       cursor: pointer;
       text-align: center;
@@ -336,15 +331,12 @@
           z-index: 0.8;
 
         }
-        
-
-        
         a {
           display:block;
           padding:5px;
-          padding-inline-start: 39px;
+          padding-inline-start: 2px;
           margin:10px;
-          color: #830000fa;
+          color: #ff0000fa;
           text-decoration: none;
           border-radius: 5px;
           transition: background-color 0.3s ease;
@@ -355,7 +347,10 @@
         }
         
         a:hover {
-
+          text-decoration: none;
+          box-shadow: 1px 0px 6px rgba(255, 0, 0, 0.507);
+          color: rgb(255, 0, 0);
+          background-color: #0e0e0e; /* Set background color for the entire page */
           text-shadow: 2px 1px 2px rgb(0, 0, 0);
         }
 
@@ -365,7 +360,6 @@
         max-width: 1200px; /* Adjust this value as needed */
         margin: 0 auto; /* Center the container horizontally */
         padding: 20px; /* Add padding for spacing from the edges */
-        
         color: #ffffff;
         text-shadow: 1px 0px 2px rgb(197, 0, 0); 
         background-color: #000000c0; /* specify a background color to ensure readability */
@@ -401,7 +395,6 @@
             padding-right:10px;
             min-width:fit-content;
           }
-          
           li {
             margin-bottom: 10px;
             padding-right:10px;
@@ -526,8 +519,12 @@ body {
     function toggleDropdown() {
       const dropdown = document.getElementById("myDropdown");
       dropdown.classList.toggle("show");
-    }
-    
+  
+      // Close the dropdown after 2 seconds (adjust as needed)
+      setTimeout(function() {
+          dropdown.classList.remove("show");
+      }, 2000);
+  }
     // Close the dropdown if the user clicks outside of it
     window.onclick = function(event) {
       if (!event.target.matches('.dropdown span')) {
@@ -572,7 +569,7 @@ body {
   <div class="container">
     <div class="sidebar">
       <div class="dropdown">
-        <span onclick="toggleDropdown()">Quicklinks</span>
+        <button class="dropbtn" onclick="toggleDropdown()">Quicklinks</button>
         <div class="dropdown-content" id="myDropdown">
           <a href="#Sutekh">Sutekh City</a>
           <a href="#Rerakth">Rerakth City</a>
@@ -751,9 +748,9 @@ body {
         </table><div> <br />
           <h2><p id="Story" class="otsikko fadein">The campaign story so far...</p></h2>
      <p class="fadein"> Mantis kilta palkkasi pelaajat selvittämään mitä vuorella tapahtuu. Pelaajat voittivat tourneyn muita vastaan ja Bata halusi palkita heidät suojelu missionilla Mt.Hirolla. Vuorelle oli rakennettu suuri portaali josta pelaajat huomasivat että se aktivoidaan heti kun pelaajat veivät salajuoneen liittyneen Orbin ja laittoivat sen muiden orbien sekaan. <br><br>
-       Party räjäytti portalin vuorelta kuten Mantis kilta halusi, mutta ongelmia tuli kun portalista tulikin läpi haavoittunut lohikäärme jota bata sanoi äidikseen. Hän puhui poikansa kanssa ja lähti sitten lepäämään Pohjoisen suuntaan lentämällä.<br> 
+       Pelaajat räjäyttivät portalin vuorelta kuten Mantis kilta halusi, mutta ongelmia tuli kun portalista tulikin läpi haavoittunut lohikäärme jota bata sanoi äidikseen. Hän puhui poikansa kanssa ja lähti sitten lepäämään Pohjoisen suuntaan lentämällä.<br> 
     <br />
-       Party otti matsia vuorella Bataa vastaan ja he säikähtivät niin paljon koko tapahtumaa ja Batan dragonformia että päättivät juosta ja hypätä alas vuoren linnakkeen seinämältä alas ja veteen. He selvisivät täpärästi tiputuksesta, ja jatkoivat rannalle josta he lopulta löysivät toisensa.
+       Pelaajat otti matsia vuorella Bataa vastaan ja he säikähtivät niin paljon koko tapahtumaa ja Batan dragonformia että päättivät juosta ja hypätä alas vuoren linnakkeen seinämältä alas ja veteen. He selvisivät täpärästi tiputuksesta, ja jatkoivat rannalle josta he lopulta löysivät toisensa.
        <br />
        Portaalista kumpuava energia käynnisti ketjureaktion, joka sai aikaan tulivuoren purkautumisen ja kuuman laavan syöksymisen kohti lähellä sijaitsevaa kaupunkia
        <br /><br />
