@@ -34,5 +34,9 @@
     "**/.vscode/**"
   ],
   "C_Cpp_Runner.useAddressSanitizer": false,
-  "C_Cpp_Runner.showCompilationTime": false
+  "C_Cpp_Runner.showCompilationTime": false,
+  "projectManager.git.baseFolders": [
+    "C:\\Users\\Gurgle\\Documents\\GitHub\\spells",
+    "C:\\Users\\Gurgle\\Documents\\GitHub\\Pikku"
+  ]
 }

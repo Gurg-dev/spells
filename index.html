@@ -1,153 +1,787 @@
-<?php
-    // Include server-side script to handle cookie consent
-    include 'handle_cookie_consent.php';
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> <!-- uus koodi image button -->
+
+
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, maximum-scale=1.75">
 	<meta name="description" content="Mordia Campaign">
 	<meta name="keywords" content="pathfinder, spells, class, links">
 	<meta property="og:image" content="project5.png">
 	<meta property="og:image:type" content="image/png">
 	<meta property="og:image:width" content="100">
 	<meta property="og:image:height" content="100">
-	<title>Class Links</title>
+  <title>Mordia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
 
-		<style>
-		
-        html {
-            height: 100%;
-            width: 100%;
-  		}
-		body {
-			scrollbar-width:thin;
-			margin: 50;
-			padding: 50;
-            height: 100%;
-			width: 100%;
-			display: all;
-			background-color: #0f0f0f;
-		}
-		a:link {
-			color: #fff;
-			text-decoration: none;
-		  }
-		iframe {
-			border:none;
+    <style>
+      /* Hide the dropdown content by default */
+      .dropdown-contentmenu {
+        display: none;
+      }
+      
+      /* Show the dropdown content when the span is clicked */
+      .show {
+        display: block;
+      }
+            
+      html, body {
+        height: 100%;
+        min-width: 780px; 
+        background-color: #0e0e0e; /* Set background color for the entire page */
+      }
+      
+      body, h1, h2, h3, p, ul, ol, li {
+        margin: 0;
+        padding: 0;
+      }
+      
+      main {
+        padding: 2vw;
+        background-color: #000000; /* Set background color for the main content area */
+        box-shadow: 0px 0px 8px rgb(255, 9, 9);
+      }
+      
+      .top-section {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #0e0e0e; 
+        box-shadow: 0px 0px 8px rgb(255, 9, 9);
+        color: white;
+        padding: 5px;
+        padding-left: 18vw;
+        text-align:initial;
+        z-index: 1000; /* Ensure the dropdown is above other elements */
+      }
+      .dropbtn
+      {
+        box-shadow: 0px 0px 8px rgb(255, 9, 9);
+        color: rgb(255, 0, 0);
+        background-color: #0e0e0e; /* Set background color for the entire page */
+      }
+  
+      .dropdown {
+        color: rgb(255, 0, 0);
+        display:flex;
+        width:max-content; /* Set the width of the box */
+      }
+  
+      .dropdown-content {
+        display: none;
+        position:absolute;
+        z-index: 1;
+        left: 0;
+        top: 100%;
+        width:max-content; /* Set the width of the box */
+        padding: 2px;/* Add padding for spacing inside the box */
+        border: 1px solid #fff; /* Add a border for a box-like appearance */
+        border-radius: 1px; /* Optional: Add rounded corners */
+        background-color: transparent; /* Set background color to transparent */
+      }
+  
+      .dropdown:hover .dropdown-content {
+        display:contents;
+        width: fit-content; /* adjust as needed */
+        word-wrap: break-word;
+      }
+  
 
+  
+      section {
+        margin-top: 10px; /* Adjust this margin to account for the fixed top section */
+        padding: 10px;
+      }
+
+      .box {
+        content: "";
+        padding-inline-start: 50px;
+      }
+      
+      .shadow:before {
+        content: "";
+        box-shadow: "";
+        position: absolute;
+        inset: 0;
+        transform: translate3d(-5, 10, -1px);
+        background: conic-gradient(from 90deg at 40% -25%, #0004ff, #22074e, #ee6907, #dfff2a, #b14949, #d61039, #cf1261, #8f0f60, #7c0b3a, #a10c2a, #de0d0d, #ee6907, #f79d03, #ffd700, #ffd700, #ffd700);
+        filter: blur(5px);
+        clip-path: polygon(-100vmax -100vmax,100vmax -100vmax,100vmax 100vmax,-100vmax 100vmax,-100vmax -100vmax,0 0,0 100%,100% 100%,100% 0,0 0);
+      }
+      @media only screen and (max-width: 600px) {
+        /* Styles for screens with a maximum width of 600px (typical for phones) */
+      }
+
+
+    .link {
+
+      text-decoration: none;
+      font-size: 40px;
+			transition: background-color 0.2s ease-in-out;
 		}
-		.box {
-			align-items:last baseline;
-			content:"";
-			background-color: rgba(0, 12, 0, 0.952);
-			box-shadow:"" ;
-			border: 3px solid #de0d0d;
-			border-style: inset;
-			position: relative;
-			transform: translate(0);
-			transform-style: preserve-3d;
-			margin: 5px;
-			border-radius: 8px;
-			clip-path: inset(0% 0% 0% 0% round var(--border-radius));
-			scroll-snap-stop:unset;
-			width: fit-content;
-			margin-right: 20px; /* Adjust the value as needed */
- 		}
-		.shadow:before {
-			content:"";
-			box-shadow:"" ;
-			position: absolute;
-			inset: 0;
-			transform: translate3d(-5,10,-1px);
-			background: conic-gradient(from 90deg at 40% -25%, #0004ff, #22074e, #ee6907, #dfff2a, #b14949, #d61039, #cf1261, #8f0f60, #7c0b3a, #a10c2a, #de0d0d, #ee6907, #f79d03, #ffd700, #ffd700, #ffd700);
-			filter: blur(5px);
-			clip-path: polygon(-100vmax -100vmax,100vmax -100vmax,100vmax 100vmax,-100vmax 100vmax,-100vmax -100vmax,0 0,0 100%,100% 100%,100% 0,0 0);
+    .jump {
+
+      text-decoration: none;
+      font-size: 40px;
+			transition: background-color 0.2s ease-in-out;
 		}
-		.shadow:after {
-			content:"";
-			box-shadow:"" ;
-			position: absolute;
-			inset: 0;
-			transform: translate3d(-5,10,-1px);
-			background: conic-gradient(from 90deg at 40% -25%, #ffd700, #f79d03, #ee6907, #e6390a, #de0d0d, #d61039, #cf1261, #8f0f60, #7c0b3a, #a10c2a, #de0d0d, #ee6907, #f79d03, #ffd700, #ffd700, #ffd700);
-			filter: blur(5px);
-			clip-path: polygon(-100vmax -100vmax,100vmax -100vmax,100vmax 100vmax,-100vmax 100vmax,-100vmax -100vmax,0 0,0 100%,100% 100%,100% 0,0 0);
-		}
-		.link-container {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			margin-top: 20px;
-			margin: 50;
-			padding: 50;
-			background-color: rgba(19, 19, 19, 0.795);
-		}
-		.link {
-			color: #ffffff;
-			font-size:larger;
-			border-radius: 8px;
-			transition: background-color 0.3s ease-in-out;
-		}
-		.link2 {
-			color: #de0d0d;
-			font-size:larger;
-			border-radius: 8px;
-			transition: background-color 0.3s ease-in-out;
-		}
+
 		.link:hover{
-			background-color: hwb(0 0% 0% / 0.384);
-			border-radius: 8px;
-			transition: background-color 0.3s ease-in-out;
-			padding-inline: 0px;
+      text-decoration: none;
+      color:white;
+      background-color: #df000093;
 		}
-	</style>
-</head>
-<body>
-	<h3>	<div class="box shadow">
-			<a href="https://aonprd.com/Spells.aspx?Class=Adept#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Adept</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Alchemist#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Alchemist</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Antipaladin#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Antipaladin</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Arcanist#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Arcanist</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Bard#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Bard</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Bloodrager#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Bloodrager</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Cleric#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Cleric</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Druid#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Druid</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Hunter#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Hunter</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Inquisitor#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Inquisitor</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Investigator#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Investigator</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Magus#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Magus</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Medium#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Medium</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Mesmerist#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Mesmerist</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Occultist#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Occultist</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Oracle#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Oracle</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Paladin#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Paladin</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Psychic#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Psychic</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Ranger#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Ranger</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=RedMantisAssassin#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">RedMantisAssassin</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=SahirAfiyun#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">SahirAfiyun</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Shaman#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Shaman</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Skald#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Skald</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Sorcerer#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Sorcerer</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Spiritualist#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Spiritualist</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Summoner#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Summoner</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Summoner%20(Unchained)#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Summoner(Unchained)</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Warpriest#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Warpriest</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Witch#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Witch</a>
-			<a href="https://aonprd.com/Spells.aspx?Class=Wizard#ctl00_MainContent_DataListTypes"  class="link" id="scroll-to-iframe" Target="myFrame">Wizard</a>
-			<a href="https://aonprd.com/OccultRituals.aspx?ItemName=All#ctl00_MainContent_GridViewOccultRituals"  class="link" id="scroll-to-iframe" Target="myFrame">Occult Rituals</a>
-			<!-- otettu pois Target="myFrame" ja alempaa #global-navigation-user-icon-->
-			<a href="Divi.html"  class="link">☥Divination:Vatic☥</a>
-			<a href="Mordia.html"  class="link2">☼Mordia☼</a>
-	</h3>
-		
+    .button {
+      display: inline-block;
+      padding: 1px 1px;
+      font-size: 18px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #370058;
+      border: none;
+      border-radius: 18px;
+      box-shadow: 0 6px #00000070;
+    }
+      .button:hover {background-color: #9d00db}
 
-    	<iframe src="Divi.html" width="100%" height="1200" padding="1px" name="myFrame" class="iframe-wrapper" >
-   		</iframe>
-</div></div>
-<script src="https://gurgle.rf.gd/handle_cookie_consent.php"></script>
+        .button:active {
+          background-color: #a200b8;
+          transform: translateY(4px);
+        }
+
+    .bgmother {
+      background-image:url("Mother2.png");
+      background-repeat: no-repeat;
+      background-position:top;
+      background-size:contain;
+      border: 2px groove #46464600;
+      border-style: inset;
+      border-radius: 8px;
+      clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+      width:100%;
+      height:calc(100% - 8px);
+    }
+    .bgmotherword {
+        width: 550px; /* adjust as needed */
+        word-wrap: break-word;
+        background-color: #6300007e;
+        background-repeat: no-repeat;
+        border: 0px groove #de0d0d;
+        border-style: inset;
+        border-radius: 8px;
+        clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+    }
+    .text-class {
+      width: 550px; /* adjust as needed */
+      word-wrap: break-word;
+      background-color: #000000e3;
+      background-repeat: no-repeat;
+      border: 0px groove #de0d0d;
+      border-style: inset;
+      border-radius: 8px;
+      clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+      }
+      .text {
+        width: fit-content; /* adjust as needed */
+        word-wrap: break-word;
+        background-color: #00000000;
+        background-repeat: no-repeat;
+        border: 0px groove #de0d0d;
+        border-style: inset;
+        border-radius: 8px;
+        clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+        text-align:left;
+      }
+
+  .text-eald {
+    width: fit-content; /* adjust as needed */
+    word-wrap: break-word;
+    background-color: #00000000;
+    background-repeat: no-repeat;
+    border: 0px groove #de0d0d;
+    border-style: inset;
+    border-radius: 8px;
+    clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+    padding-top: 550px;
+  }
+  .text-mother {
+    width: fit-content; /* adjust as needed */
+    word-wrap: break-word;
+    background-color: #00000000;
+    background-repeat: no-repeat;
+    border: 0px groove #de0d0d;
+    border-style: inset;
+    border-radius: 8px;
+    clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+    padding-top: 450px;
+  }
+    .bgeald {
+      background-image:url("Eald.png");
+      background-repeat: no-repeat;
+      background-position:top;
+      background-size:contain;
+      border: 0px groove #44444446;
+      border-style: inset;
+      border-radius: 8px;
+      clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+      width:100%;
+      height:calc(100% - 8px);
+    }
+    /*
+    .bgealdword {
+
+    }*/
+    .Anpu {
+      background-image:url("Anpu.png");
+      background-repeat: no-repeat;
+      background-position:center;
+      background-size:contain;
+      background-clip: padding-box;
+      border: 2px groove #de0d0d;
+      border-style: inset;
+      border-radius: 8px;
+      clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+      width: 100%;
+      height: 400px;
+    }
+
+        .bgimg-1 {
+          background-image:url("bgold.png");
+          background-repeat: no-repeat;
+          background-position:right;
+          background-size:cover;
+          background-clip: padding-box;
+          border: 2px groove #de0d0d;
+          border-style: inset;
+          border-radius: 8px;
+          clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+          width: 100%;
+          height: 400px;
+        }
+        .bgimg-2 {
+          background-image: url("mordgola.png");
+          background-repeat: no-repeat;
+          background-position:right;
+          background-size:cover;
+          background-clip: padding-box;
+          border: 2px groove #de0d0d;
+          border-style: inset;
+          border-radius: 8px;
+          clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+          width: 100%;
+          height: 600px;
+          
+        }
+        div img {
+          height: 100%; /* adjust as needed */
+        }
+        .bgimg-3 {
+          background-image: url("TS_1624027005.png");
+          background-repeat: no-repeat;
+          background-position:right;
+          background-size:cover;
+          background-clip: padding-box;
+          border: 2px groove #de0d0d;
+          border-style: inset;
+          border-radius: 8px;
+          clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+          width: 100%;
+          height: 500px;
+        }
+        .bgimg-4 {
+          background-image: url("Mordia.jpg");
+          background-repeat: no-repeat;
+          background-position: top;
+          background-size: cover;
+          background-clip: padding-box;
+          border: 2px groove #de0d0d; /* Adjust border size */
+          border-style: inset;
+          border-radius: 8px; /* Adjust border-radius proportionally */
+          clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+          width: 100%;
+          height: 780px;
+        }
+        .textibox {
+          background-image: url("papyrus.jpg");
+          background-repeat: no-repeat;
+          background-position:right;
+          background-size:cover;
+          background-clip: padding-box;
+          border: 2px groove #de0d0d;
+          border-style: inset;
+          border-radius: 8px;
+          clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+          width: 100%;
+          height: 400px;
+        }
+        nav {
+          padding-inline-start: 5px;
+          margin-top: 250px;
+          top: 0;
+          left: 0;
+          transform: translateY(-50%);
+          z-index: 0.8;
+
+        }
+        a {
+          display:block;
+          padding:5px;
+          padding-inline-start: 2px;
+          margin:10px;
+          color: #ff0000fa;
+          text-decoration: none;
+          border-radius: 5px;
+          transition: background-color 0.3s ease;
+          height:calc(100% - 8px);
+          width: -moz-fit-content;
+          text-shadow: 2px 1px 2px rgb(0, 0, 0);
+          background-color: #b9000000; /* specify a background color to ensure readability */
+        }
+        
+        a:hover {
+          text-decoration: none;
+          box-shadow: 1px 1px 6px rgba(255, 0, 0, 0.507);
+          color: rgb(255, 0, 0);
+          background-color: #0e0e0e; /* Set background color for the entire page */
+          text-shadow: 2px 1px 2px rgb(0, 0, 0);
+        }
+
+        .texti {
+        size: 10px;
+
+        max-width: 1200px; /* Adjust this value as needed */
+        margin: 0 auto; /* Center the container horizontally */
+        padding: 20px; /* Add padding for spacing from the edges */
+        color: #ffffff;
+        text-shadow: 1px 0px 2px rgb(197, 0, 0); 
+        background-color: #000000c0; /* specify a background color to ensure readability */
+        }
+        p {
+        text-align:justify;
+        size: 14px;
+        margin:3px;
+        }
+        .fadein {
+          opacity: 0;
+          transition: opacity 2s;
+        }
+        .otsikko {
+          text-align:center;
+          size: 14px;
+          margin:3px;
+          }
+          .parent {
+            text-align: center;
+          }
+        td {
+        padding-right:10px;
+        min-width:fit-content;
+        }
+        th {
+          padding-right:10px;
+          min-width:fit-content;
+          }
+          ul {
+            list-style: none;
+            margin: 0;
+            padding-right:10px;
+            min-width:fit-content;
+          }
+          li {
+            margin-bottom: 10px;
+            padding-right:10px;
+            min-width:fit-content;
+          }
+
+        /*
+        .left {
+          display: table-cell;
+          vertical-align: middle;
+          width: 600px;
+          margin: 0;
+          padding: 0;
+          height: fit-content;
+        }
+        
+        .right {
+          display: table-cell;
+          vertical-align: right;
+
+          padding: 0 10px;
+        }
+        .container {
+          width: 600px;
+          display: inline-block;
+          height: 80px;
+          margin-right: 10px;
+          padding: 0;
+        } */
+/*
+#yellow {
+  font-size: 30px;
+  color: yellow;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.288);
+}
+
+
+body {
+  margin: 0;
+
+    background-image: url("bg2.png");
+
+    height: 650px;
+    position: relative;
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border:transparent;
+  
+ 
+    min-height: 500px; 
+  
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
+
+
+
+
+
+
+
+/*.parallax {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.parallax-layer {
+    position: sticky;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("bg2.png");
+}
+.parallax-layer.layer1 {
+
+  transform:translateZ(-0.1px);
+  top: 10rem;
+
+  width: 100%;
+  height: 50rem;  
+
+  min-height: 500px; 
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}*/
+
+
+
+
+
+
+
+
+
+/* Turn off parallax scrolling for tablets and phones 
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+      background-attachment: scroll;
+    }
+    }
+    .content {
+    padding: 50px;
+    text-align: center;
+    color: rgba(255, 0, 0, 0.76);
+    }
+    class.mw-headline{
+    background-color: #250047;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');*/
+    </style>
+
+<body>
+
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById("myDropdown");
+      dropdown.classList.toggle("show");
+  
+      // Close the dropdown after 2 seconds (adjust as needed)
+      setTimeout(function() {
+          dropdown.classList.remove("show");
+      }, 2000);
+  }
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropdown span')) {
+        const dropdowns = document.getElementsByClassName("dropdown-content");
+        for (const dropdown of dropdowns) {
+          if (dropdown.classList.contains('show')) {
+            dropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+  <script>
+    function search() {
+      // Get the search query
+      const query = document.getElementById("search-input").value;
+  
+      // Find all the elements on the page that contain the search query
+      const elements = [...document.querySelectorAll("*")].filter(element => element.textContent.includes(query));
+  
+      // If any elements were found, scroll to the first one
+      if (elements.length > 0) {
+        elements[0].scrollIntoView();
+      }
+    }
+
+    window.addEventListener('scroll', function() {
+      var elements = document.querySelectorAll('.fadein');
+    
+      elements.forEach(function(element) {
+        var position = element.getBoundingClientRect();
+    
+        // checking whether partially visible
+        if(position.top < window.innerHeight && position.bottom >= 0) {
+          element.style.opacity = 1;
+        } else {
+          element.style.opacity = 0;
+        }
+      });
+    });
+  </script>
+  <div class="container">
+    <div class="sidebar">
+      <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown()">Quicklinks</button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="#Sutekh">Sutekh City</a>
+          <a href="#Rerakth">Rerakth City</a>
+          <a href="#Gods">Gods</a>
+          <a href="#Story">Campaign</a>
+          <a href="spells.html">Spells</a>
+        </div>
+      </div>
+    </div>
+    <div class="main-content">
+      <!-- Your main content goes here -->
+    </div>
+  </div>
+
+
+  <div class="container">
+    <main>
+ <div class="texti">
+
+  <div class="bgimg-4"><button button type="button" onclick="window.location.href='Mordia8knames.png';" target="_blank" class="button" class="expand">Expand</button>
+  </div>
+
+      
+
+                <h1><p class="inner_text_shadow otsikko">Islands of Mordia</h1> </p> <div class="link-wrap">
+                          
+
+        <div>
+        <p class="fadein parent">Mordia is located direct east of Katapesh coast line, Between Qadira and Katapesh, Amidst of the Obari Ocean... </p>
+        </div>
+          <br />
+          
+          <div class="bgimg-2"><button button type="button" onclick="window.location.href='MordiaGOLA.png';" target="_blank" class="button" class="expand">Expand</button>
+          </div>
+    <h2><p id="Mordia" class="otsikko fadein">Mordia, First Day - the Disaster.</p></h2>
+    <div class="container"></div>
+    <div class="bgimg-3"><button button type="button" onclick="window.location.href='TS_1624027005.png';" target="_blank" class="button" class="expand">Expand</button>
+    </div>
+   
+    <p class="fadein">Katapesh: The yellow-sailed ships from the Katapeshi city of Okeno are the most well-known and feared agents of the slave trade on the Inner Sea. Okeno originally
+      began as a convenient spot for pirates to stop by to collect water and provisions without relying on the ports of the mainland nations. Keleshite Captain
+      Xiren Bhey is the current leader of Okeno Slavers. He arrived in Okeno more than ten years ago and gained the reputation of a ruthless slaver. Captain Xiren
+      Bhey (aka Stanley Pike) killed the leader of Okeno Slavers in a duel and established himself as the new leader. He captains the galley Undertow.
+      </p>
+    <p class="fadein">Undertow sank in the shoreline when it was heading to sell slaves to Blackmouth village for the Blessed Kingdom.</p>
+    <p class="fadein">You remember being on a ship for a while and wondering where and who you are. No one remembers their names. Some weird fog covers the air,
+       until suddenly you hear the bottom of the ship screeching and after the crash upon some stones, the ship went over the rocky coral reef
+        and rose on top of it. Your ship sank because the captain could no longer remember where the reefs were on the shore. The ship sank 
+        next to a river mouth. Your ship must have been carrying resources because the flag had a gold coin on hand.  The beaches are also quite deep.
+         The adventurers managed to get off the ship, alive. You swim ashore and watch as the ship continues to sink offshore...</p>
+      <section id="Sutekh"><br>
+    <h2 id="Sutekh" class="otsikko fadein">Sutekh City</h2>
+      <div class="bgimg-1"><button button type="button" onclick="window.location.href='bgold.png';" target="_blank" class="button" class="expand">Expand</button>
+      </div>
+    <p class="fadein">City established in the Valley of Sand next to the inner sea of Mordia. Sutekh was captured by Bata's forces some years ago. Since then, Bata has lead the city
+       with his evil minions - 
+       ruling with an iron fist. First adventurers that arrived there were hauling a mysterious artifact for Bata. City council has been plotting the demice
+       of Bata. The party of people with help of Mantis Guild in the city is planning to overthrow the unrightful tyrant.  Their arrival started a series of events
+       leading to Bata using Artifacts only known to him to free his mother from her higher domain. Now Bata's mother is now free in Mordia, but Bata has been defeated by the Blessed Kingdom and their allies.
+      </p>
+    
+     
+ <h2>
+    <p class="otsikko fadein">Important people</p></h2>
+            
+    
+    <p class="fadein">Lady Elspeth von Carstein - Human noble - Trading Company: Lady Elspeth comes from a wealthy and influential family that has long held a significant position in
+       the city's political scene. She is known for her sharp intellect, political savvy, and unwavering dedication to the city's well-being. She believes the city's 
+       prosperity depends on strong trade relationships with neighboring kingdoms and works constantly to improve these relationships. Lady Elspeth is often seen 
+       dressed in the latest fashion trends and behaves in a regal manner. - burned down a rival clothing merchant's warehouse
+    
+    </p><br />
+    <p class="fadein">Thorne Ironfist - Dwarf paladin - Corrupt police chief: Thorne is a rough and outspoken member of the city council. He takes his duties very seriously and is 
+      dedicated to maintaining law and protecting the city's residents. He is a skilled fighter and is not afraid to get his hands dirty when necessary. Thorne is loyal
+       to his deity Moradin and often speaks of the importance of honor, loyalty, and duty. Although his stiff demeanor can be intimidating, he is popular with many of
+        the city's residents.
+    
+    </p><br />
+    <p class="fadein">Mirielle d'Arc - Halfling bard - City entertainment director: Mirielle is a charismatic and charming member of the city council. She has a way of speaking that
+    </p>
+    <p class="fadein">
+    Xalara Bloodblade - 
+    Xalara is the current leader of the Red Mantis assassins in Sutekh. She rose to the position through sheer skill and ruthlessness, having climbed the ranks of
+    the organization over many years. Xalara is highly respected among the Red Mantis for her strategic thinking and deadly efficiency. Characteristics: Xalara is
+    a cold and calculating individual who rarely shows emotion. She is highly intelligent and a skilled strategist, often planning out complex operations with meticulous
+    attention to detail. Xalara is also a master of disguise, able to blend seamlessly into any crowd and manipulate those around her to achieve her goals.
+    </p><br />
+    Sten Valencourt - Dragonkin Wizard - Sten Valencourt stands tall, his presence commanding attention in any room. His age is difficult to discern; his face bears the wisdom of centuries, yet his eyes sparkle with youthful curiosity. His long, silver hair cascades down his back, interwoven with strands of iridescent blue. His robes, adorned with intricate golden sigils, seem to shimmer with an otherworldly glow. A staff of ancient oak rests in his hand, its tip adorned with a sapphire that pulses with arcane energy.
+<br />
+Sten emerged from obscurity, working with the ranks of the Mantis guild in Sutekh. His origins remain shrouded, whispered rumors hinting at forbidden pacts with ancient beings. Some say he bargained with the very stars to gain his power. Regardless, his appointment as Grand Wizard surprised many. Was it merit or manipulation that led to his ascension?
+<br />
+His motives remain veiled, even to those closest to him. Is he a protector of the city or a puppet master pulling unseen strings? The title of Grand Wizard is not enough for Sten. He seeks to unravel the secrets of the cosmos, transcending mortal limitations.
+<br /><br />
+Ki Juma - Catfolk Paladin - Embodies the spirit of the wild—a lithe figure with fur the color of midnight. His eyes, amber and unyielding, hold the secrets of forgotten jungles. His tail, sinuous and expressive, twitches with anticipation. Around his neck, a pendant of obsidian bears the emblem of the Blessed Kingdom—a golden eye.
+<br />
+Ki Juma’s loyalty to the Blessed Kingdom runs deeper than bone. He fought alongside its legions, his claws stained with the blood of invaders. Some say Ki Juma bargained with the gods for his power. In return, he vowed to protect the Blessed Kingdom until the stars themselves fade.
+</section>
+  <section id="Rerakth"><br>
+      <h2 class="mw-headline otsikko fadein" id="Rerakth_city">Rerakth city
+      </h2>
+      <div class="Anpu"><button button type="button" onclick="window.location.href='Anpu.png';" target="_blank" class="button" class="expand">Expand</button>
+      </div>
+      <p class="fadein">The city of Rerakth is located on the eastern shore of the Green sea of Mordia. Other side of the ocean from the Green Wastes. There was a sudden change in rulership when the queen got sick, her new husband she married a year ago took over for her while the queen is twindling away in bed. The current ruler of Rerakth is Anpu. Rumors say he caused the queens affliction, but no proof has been found.</p>
+
+      <h2>
+    <p id="Village" class="otsikko fadein">Village of Bleakburn</h2></p>
+ 
+    <p class="fadein">This village was taken over by the Sand Kingdom with the help by group of players some time ago.</p>
+
+    <h3>
+      <p class="otsikko fadein">Important people</p></h3>
+    <p class="fadein">Ashii - The current appointed village leader Astomoi Cleric Ashii, She has a long ceremonial cloak covering her body,
+      unlike like most Astomoi. Behind her mask, you only see darkness and some light beams. Astomoi like company even if they don't eat or drink. She can sense
+      thoughts and thus has been voted for a temporary leader of the village after a short ceremony when it was taken over by her and her associates.
+    </p>
+    <p class="fadein">Hera - Temporary The guard Commander, Dark Elf Magus Hera, Covered in a dark cloak, wielding a longsword. Ashii assigned
+      her as the guard Captain for the village.</p>
+    <p class="fadein">Will - The current tavern keep, Axel Willis "Will" This is a big guy, pure barbaric muscle. Wielding a huge
+      Earthbreaker. Lightly armored, currently running a tavern.</p>
+  
+      <br /></section>
+      <section id="Gods"><br>
+      <h2 id="Gods" class="otsikko fadein">☥ Gods of Mordia ☥</h2>
+      <p class="fadein">In addition to following Gods, island of Mordia Campaign you can use all gods from Pathfinder 1E world. And then some.</p>
+      <br />
+      <div class="bgmother">
+        <table class="styled-table">
+          <tr>                                    
+              <h2><p class="fadein">Mother</p></h2> <br>
+                     <p class="fadein">Alignment: Chaotic Evil
+            <br>
+            Domains: Air, Chaos, Healing, Evil
+            <br> Symbol: Golden bouquet of Roses<br>
+            Garb: Long robes, sandals, <br>and ceremonial head-dress (beast mask), <br>Golden bouquet of
+            Roses (holy symbol)<br>
+            Favored Weapons: quarterstaff, <br>spear, poisoned weapons<br>
+            Typical Worshipers: Evil power-seeking humanoids,<br> evil monks, assassins, concubines,
+            cultists
+            <br><br>
+
+                            <p class="text-mother fadein">
+                              Mother *hidden true name* is a greater god, worshiped by some denizens on Mordia. Organized groups of assassins are known to be dedicated to her worship.
+                              Her worshipers, mainly clerics use a long robe and a mask to cover their face. Tales tell of her showing her self around Mordia, but many of the ones who saw
+                              her - never did again. Many of his worshipers tattoo themselves with roses and embroider clothing in same way.<br>
+                              The Mother was released from her currently unknown prison of sorts. Her son assembled a number of artifacts to summon her out, and he did. The summoning portal was destroyed and she fled because of the damage she sustained during the summoning. Her son Bata punished everyone that let this explosion sabotage to happen. This is not the last people will hear of her...</p>
+                            </p>
+          </td>
+              <td class="text-side">
+              </td>
+              <td class="image-side">
+                <div class="bgmotherword"></div>
+              </td>
+          </tr>
+      </table>
+      </div></div><br />
+      <div class="bgeald">
+        <table class="styled-table">
+          <tr>
+              <td class="text-eald fadein">
+                  Ealdthryn is known as the deity of wisdom and knowledge. It is said that Ealdthryn's vast intellect
+                  is matched only by their insatiable hunger for learning and understanding. Ealdthryn is often depicted as a wise old figure with a long white beard, deep-set
+                  eyes, and a serene expression. They are typically depicted holding a staff or book, symbolizing their mastery over knowledge. According to legend, Ealdthryn
+                  was one of the first beings to emerge from the void at the beginning of creation. As the universe took shape around them, Ealdthryn set about cataloging and
+                  studying every aspect of it, from the movement of the stars to the behavior of the smallest subatomic particles. Ealdthryn's quest for knowledge was unquenchable,
+                  and they spent countless eons traveling the cosmos, exploring every corner of it. Over time, Ealdthryn became revered by mortal beings for their vast knowledge
+                  and wisdom. Temples were built in their honor, and they were worshipped by scholars, sages, and philosophers alike.<br> Ealdthryn was seen as a source of guidance
+                  and inspiration, and their followers sought their counsel on matters of science, philosophy, and magic. Ealdthryn's teachings are focused on the importance
+                  of learning and self-improvement.They believe that the pursuit of knowledge is a sacred duty, and that every being has the potential to grow and expand their
+                  understanding of the universe. Ealdthryn's followers are encouraged to seek out new experiences, learn from their mistakes, and constantly strive to better
+                  themselves. Despite their immense wisdom, Ealdthryn is not infallible.<br> There are many stories of Ealdthryn making mistakes or underestimating the power of
+                  their own creations. However, these missteps are seen as learning opportunities, and Ealdthryn is always quick to rectify their errors and use them to expand
+                  their understanding of the universe. In combat, Ealdthryn is rarely directly involved, preferring instead to use their vast intellect to outmaneuver and outwit
+                  their opponents. Ealdthryn's followers are often powerful mages, using their knowledge of the arcane to manipulate reality itself and gain an edge in battle.
+                  <br>Ealdthryn's enemies are those who seek to suppress knowledge and keep others in ignorance. They view such beings as threats to the natural order of the universe,
+                  and will go to great lengths to thwart their plans. Ealdthryn's followers are also sworn enemies of any who seek to use knowledge for personal gain or to subjugate
+                  others.
+            </p>
+              </td>
+              <div class="text">
+                  <p class="fadein">
+                    <h2 class="fadein">Ealdthryn</h2><br> <p class="fadein">Alignment: Chaotic Good <br>Domains: Earth, Protection, Knowledge<br>
+                  Symbol: Book<br>
+                  Garb: Staff, Long robes<br>
+                  Favored Weapons: Staff<br>
+                  Typical Worshipers: good humanoids, good monks, philosophers,<br> planar creatures In the pantheon of the gods.<br><br></p>
+                    </section></div>
+          </tr>
+        </table><div> <br />
+          <h2><p id="Story" class="otsikko fadein">The campaign story so far...</p></h2>
+          <p class="fadein"> The players have started with different tasks in the ranks of Red Mantis. they knew each other to some extent, Red Mantis has been operating in the city of Sutekh for about a year when Xalara arrived to establish it.
+            Those from Sutekh know that about 3 years ago Bata took over the city from the previous leader when he executed him and his subjects in the attack. The influential people of the city then just accepted his leadership.<br /> Group of travelers came from the south enterance of Sutekh and they carried a mystery object in a cart. They were received by Bata and after they were observed by players from the Mantis guild to have received a flying ship and flew off to the sea.<br />
+            <br />
+            Mantis guild gave a mission to get some city council converted to their side. Mirielle d'Arc's husband Mark d'Arc got killed by the party to achieve this, the body is near a boatwreck at sea. After this the players went to Lady Elspeth von Carstein, after the players dealt with competing clothing business owner's shop, the lady agreed to side with Mantis' plan.  
+            Mantis guild hired the players as double agents to find out what was happening on the mountain. The players found out about the tournament and won it against other competing parties at Fort Bata and Bata wanted to reward them with a protection mission on Mt. Hiro. A large portal had been built on the mountain, which the players noticed that it was activated after the players took the orb related to the conspiracy and put it among the other orbs. <br><br>
+            The portal blew up at the mountain as the Mantis guild wanted, but problems arose when a wounded dragon appeared through the exploding portal, Bata called this dragon his mother. He spoke to his son and then left to rest, flying north.<br> 
+         <br />
+            The players took a fight on the mountain against Bata and they were so scared of the whole event and Bata's dragon form that they decided to run and jump down from the wall of the mountain temple and into the water. They barely survived the fall, and continued to the beach where they finally found each other.
+            <br />
+            The energy emanating from the portal triggered a chain reaction, causing the volcano to erupt and hot lava to rush towards the nearby city
+            <br /><br />
+             The rumble grew and grew, until the mountain exploded, spewing hot lava in all directions. The nearby city of Sutekh had never faced such a disaster. The ground shook as the lava flowed down the mountain slope towards the city. On the outskirts of the city, people ran for their lives, but many were not fast enough. The scorching heat and toxic gases made breathing difficult, or impossible.
+             <br />
+            The city's emergency services were overloaded, and the residents were left on their own. The elementalists tried their best to limit the flames, but it was a hopeless battle. The lava swallowed everything in its path, destroying homes, buildings and roads on the south side
+            <br /><br />
+            As the days passed, the lava began to cool, and the city began to assess the damage. The grief was deep and many had lost their homes and loved ones. The city suffered huge losses, but the residents decided to get up and start rebuilding. Although the mountain had caused a great catastrophe, most of the city survived in the end stronger than ever before.
+            <br /><br /> The players conquered Sutekh with the help of the Blessed Kingdom's battalions and navy, Bata was killed and the tyranny was over in the whole region. Anpu, the leader of the Blessed Kingdom, appointed General Ki Juma as the interim leader of the Sand Kingdom region as it is being stabilized.</p></div>
+      </table>
+
+
+</main>
+   </div>   </div></div>
+  </head>
 </body>
+
 </html>
