@@ -71,7 +71,15 @@
         display:flex;
         width:max-content; /* Set the width of the box */
       }
-  
+      .dropdown:after {
+        content: "";
+        position: absolute;
+        bottom: -30px;
+        height: 30px;
+        width: 100%;
+        left: 0;
+        display: block;
+      }
       .dropdown-content {
         display: none;
         position:absolute;
@@ -90,7 +98,7 @@
         width: fit-content; /* adjust as needed */
         word-wrap: break-word;
       }
-  
+
 
   
       section {
@@ -579,9 +587,7 @@ body {
         </div>
       </div>
     </div>
-    <div class="main-content">
-      <!-- Your main content goes here -->
-    </div>
+
   </div>
 
 
