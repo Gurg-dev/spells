@@ -38,5 +38,7 @@
   "projectManager.git.baseFolders": [
     "C:\\Users\\Gurgle\\Documents\\GitHub\\spells",
     "C:\\Users\\Gurgle\\Documents\\GitHub\\Pikku"
-  ]
+  ],
+  "scm.alwaysShowRepositories": true,
+  "scm.alwaysShowActions": true
 }
