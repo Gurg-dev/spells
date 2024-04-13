@@ -73,7 +73,9 @@
         color: rgb(255, 0, 0);
         background-color: #0e0e0e; /* Set background color for the entire page */
       }
-  
+      .my-subheading {
+    font-size: 16px; /* Adjust as needed */
+  }
       .dropdown {
         color: rgb(255, 0, 0);
         display:flex;
@@ -134,6 +136,17 @@
       @media only screen and (max-width: 600px) {
         /* Styles for screens with a maximum width of 600px (typical for phones) */
       }
+
+      .centered-heading {
+    text-align: center;
+    font-size: 24px;
+    /* Add more styles as needed */
+    }
+    .texthead {
+    text-align: center;
+    font-size: 20px;
+    /* Add more styles as needed */
+    }
 
 
     .link {
@@ -206,7 +219,12 @@
       border-style: inset;
       border-radius: 8px;
       clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+      font-size: 5vw; /* 5% of viewport width */
     }
+    .text-scroll img {
+    max-width: 100%;
+    height: auto;
+}
     .text-class {
       width: 550px; /* adjust as needed */
       word-wrap: break-word;
@@ -336,13 +354,15 @@
           background-repeat: no-repeat;
           background-position: top;
           background-size: cover;
-          background-clip: padding-box;
-          border: 2px groove #de0d0d00; /* Adjust border size */
+          border: 125px groove #de0d0d00; /* Adjust border size */
           border-style: inset;
           border-radius: 8px; /* Adjust border-radius proportionally */
           clip-path: inset(0% 0% 0% 0% round var(--border-radius));
-          width: 100%;
+          width: 98%;
           height: 1392px;
+          font-size: calc(12px + 0.5vw); /* Base size + 0.5% of viewport width */
+          font-size: min(2em, var(--max-font-size)); /* Limit font size to 2em or the custom max size */
+          line-height: 1.1;
 
         }
         .textibox {
@@ -392,7 +412,10 @@
           background-color: #0e0e0e; /* Set background color for the entire page */
           text-shadow: 2px 1px 2px rgb(0, 0, 0);
         }
-
+        .container {
+        position: relative;
+        text-align: center;
+        }
         .texti {
         size: 10px;
         max-width: 1200px; /* Adjust this value as needed */
@@ -636,7 +659,7 @@ Ki Juma’s loyalty to the Blessed Kingdom runs deeper than bone. He fought alon
             Some of her worshipers tattoo themselves with roses and embroider clothing in the same way.<br>
             The Mother was released from her currently unknown prison of sorts. Her son assembled a number of artifacts to summon her out, and he did.
             The summoning portal was destroyed, and she fled due to the damage sustained during the summoning. Her son Bata punished everyone responsible for the explosion.
-            This is not the last people will hear of her...<br/>
+            This is not the last people will hear of her...<br/><br/>
         </p>
       </div>
       <div class="bgeald">
@@ -688,19 +711,21 @@ Ki Juma’s loyalty to the Blessed Kingdom runs deeper than bone. He fought alon
             was over in the whole region. Anpu, the leader of the Blessed Kingdom, appointed General Ki Juma as the interim leader
             of the Sand Kingdom region as it is being stabilized. <br /><br />
             The Party was given orders to stabilize the Mt.Hiro lava area, and they cleared the rifts that opened to another plane. at the foot of the mountain, the players received a book of revelation from a angelic being.
-            <div class="bgimg-5">
-
-   <h3 class="box styled-table"></br></br></br></br></br></br>The Book of Revelations</h3>
-   <h5 class="box"></br>The leather-bound cover bears the embossed favored weapon of Ealdthryn, the god of wisdom and knowledge. Its pages, yellowed with age, whisper secrets that transcend mortal comprehension.
-  </br></br> Prologue: The War for Sutekh</br></br>
-   The inked words recount the cataclysmic clash between two forces—the War for Sutekh. The two brothers clashed, their energies rending the very fabric of existence. Amidst the cosmic turmoil, Ealdthryn stood resolute, his eyes piercing the veil of time. He foresaw the aftermath—the fragile balance of power, the scars etched upon the realms.
-  </br></br>Chapter I: The Desolate Desert </br></br>
+  <div class="container bgimg-5 img-fluid">
+ 
+   <br/><br/><br/><br/><br/><br/><br/><br/><h3 class="centered-heading">The Book of Revelations</h3>
+   <p class="subtext"></br>
+    The leather-bound cover bears the embossed favored weapon of Ealdthryn, the god of wisdom and knowledge. Its pages, yellowed with age, whisper secrets that transcend mortal comprehension.
+  </br></br> <h4 class="texthead">Prologue: The War for Sutekh</h4></br>
+    The inked words recount the cataclysmic clash between two forces—the War for Sutekh. The two brothers clashed, their energies rending the very fabric of existence. Amidst the cosmic turmoil, Ealdthryn stood resolute, his eyes piercing the veil of time. He foresaw the aftermath—the fragile balance of power, the scars etched upon the realms.
+  </br></br><h4 class="texthead">Chapter I: The Desolate Desert </h4></br>
     The prophecy unfolds upon the shifting sands of the Desolate Desert. Beneath the relentless sun, an underground cave awaits—a sanctuary for secrets and shadows. The air is thick with ancient magic, and the walls bear inscriptions older than memory. Here, the veil between worlds grows thin.
-  </br></br>Chapter II: The Portal</br></br>
+  </br></br><h4 class="texthead">Chapter II: The Portal</h4></br>
     Beware the portal—the malevolent gateway through which an insidious race seeks foothold in Mordia. Their eyes glow like dying stars, and their hunger knows no bounds. The Tome of Ealdthryn warns of their arrival—their whispers echoing through forgotten tunnels.
-  </br></br>Epilogue: Seek the Light</br></br>
+  </br></br><h4 class="texthead">Epilogue: Seek the Light</h4></br>
     Seek the light, seeker of knowledge. For within these pages lies the key to thwarting the encroaching darkness. The path is treacherous, but wisdom shall guide your steps. May Ealdthryn’s grace illuminate your way. Let this book grant you clarity and courage at the end of your journey.
-  </br></br></h5> </p>
+  </br></br></p>
+
 </div>
 
 </div>
