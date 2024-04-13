@@ -40,5 +40,8 @@
     "C:\\Users\\Gurgle\\Documents\\GitHub\\Pikku"
   ],
   "scm.alwaysShowRepositories": true,
-  "scm.alwaysShowActions": true
+  "scm.alwaysShowActions": true,
+  "githubPullRequests.ignoredPullRequestBranches": [
+    "main"
+  ]
 }
