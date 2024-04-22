@@ -168,23 +168,23 @@
       background-color: #df000093;
 		}
     .button {
-      display: inline-block;
-      padding: 1px 1px;
+      display:table;
+      padding: 4px 8px;
       font-size: 18px;
       cursor: pointer;
       text-align: center;
       text-decoration: none;
       outline: none;
       color: #fff;
-      background-color: #370058;
+      background-color: #00000061;
       border: none;
       border-radius: 18px;
-      box-shadow: 0 6px #00000070;
+      box-shadow: 0 6px #00000000;
     }
-      .button:hover {background-color: #9d00db}
+      .button:hover {background-color: #9d00db61}
 
         .button:active {
-          background-color: #a200b8;
+          background-color: #a300b8;
           transform: translateY(4px);
         }
 
@@ -350,21 +350,17 @@
           height: 780px;
         }
         .bgimg-5 {
-          background-image: url("scrollbg.png");
-          background-repeat: no-repeat;
-          background-position: top;
-          background-size: cover;
-          border: 125px groove #de0d0d00; /* Adjust border size */
-          border-style: inset;
-          border-radius: 8px; /* Adjust border-radius proportionally */
-          clip-path: inset(0% 0% 0% 0% round var(--border-radius));
-          width: 98%;
-          height: 1392px;
-          font-size: calc(12px + 0.5vw); /* Base size + 0.5% of viewport width */
-          font-size: min(2em, var(--max-font-size)); /* Limit font size to 2em or the custom max size */
-          line-height: 1.1;
-
-        }
+  background-image: url("scrollbg2.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 120% auto;
+  border: 125px groove #de0d0d00;
+  border-style: inset;
+  border-radius: 8px;
+  clip-path: inset(0% 0% 0% 0% round var(--border-radius));
+  min-height: 100vw; /* Use viewport height (vw) for maximum height */
+  max-height: 100vh; /* Use viewport height (vh) for maximum height */
+}
         .textibox {
           background-image: url("papyrus.jpg");
           background-repeat: no-repeat;
@@ -565,13 +561,13 @@
       began as a convenient spot for pirates to stop by to collect water and provisions without relying on the ports of the mainland nations. Keleshite Captain
       Xiren Bhey is the current leader of Okeno Slavers. He arrived in Okeno more than ten years ago and gained the reputation of a ruthless slaver. Captain Xiren
       Bhey (aka Stanley Pike) killed the leader of Okeno Slavers in a duel and established himself as the new leader. He captains the galley Undertow.
-      </p>
+      </p><br />
     <p class="fadein">Undertow sank in the shoreline when it was heading to sell slaves to Blackmouth village for the Blessed Kingdom.</p>
-    <p class="fadein">You remember being on a ship for a while and wondering where and who you are. No one remembers their names. Some weird fog covers the air,
-       until suddenly you hear the bottom of the ship screeching and after the crash upon some stones, the ship went over the rocky coral reef
-        and rose on top of it. Your ship sank because the captain could no longer remember where the reefs were on the shore. The ship sank 
-        next to a river mouth. Your ship must have been carrying resources because the flag had a gold coin on hand.  The beaches are also quite deep.
-         The adventurers managed to get off the ship, alive. You swim ashore and watch as the ship continues to sink offshore...</p>
+    <p class="fadein">The party remembers being on a ship for a while and wondering where and who they are. No one remembers their names. Some weird fog covers the air,
+       until suddenly they hear the bottom of the ship screeching and after the crash upon some stones, the ship went over the rocky coral reef
+        and rose on top of it. Their ship sank because the captain could no longer remember where the reefs were on the shore. The ship sank 
+        next to a river mouth. The ship must have been carrying resources because the flag had a gold coin on hand.  The beaches are also quite deep.
+         The party managed to get off the ship, alive. The party swam ashore and watch as the ship continues to sink offshore...</p>
       <section id="Sutekh"><br>
     <h2 id="Sutekh" class="otsikko fadein">Sutekh City</h2>
       <div class="bgimg-1"><button button type="button" onclick="window.location.href='bgold.png';" target="_blank" class="button" class="expand">Expand</button>
@@ -600,25 +596,24 @@
         the city's residents.
     
     </p><br />
-    <p class="fadein">Mirielle d'Arc - Halfling bard - City entertainment director: Mirielle is a charismatic and charming member of the city council. She has a way of speaking that
-    </p>
+    <p class="fadein">Mirielle d'Arc - Halfling bard - City entertainment director: Mirielle is a charismatic and charming member of the city council. She has a way of speaking that often convinces others to see things her way. She loves the arts and frequently organizes events such as concerts and plays to entertain the city’s residents. Mirielle is a strong advocate for education and believes that all children in the city should receive an education. She is often seen carrying a lute and singing melodies as she walks the streets. 
+    </p><br>
     <p class="fadein">
-    Xalara Bloodblade - 
-    Xalara is the current leader of the Red Mantis assassins in Sutekh. She rose to the position through sheer skill and ruthlessness, having climbed the ranks of
+    Xalara Bloodblade - The current leader of the Red Mantis assassins in Sutekh. She rose to the position through sheer skill and ruthlessness, having climbed the ranks of
     the organization over many years. Xalara is highly respected among the Red Mantis for her strategic thinking and deadly efficiency. Characteristics: Xalara is
     a cold and calculating individual who rarely shows emotion. She is highly intelligent and a skilled strategist, often planning out complex operations with meticulous
     attention to detail. Xalara is also a master of disguise, able to blend seamlessly into any crowd and manipulate those around her to achieve her goals.
-    </p><br />
-    Sten Valencourt - Dragonkin Wizard - Sten Valencourt stands tall, his presence commanding attention in any room. His age is difficult to discern; his face bears the wisdom of centuries, yet his eyes sparkle with youthful curiosity. His long, silver hair cascades down his back, interwoven with strands of iridescent blue. His robes, adorned with intricate golden sigils, seem to shimmer with an otherworldly glow. A staff of ancient oak rests in his hand, its tip adorned with a sapphire that pulses with arcane energy.
+    </p class="fadein"><br />
+    Sten Valencourt - Dragonkin Wizard - Sten Valencourt stands tall, his presence commanding attention in any room. His age is difficult to discern; his face bears the wisdom of centuries, yet his eyes sparkle with youthful curiosity. His long, silver hair cascades down his back, interwoven with strands of iridescent blue. His robes, adorned with intricate golden sigils, seem to shimmer with an otherworldly glow. A staff of ancient oak rests in his hand, its tip adorned with a sapphire that pulses with arcane energy.<br>
 <br />
-Sten emerged from obscurity, working with the ranks of the Mantis guild in Sutekh. His origins remain shrouded, whispered rumors hinting at forbidden pacts with ancient beings. Some say he bargained with the very stars to gain his power. Regardless, his appointment as Grand Wizard surprised many. Was it merit or manipulation that led to his ascension?
+Sten emerged from obscurity, working with the ranks of the Mantis guild in Sutekh. His origins remain shrouded, whispered rumors hinting at forbidden pacts with ancient beings. Some say he bargained with the very stars to gain his power. Regardless, his appointment as Grand Wizard surprised many. Was it merit or manipulation that led to his ascension?<br>
 <br />
 His motives remain veiled, even to those closest to him. Is he a protector of the city or a puppet master pulling unseen strings? The title of Grand Wizard is not enough for Sten. He seeks to unravel the secrets of the cosmos, transcending mortal limitations.
 <br /><br />
 Ki Juma - Catfolk Paladin - Embodies the spirit of the wild—a lithe figure with fur the color of midnight. His eyes, amber and unyielding, hold the secrets of forgotten jungles. His tail, sinuous and expressive, twitches with anticipation. Around his neck, a pendant of obsidian bears the emblem of the Blessed Kingdom—a golden eye.
 <br />
 Ki Juma’s loyalty to the Blessed Kingdom runs deeper than bone. He fought alongside its legions, his claws stained with the blood of invaders. Some say Ki Juma bargained with the gods for his power. In return, he vowed to protect the Blessed Kingdom until the stars themselves fade.
-</section>
+    </p></section>
   <section id="Rerakth"><br>
       <h2 class="mw-headline otsikko fadein" id="Rerakth_city">Rerakth city
       </h2>
@@ -635,10 +630,10 @@ Ki Juma’s loyalty to the Blessed Kingdom runs deeper than bone. He fought alon
       <p class="otsikko fadein">Important people</p></h3>
     <p class="fadein">Ashii - The current appointed village leader Astomoi Cleric Ashii, She has a long ceremonial cloak covering her body,
       unlike like most Astomoi. Behind her mask, you only see darkness and some light beams. Astomoi like company even if they don't eat or drink. She can sense
-      thoughts and thus has been voted for a temporary leader of the village after a short ceremony when it was taken over by her and her associates.
+      thoughts and thus has been voted for a temporary leader of the village after a short ceremony when it was taken over by her and her associates.<br /><br />
     </p>
     <p class="fadein">Hera - Temporary The guard Commander, Dark Elf Magus Hera, Covered in a dark cloak, wielding a longsword. Ashii assigned
-      her as the guard Captain for the village.</p>
+      her as the guard Captain for the village.</p><br>
     <p class="fadein">Will - The current tavern keep, Axel Willis "Will" This is a big guy, pure barbaric muscle. Wielding a huge
       Earthbreaker. Lightly armored, currently running a tavern.</p>
   
@@ -656,7 +651,7 @@ Ki Juma’s loyalty to the Blessed Kingdom runs deeper than bone. He fought alon
         <p class="text-mother fadein">
             <br/>Mother's *hidden true name* is a greater god, worshiped by some denizens on Mordia. Organized groups of assassins are known to be dedicated to her worship.
             Her worshipers, mainly clerics, use long robes and masks to cover their faces. Tales tell of her revealing herself around Mordia, but many who saw her never did again.
-            Some of her worshipers tattoo themselves with roses and embroider clothing in the same way.<br>
+            Some of her worshipers tattoo themselves with roses and embroider clothing in the same way.<br /><br />
             The Mother was released from her currently unknown prison of sorts. Her son assembled a number of artifacts to summon her out, and he did.
             The summoning portal was destroyed, and she fled due to the damage sustained during the summoning. Her son Bata punished everyone responsible for the explosion.
             This is not the last people will hear of her...<br/><br/>
@@ -674,14 +669,14 @@ Ki Juma’s loyalty to the Blessed Kingdom runs deeper than bone. He fought alon
           was one of the first beings to emerge from the void at the beginning of creation. As the universe took shape around them, Ealdthryn set about cataloging and
           studying every aspect of it, from the movement of the stars to the behavior of the smallest subatomic particles. Ealdthryn's quest for knowledge was unquenchable,
           and they spent countless eons traveling the cosmos, exploring every corner of it. Over time, Ealdthryn became revered by mortal beings for their vast knowledge
-          and wisdom. Temples were built in their honor, and they were worshipped by scholars, sages, and philosophers alike.<br> Ealdthryn was seen as a source of guidance
+          and wisdom. Temples were built in their honor, and they were worshipped by scholars, sages, and philosophers alike.<br /><br /> Ealdthryn was seen as a source of guidance
           and inspiration, and their followers sought their counsel on matters of science, philosophy, and magic. Ealdthryn's teachings are focused on the importance
           of learning and self-improvement.They believe that the pursuit of knowledge is a sacred duty, and that every being has the potential to grow and expand their
           understanding of the universe. Ealdthryn's followers are encouraged to seek out new experiences, learn from their mistakes, and constantly strive to better
-          themselves. Despite their immense wisdom, Ealdthryn is not infallible.<br> There are many stories of Ealdthryn making mistakes or underestimating the power of
+          themselves. Despite their immense wisdom, Ealdthryn is not infallible.<br /><br /> There are many stories of Ealdthryn making mistakes or underestimating the power of
           their own creations. However, these missteps are seen as learning opportunities, and Ealdthryn is always quick to rectify their errors and use them to expand
           their understanding of the universe. In combat, Ealdthryn is rarely directly involved, preferring instead to use their vast intellect to outmaneuver and outwit
-          their opponents. Ealdthryn's followers are often powerful mages, using their knowledge of the arcane to manipulate reality itself and gain an edge in battle.
+          their opponents. Ealdthryn's followers are often powerful mages, using their knowledge of the arcane to manipulate reality itself and gain an edge in battle.<br />
           <br>Ealdthryn's enemies are those who seek to suppress knowledge and keep others in ignorance. They view such beings as threats to the natural order of the universe,
           and will go to great lengths to thwart their plans. Ealdthryn's followers are also sworn enemies of any who seek to use knowledge for personal gain or to subjugate
           others.
@@ -711,26 +706,12 @@ Ki Juma’s loyalty to the Blessed Kingdom runs deeper than bone. He fought alon
             was over in the whole region. Anpu, the leader of the Blessed Kingdom, appointed General Ki Juma as the interim leader
             of the Sand Kingdom region as it is being stabilized. <br /><br />
             The Party was given orders to stabilize the Mt.Hiro lava area, and they cleared the rifts that opened to another plane. at the foot of the mountain, the players received a book of revelation from a angelic being.
-  <div class="container bgimg-5 img-fluid">
+          </div>
+
+            <img src="scrollbg2.png" alt="Revelation" class="img-fluid">
  
-   <br/><br/><br/><br/><br/><br/><br/><br/><h3 class="centered-heading">The Book of Revelations</h3>
-   <p class="subtext"></br>
-    The leather-bound cover bears the embossed favored weapon of Ealdthryn, the god of wisdom and knowledge. Its pages, yellowed with age, whisper secrets that transcend mortal comprehension.
-  </br></br> <h4 class="texthead">Prologue: The War for Sutekh</h4></br>
-    The inked words recount the cataclysmic clash between two forces—the War for Sutekh. The two brothers clashed, their energies rending the very fabric of existence. Amidst the cosmic turmoil, Ealdthryn stood resolute, his eyes piercing the veil of time. He foresaw the aftermath—the fragile balance of power, the scars etched upon the realms.
-  </br></br><h4 class="texthead">Chapter I: The Desolate Desert </h4></br>
-    The prophecy unfolds upon the shifting sands of the Desolate Desert. Beneath the relentless sun, an underground cave awaits—a sanctuary for secrets and shadows. The air is thick with ancient magic, and the walls bear inscriptions older than memory. Here, the veil between worlds grows thin.
-  </br></br><h4 class="texthead">Chapter II: The Portal</h4></br>
-    Beware the portal—the malevolent gateway through which an insidious race seeks foothold in Mordia. Their eyes glow like dying stars, and their hunger knows no bounds. The Tome of Ealdthryn warns of their arrival—their whispers echoing through forgotten tunnels.
-  </br></br><h4 class="texthead">Epilogue: Seek the Light</h4></br>
-    Seek the light, seeker of knowledge. For within these pages lies the key to thwarting the encroaching darkness. The path is treacherous, but wisdom shall guide your steps. May Ealdthryn’s grace illuminate your way. Let this book grant you clarity and courage at the end of your journey.
-  </br></br></p>
 
-</div>
-
-</div>
-
-            <br>Ki Juma gave the players the ownership of the motel part of "The Better Pirate" tavern, and the keys to a sailing ship. 
+            Ki Juma gave the players the ownership of the motel part of "The Better Pirate" tavern, and the keys to a sailing ship. 
             After a dangerous sea voyage with their new ship, the adventurers arrived at Northpass, an old mining town on the west
             side of the inner sea.
             The party met with a Paladin recruiter named Sir Elgar: "We have a task ahead of us that requires courage and
@@ -745,12 +726,14 @@ Ki Juma’s loyalty to the Blessed Kingdom runs deeper than bone. He fought alon
             gleaming eyes, not of this world.
             The party suffered a casualty in first encounter of this enemy force at the start of the Sandscar Ravines in the Gray
             Desert.
+            <br /><br />
+            After returning to the Renatam Fort, the paladin Lord Varathin helped the party with raising the member and they continued their mission after. The party finished clearing the route thru the Sandscar Ravines to the temple where they were to meet a second group of scouts.
             </div>
             </table>
 
 
 </main>
-   </div>   </div></div>
+
   </head>
 </body>
 
