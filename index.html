@@ -417,23 +417,21 @@
           text-shadow: 2px 1px 2px rgb(0, 0, 0);
         }
         .container {
-        position: relative;
-        text-align: center;
-        overflow: scroll; /* This will add scrolling */
-        scroll
-        margin: 0 auto; /* Center the container horizontally */
-        padding: -2px; /* Add padding for spacing from the edges */
+          position: relative;
+          text-align: center;
+          overflow: scroll; /* This will add scrolling */
+          margin: auto; /* Center the container horizontally */
+          padding: -2px; /* Add padding for spacing from the edges */
 
-
-        /* Hide scrollbar for Chrome, Safari and Opera */
-        -webkit-scrollbar {
+          /* Hide scrollbar for Chrome, Safari, and Opera */
+          ::-webkit-scrollbar {
             display: none;
-        }
+          }
 
-        /* Hide scrollbar for IE, Edge, and Firefox */
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
-      }
+          /* Hide scrollbar for IE, Edge, and Firefox */
+          -ms-overflow-style: none; /* IE and Edge */
+          scrollbar-width: none; /* Firefox */
+        }
         .texti {
         size: 10px;
         max-width: 1200px; /* Adjust this value as needed */
