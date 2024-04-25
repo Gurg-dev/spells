@@ -42,13 +42,12 @@
       body, h1, h2, h3, p, ul, ol, li {
         margin: 0;
         padding: 0;
-
       }
       
       main {
-        padding: 2vw;
+
         background-color: #000000; /* Set background color for the main content area */
-        box-shadow: 0px 0px 8px rgb(255, 9, 9);
+        box-shadow: 0px 0px 4px rgb(255, 9, 9);
 
       }
       p.no-wrap {
@@ -61,25 +60,30 @@
         width: 100%;
         background-color: #0e0e0e; 
         box-shadow: 0px 0px 8px rgb(255, 9, 9);
-        color: white;
+        color: rgb(0, 0, 0);
         padding: 5px;
-        padding-left: 18vw;
+        padding-left: 1vw;
         text-align:initial;
         z-index: 1000; /* Ensure the dropdown is above other elements */
       }
       .dropbtn
       {
-        box-shadow: 0px 0px 8px rgb(255, 9, 9);
+
         color: rgb(255, 0, 0);
         background-color: #0e0e0e; /* Set background color for the entire page */
+        border: none;
+        outline: none; /* Optional: Removes focus border when clicked */
       }
       .my-subheading {
-    font-size: 16px; /* Adjust as needed */
-  }
+        font-size: 16px; /* Adjust as needed */
+      }
       .dropdown {
         color: rgb(255, 0, 0);
         display:flex;
-        width:max-content; /* Set the width of the box */
+        width:100vmax; /* Set the width of the box */
+        border: none;
+
+        padding-inline-start: 0%;
       }
       .dropdown:after {
         content: "";
@@ -89,6 +93,7 @@
         width: 100%;
         left: 0;
         display: block;
+        
       }
       .dropdown-content {
         display: none;
@@ -98,15 +103,17 @@
         top: 100%;
         width:max-content; /* Set the width of the box */
         padding: 2px;/* Add padding for spacing inside the box */
-        border: 1px solid #fff; /* Add a border for a box-like appearance */
+        border: 1px solid #ffffff00; /* Add a border for a box-like appearance */
         border-radius: 1px; /* Optional: Add rounded corners */
         background-color: transparent; /* Set background color to transparent */
+
       }
   
       .dropdown:hover .dropdown-content {
         display:contents;
         width: fit-content; /* adjust as needed */
         word-wrap: break-word;
+        border-color: #0e0e0e00;
       }
 
 
@@ -114,6 +121,7 @@
       section {
         margin-top: 10px; /* Adjust this margin to account for the fixed top section */
         padding: 10px;
+        text-align: left;
       }
 
       .box {
@@ -176,16 +184,16 @@
       text-decoration: none;
       outline: none;
       color: #fff;
-      background-color: #00000061;
+      background-color: #00000029;
       border: none;
       border-radius: 18px;
       box-shadow: 0 6px #00000000;
     }
-      .button:hover {background-color: #9d00db61}
+      .button:hover {background-color: #cc00db5a}
 
         .button:active {
-          background-color: #a300b8;
-          transform: translateY(4px);
+          background-color: #94009641;
+
         }
 
     .bgmother {
@@ -411,7 +419,21 @@
         .container {
         position: relative;
         text-align: center;
+        overflow: scroll; /* This will add scrolling */
+        scroll
+        margin: 0 auto; /* Center the container horizontally */
+        padding: -2px; /* Add padding for spacing from the edges */
+
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        -webkit-scrollbar {
+            display: none;
         }
+
+        /* Hide scrollbar for IE, Edge, and Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
         .texti {
         size: 10px;
         max-width: 1200px; /* Adjust this value as needed */
@@ -580,8 +602,7 @@
       </p>
     
      
- <h2>
-    <p class="otsikko fadein">Important people</p></h2>
+    <h2><p class="otsikko fadein">Important people</p></h2>
             
     
     <p class="fadein">Lady Elspeth von Carstein - Human noble - Trading Company: Lady Elspeth comes from a wealthy and influential family that has long held a significant position in
@@ -605,16 +626,16 @@
     attention to detail. Xalara is also a master of disguise, able to blend seamlessly into any crowd and manipulate those around her to achieve her goals.
     </p class="fadein"><br />
     Sten Valencourt - Dragonkin Wizard - Sten Valencourt stands tall, his presence commanding attention in any room. His age is difficult to discern; his face bears the wisdom of centuries, yet his eyes sparkle with youthful curiosity. His long, silver hair cascades down his back, interwoven with strands of iridescent blue. His robes, adorned with intricate golden sigils, seem to shimmer with an otherworldly glow. A staff of ancient oak rests in his hand, its tip adorned with a sapphire that pulses with arcane energy.<br>
-<br />
-Sten emerged from obscurity, working with the ranks of the Mantis guild in Sutekh. His origins remain shrouded, whispered rumors hinting at forbidden pacts with ancient beings. Some say he bargained with the very stars to gain his power. Regardless, his appointment as Grand Wizard surprised many. Was it merit or manipulation that led to his ascension?<br>
-<br />
-His motives remain veiled, even to those closest to him. Is he a protector of the city or a puppet master pulling unseen strings? The title of Grand Wizard is not enough for Sten. He seeks to unravel the secrets of the cosmos, transcending mortal limitations.
-<br /><br />
-Ki Juma - Catfolk Paladin - Embodies the spirit of the wild—a lithe figure with fur the color of midnight. His eyes, amber and unyielding, hold the secrets of forgotten jungles. His tail, sinuous and expressive, twitches with anticipation. Around his neck, a pendant of obsidian bears the emblem of the Blessed Kingdom—a golden eye.
-<br />
-Ki Juma’s loyalty to the Blessed Kingdom runs deeper than bone. He fought alongside its legions, his claws stained with the blood of invaders. Some say Ki Juma bargained with the gods for his power. In return, he vowed to protect the Blessed Kingdom until the stars themselves fade.
-    </p></section>
-  <section id="Rerakth"><br>
+    <br />
+    Sten emerged from obscurity, working with the ranks of the Mantis guild in Sutekh. His origins remain shrouded, whispered rumors hinting at forbidden pacts with ancient beings. Some say he bargained with the very stars to gain his power. Regardless, his appointment as Grand Wizard surprised many. Was it merit or manipulation that led to his ascension?<br>
+    <br />
+    His motives remain veiled, even to those closest to him. Is he a protector of the city or a puppet master pulling unseen strings? The title of Grand Wizard is not enough for Sten. He seeks to unravel the secrets of the cosmos, transcending mortal limitations.
+    <br /><br />
+    Ki Juma - Catfolk Paladin - Embodies the spirit of the wild—a lithe figure with fur the color of midnight. His eyes, amber and unyielding, hold the secrets of forgotten jungles. His tail, sinuous and expressive, twitches with anticipation. Around his neck, a pendant of obsidian bears the emblem of the Blessed Kingdom—a golden eye.
+    <br />
+    Ki Juma’s loyalty to the Blessed Kingdom runs deeper than bone. He fought alongside its legions, his claws stained with the blood of invaders. Some say Ki Juma bargained with the gods for his power. In return, he vowed to protect the Blessed Kingdom until the stars themselves fade.
+        </p></section>
+    <section id="Rerakth"><br>
       <h2 class="mw-headline otsikko fadein" id="Rerakth_city">Rerakth city
       </h2>
       <div class="Anpu"><button button type="button" onclick="window.location.href='Anpu.png';" target="_blank" class="button" class="expand">Expand</button>
@@ -637,7 +658,7 @@ Ki Juma’s loyalty to the Blessed Kingdom runs deeper than bone. He fought alon
     <p class="fadein">Will - The current tavern keep, Axel Willis "Will" This is a big guy, pure barbaric muscle. Wielding a huge
       Earthbreaker. Lightly armored, currently running a tavern.</p>
   
-      <br /></section>
+    </section>
       <section id="Gods"><br>
       <h2 id="Gods" class="otsikko fadein">☥ Gods of Mordia ☥</h2>
       <p class="fadein">In addition to following Gods, island of Mordia Campaign you can use all gods from Pathfinder 1E world. And then some.</p>
@@ -649,7 +670,7 @@ Ki Juma’s loyalty to the Blessed Kingdom runs deeper than bone. He fought alon
 
       <div class="bgmotherword">
         <p class="text-mother fadein">
-            <br/>Mother's *hidden true name* is a greater god, worshiped by some denizens on Mordia. Organized groups of assassins are known to be dedicated to her worship.
+            Mother's *hidden true name* is a greater god, worshiped by some denizens on Mordia. Organized groups of assassins are known to be dedicated to her worship.
             Her worshipers, mainly clerics, use long robes and masks to cover their faces. Tales tell of her revealing herself around Mordia, but many who saw her never did again.
             Some of her worshipers tattoo themselves with roses and embroider clothing in the same way.<br /><br />
             The Mother was released from her currently unknown prison of sorts. Her son assembled a number of artifacts to summon her out, and he did.
@@ -663,7 +684,7 @@ Ki Juma’s loyalty to the Blessed Kingdom runs deeper than bone. He fought alon
 
       <div class="bgealdword">
         <p class="text-eald fadein">
-          <br/>Ealdthryn is known as the deity of wisdom and knowledge. It is said that Ealdthryn's vast intellect
+          Ealdthryn is known as the deity of wisdom and knowledge. It is said that Ealdthryn's vast intellect
           is matched only by their insatiable hunger for learning and understanding. Ealdthryn is often depicted as a wise old figure with a long white beard, deep-set
           eyes, and a serene expression. They are typically depicted holding a staff or book, symbolizing their mastery over knowledge. According to legend, Ealdthryn
           was one of the first beings to emerge from the void at the beginning of creation. As the universe took shape around them, Ealdthryn set about cataloging and
@@ -711,7 +732,7 @@ Ki Juma’s loyalty to the Blessed Kingdom runs deeper than bone. He fought alon
             <img src="scrollbg2.png" alt="Revelation" class="img-fluid">
  
 
-            Ki Juma gave the players the ownership of the motel part of "The Better Pirate" tavern, and the keys to a sailing ship. 
+            <br>Ki Juma gave the players the ownership of the motel part of "The Better Pirate" tavern, and the keys to a sailing ship. 
             After a dangerous sea voyage with their new ship, the adventurers arrived at Northpass, an old mining town on the west
             side of the inner sea.
             The party met with a Paladin recruiter named Sir Elgar: "We have a task ahead of us that requires courage and
